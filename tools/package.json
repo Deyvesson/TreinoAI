@@ -1,0 +1,19 @@
+{
+  "name": "treinoai-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "imagens:descrever": "node imagens/descrever.ts",
+    "imagens:gerar": "node imagens/gerar.ts",
+    "imagens:revisar": "node imagens/revisar.ts",
+    "imagens:publicar": "node imagens/publicar.ts",
+    "check": "tsc -p ."
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}

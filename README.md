@@ -20,6 +20,7 @@ Subscription "Assinatura do Visual Studio Professional", resource group `rg-trei
 | Static Web App (Free) | `treinoai-swa` | https://icy-bay-073af510f.1.azurestaticapps.net |
 | Azure AI Foundry (AIServices) | `treinoai-foundry` | projeto `treinoai` |
 | Deployment do modelo | `gpt-6-luna` | versão 2026-09-22, GlobalStandard, 30K TPM (teto de custo) |
+| Deployment de imagem | `gpt-image-2.5` | modelo `gpt-image-2.5-flare` 2026-09-08, GlobalStandard, capacidade 4 (geração offline das imagens dos exercícios, não é chamado pelo app) |
 
 App settings do SWA: `FOUNDRY_ENDPOINT`, `FOUNDRY_API_KEY`, `FOUNDRY_DEPLOYMENT`.
 
@@ -52,3 +53,18 @@ Cada push na `main` dispara o deploy pelo GitHub Actions. O workflow precisa do 
 ```bash
 az staticwebapp secrets list -n treinoai-swa -g rg-treinoai --query properties.apiKey -o tsv
 ```
+
+## Imagens dos exercícios
+
+Dois quadros por exercício (posição inicial e final), gerados com `gpt-image-2.5` e animados pelo app. Scripts em `tools/` (rodar de dentro da pasta, após `npm install`):
+
+| Etapa | Comando | O que faz |
+|---|---|---|
+| 1 | `npm run imagens:descrever` | `gpt-6-luna` descreve início e fim de cada exercício em `tools/imagens/poses.json` (versionado, editável à mão) |
+| 2 | `npm run imagens:gerar` | Gera os quadros em `tools/imagens/.saida/` (fora do Git); o quadro 2 é uma edição do quadro 1 |
+| 3 | `npm run imagens:revisar` | Recria `.preview/revisao.html`: aprove cada exercício e cole o JSON copiado em `tools/imagens/aprovados.json` |
+| 4 | `npm run imagens:publicar` | Copia só os aprovados para `app/public/exercicios/` e escreve `app/src/gerado/imagens-exercicios.json` |
+
+Opções de `descrever` e `gerar`: `--ids a,b` (só esses), `--forcar` (refaz o que já existe), `--paralelo N`. Em `gerar`, `--quadro 2` refaz só o quadro final reaproveitando o inicial.
+
+O estilo fica em `tools/imagens/estilo.ts` e ainda é **provisório**: a geração completa roda depois que a identidade visual for definida. Credenciais vêm de `api/local.settings.json`, ou de `tools/.env.local` (veja `tools/.env.example`).

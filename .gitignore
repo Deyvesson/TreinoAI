@@ -14,3 +14,11 @@ api/local.settings.json
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Prévias locais
+.preview/
+
+# Geração de imagens: originais, candidatos e segredos locais
+tools/imagens/.brutas/
+tools/imagens/.saida/
+tools/.env.local

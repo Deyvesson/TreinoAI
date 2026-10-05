@@ -47,7 +47,8 @@ Tudo isso sem conta e com os dados no próprio aparelho. Adaptação automática
 - A sessão de treino e o registro funcionam **offline desde o MVP**; só a geração de plano e a análise de progresso exigem rede.
 - **Escopo do MVP:** fundação, geração do plano, sessão de treino com registro, e histórico com análise de progresso. Exportação/backup, polimento e aviso de saúde ficam para depois do MVP.
 - **Catálogo fechado de exercícios** em `shared/exercicios.ts` (PT-BR, IDs permanentes): a IA só pode escolher IDs desse catálogo, para o histórico do mesmo exercício ser comparável ao longo do tempo. Cada exercício define como a série é registrada (carga × reps, reps, tempo, carga × tempo, distância e tempo) e se é unilateral.
-- **Em aberto:** exportação/backup dos dados locais (o risco de perder dados ao limpar o navegador existe); mídia dos exercícios (imagem/vídeo de execução); como lidar com lesões, limitações e o aviso de que o app não substitui orientação médica ou profissional; monetização.
+- **Mídia dos exercícios:** dois quadros por exercício (posição inicial e final; um só quadro para isometrias), gerados com `gpt-image-2.5` no Foundry e servidos como WebP. O app anima a alternância entre os quadros (transição suave, pausável, estático com movimento reduzido); nada de GIF nem vídeo. Toda imagem passa por revisão humana antes de publicar: execução errada ensina o movimento errado. O estilo das imagens segue a identidade visual; a geração completa só roda depois que ela for definida.
+- **Em aberto:** exportação/backup dos dados locais (o risco de perder dados ao limpar o navegador existe); como lidar com lesões, limitações e o aviso de que o app não substitui orientação médica ou profissional; monetização.
 
 ## Brand Commitments
 
