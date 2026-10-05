@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Azure Functions local secrets
+api/local.settings.json
+
+# SWA CLI
+.swa/
+
+# Impeccable local-only config
+.impeccable/config.local.json
+
+# Claude Code local settings
+.claude/settings.local.json

@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "",
+    "FOUNDRY_ENDPOINT": "https://treinoai-foundry.openai.azure.com",
+    "FOUNDRY_API_KEY": "<az cognitiveservices account keys list -n treinoai-foundry -g rg-treinoai --query key1 -o tsv>",
+    "FOUNDRY_DEPLOYMENT": "gpt-6-luna"
+  }
+}
