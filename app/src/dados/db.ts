@@ -12,15 +12,48 @@ export interface PlanoSalvo extends PlanoGerado {
   ativo: 0 | 1
 }
 
+export type EstadoSessao = 'ativa' | 'concluida' | 'encerrada'
+
+export interface SessaoSalva {
+  id?: number
+  planoId: number
+  diaIndice: number
+  iniciadaEm: string
+  encerradaEm: string | null
+  estado: EstadoSessao
+  /** Exercício em execução; a troca livre muda este campo. */
+  atual: string | null
+  /** Fim do descanso em ms desde a época (sobrevive a tela bloqueada e recarga); null fora do descanso. */
+  descansoAte: number | null
+}
+
+export interface SerieSalva {
+  id?: number
+  sessaoId: number
+  exercicioId: string
+  numero: number
+  carga: number | null
+  repeticoes: number | null
+  duracaoSegundos: number | null
+  distanciaKm: number | null
+  registradaEm: string
+}
+
 export const db = new Dexie('treinoai') as Dexie & {
   perfil: EntityTable<PerfilSalvo, 'id'>
   planos: EntityTable<PlanoSalvo, 'id'>
+  sessoes: EntityTable<SessaoSalva, 'id'>
+  series: EntityTable<SerieSalva, 'id'>
 }
 
-// Novas tabelas (sessões, séries) entram numa nova versão, sem apagar as anteriores.
+// Novas tabelas entram numa nova versão, sem apagar as anteriores.
 db.version(1).stores({
   perfil: 'id',
   planos: '++id, ativo, geradoEm',
+})
+db.version(2).stores({
+  sessoes: '++id, estado, planoId, iniciadaEm',
+  series: '++id, sessaoId, exercicioId, registradaEm',
 })
 
 export async function salvarPerfil(perfil: PerfilTreino): Promise<void> {

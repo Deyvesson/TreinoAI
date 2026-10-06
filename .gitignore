@@ -22,3 +22,11 @@ api/local.settings.json
 tools/imagens/.brutas/
 tools/imagens/.saida/
 tools/.env.local
+
+# Impeccable: páginas de decisão e capturas de revisão (transitórias)
+.impeccable/questions/
+.impeccable/review/
+
+# Capturas e logs do Playwright
+.playwright-mcp/
+app/public/__dev-plano.json

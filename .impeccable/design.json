@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T12:00:00Z",
+  "title": "Design System: TreinoAI",
+  "extensions": {
+    "colorMeta": {
+      "ultramar": { "role": "primary", "displayName": "Ultramar da Transmissão", "canonical": "#2433d6", "tonalRamp": ["#0b1150", "#121c80", "#1b27b0", "#2433d6", "#4f5be2", "#8189ec", "#b3b8f5", "#e4e6fd"] },
+      "ultramar-forte": { "role": "primary", "displayName": "Ultramar Profundo", "canonical": "#1b27b0", "tonalRamp": ["#080d40", "#0f1770", "#1b27b0", "#2433d6", "#4f5be2", "#8189ec", "#b3b8f5", "#e4e6fd"] },
+      "na-placa": { "role": "secondary", "displayName": "Branco na Placa", "canonical": "#ffffff", "tonalRamp": ["#1f2233", "#3d4257", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f1f2f6", "#ffffff"] },
+      "na-placa-2": { "role": "secondary", "displayName": "Lavanda na Placa", "canonical": "#cdd1fa", "tonalRamp": ["#1d2266", "#2f3699", "#4a52c4", "#6d74de", "#959bec", "#cdd1fa", "#e3e5fd", "#f4f5ff"] },
+      "fundo": { "role": "neutral", "displayName": "Branco de Estúdio", "canonical": "#ffffff", "tonalRamp": ["#1f2233", "#3d4257", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f1f2f6", "#ffffff"] },
+      "superficie": { "role": "neutral", "displayName": "Célula Branca", "canonical": "#ffffff", "tonalRamp": ["#1f2233", "#3d4257", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f1f2f6", "#ffffff"] },
+      "tinta": { "role": "neutral", "displayName": "Tinta Azul-Noite", "canonical": "#0b1020", "tonalRamp": ["#0b1020", "#1f2538", "#3f4659", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f4f5f8"] },
+      "tinta-2": { "role": "neutral", "displayName": "Tinta Média", "canonical": "#3f4659", "tonalRamp": ["#0b1020", "#1f2538", "#3f4659", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f4f5f8"] },
+      "tinta-3": { "role": "neutral", "displayName": "Tinta Clara", "canonical": "#5f6578", "tonalRamp": ["#0b1020", "#1f2538", "#3f4659", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f4f5f8"] },
+      "fio": { "role": "neutral", "displayName": "Fio", "canonical": "#dcdfe6", "tonalRamp": ["#0b1020", "#1f2538", "#3f4659", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f4f5f8"] },
+      "fio-forte": { "role": "neutral", "displayName": "Fio Forte", "canonical": "#b4bac7", "tonalRamp": ["#0b1020", "#1f2538", "#3f4659", "#5f6578", "#8a8fa0", "#b4bac7", "#dcdfe6", "#f4f5f8"] },
+      "verde": { "role": "tertiary", "displayName": "Verde Meta", "canonical": "#12a150", "tonalRamp": ["#04301a", "#07502a", "#0b7a3c", "#12a150", "#3dbf74", "#76d79e", "#b2ebc9", "#e6f8ed"] },
+      "roxo": { "role": "tertiary", "displayName": "Roxo Recorde", "canonical": "#7b2ff7", "tonalRamp": ["#250a52", "#3f1290", "#6320d4", "#7b2ff7", "#9a5ff9", "#bb93fb", "#dbc8fd", "#f2ebff"] },
+      "amarelo": { "role": "tertiary", "displayName": "Amarelo Abaixo", "canonical": "#f5b700", "tonalRamp": ["#3d2c00", "#5c4200", "#7a5800", "#b88600", "#f5b700", "#ffcf4d", "#ffe499", "#fff6db"] },
+      "pendente": { "role": "tertiary", "displayName": "Cinza Pendente", "canonical": "#c5cad4", "tonalRamp": ["#1f2233", "#3d4257", "#5f6578", "#8a8fa0", "#a8aebb", "#c5cad4", "#e2e5ea", "#f4f5f8"] },
+      "verde-texto": { "role": "tertiary", "displayName": "Verde Meta (texto)", "canonical": "#0b7a3c", "tonalRamp": ["#04301a", "#07502a", "#0b7a3c", "#12a150", "#3dbf74", "#76d79e", "#b2ebc9", "#e6f8ed"] },
+      "roxo-texto": { "role": "tertiary", "displayName": "Roxo Recorde (texto)", "canonical": "#6320d4", "tonalRamp": ["#250a52", "#3f1290", "#6320d4", "#7b2ff7", "#9a5ff9", "#bb93fb", "#dbc8fd", "#f2ebff"] },
+      "amarelo-texto": { "role": "tertiary", "displayName": "Amarelo Abaixo (texto)", "canonical": "#7a5800", "tonalRamp": ["#3d2c00", "#5c4200", "#7a5800", "#b88600", "#f5b700", "#ffcf4d", "#ffe499", "#fff6db"] },
+      "perigo": { "role": "tertiary", "displayName": "Perigo", "canonical": "#b42318", "tonalRamp": ["#3d0b07", "#6b140d", "#b42318", "#d6402f", "#e8705f", "#f2a196", "#f9d0ca", "#fdeeec"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Só a contagem do descanso." },
+      "numero": { "displayName": "Número", "purpose": "Carga, repetições e cronômetro na placa; cresce sem imagem." },
+      "headline": { "displayName": "Headline", "purpose": "Nome do treino do dia em Hoje e no Resumo." },
+      "title": { "displayName": "Title", "purpose": "Nome do exercício na placa." },
+      "torre": { "displayName": "Linha da torre", "purpose": "Nome do exercício na torre; posição e valor condensados ao lado." },
+      "body": { "displayName": "Body", "purpose": "Texto corrido, até 60–68ch." },
+      "label": { "displayName": "Label", "purpose": "Rótulo de campo do ajuste, em maiúsculas, colado ao valor." },
+      "botao": { "displayName": "Botão", "purpose": "Texto de botões, 700 a 85% de largura." }
+    },
+    "shadows": [
+      { "name": "linha-erguida", "value": "0 10px 24px rgb(11 16 32 / 0.14), 0 2px 6px rgb(11 16 32 / 0.08)", "purpose": "Linha da torre aberta para troca, com translateY(-4px); as outras esmaecem a 32%." },
+      { "name": "menu", "value": "0 14px 36px rgb(11 16 32 / 0.2), 0 2px 6px rgb(11 16 32 / 0.1)", "purpose": "Menu flutuante da sessão sobre véu de tinta a 32%." },
+      { "name": "botao-interruptor", "value": "0 1px 3px rgb(11 16 32 / 0.25)", "purpose": "Botão circular do interruptor." }
+    ],
+    "motion": [
+      { "name": "sair", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Curva única de todas as transições e entradas." },
+      { "name": "placa-entra", "value": "clip-path inset(0 100% 0 0) -> inset(0) 420ms sair", "purpose": "A placa varre da esquerda para a direita, como gráfico de transmissão." },
+      { "name": "torre-desce", "value": "clip-path inset(0 0 100% 0) -> inset(0) 320ms sair", "purpose": "O painel da torre aberta desce de cima para baixo." },
+      { "name": "inverte", "value": "filter invert(1) hue-rotate(180deg), 900ms sair, uma vez", "purpose": "Fim do descanso inverte a tela inteira; desligado com movimento reduzido." },
+      { "name": "alterna-quadros", "value": "2.4s ease-in-out infinite", "purpose": "Alterna os dois quadros da imagem do exercício; primeiro quadro estático com movimento reduzido." },
+      { "name": "linha-torre", "value": "opacity, transform, box-shadow 260ms sair", "purpose": "Linha escolhida sobe e as outras esmaecem." }
+    ],
+    "breakpoints": [
+      { "name": "desktop", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA ultramar fora da placa; a única superfície preenchida em Hoje e no Resumo.",
+      "html": "<button class=\"ds-botao ds-botao-primario\">Começar treino</button>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 20px; border: 0; border-radius: 3px; font-family: 'Archivo Variable', system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; font-stretch: 85%; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), transform 100ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-botao-primario { background: #2433d6; color: #ffffff; } .ds-botao-primario:hover { background: #1b27b0; } .ds-botao:active { transform: translateY(1px); } .ds-botao:focus-visible { outline: 3px solid #2433d6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Botões da placa",
+      "kind": "button",
+      "refersTo": "button-plate",
+      "description": "Sobre a placa ultramar: ação principal branca e ação secundária em contorno.",
+      "html": "<div class=\"ds-placa-base\"><button class=\"ds-botao-contorno\">+15s</button><button class=\"ds-botao-placa\">Registrar série</button></div>",
+      "css": ".ds-placa-base { display: flex; gap: 12px; padding: 20px; background: #2433d6; } .ds-botao-placa, .ds-botao-contorno { min-height: 64px; padding: 0 20px; border: 0; border-radius: 3px; font-family: 'Archivo Variable', system-ui, sans-serif; font-weight: 700; font-stretch: 85%; cursor: pointer; } .ds-botao-placa { flex: 1; background: #ffffff; color: #2433d6; font-size: 1.1875rem; } .ds-botao-contorno { flex: 0 0 34%; background: transparent; color: #ffffff; font-size: 1.0625rem; box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.3); } .ds-botao-contorno:hover { background: rgb(255 255 255 / 0.08); } .ds-botao-placa:active, .ds-botao-contorno:active { transform: translateY(1px); } .ds-botao-placa:focus-visible, .ds-botao-contorno:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão de texto",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Ação secundária sublinhada; variante de perigo em vermelho para ações destrutivas isoladas.",
+      "html": "<div class=\"ds-texto-par\"><button class=\"ds-botao-texto\">Manter a ordem</button><button class=\"ds-botao-texto ds-perigo\">Encerrar treino</button></div>",
+      "css": ".ds-texto-par { display: flex; gap: 20px; } .ds-botao-texto { min-height: 48px; padding: 0; border: 0; background: none; color: #3f4659; font-family: 'Archivo Variable', system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; font-stretch: 85%; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; cursor: pointer; } .ds-botao-texto.ds-perigo { color: #b42318; } .ds-botao-texto:hover { color: #0b1020; } .ds-botao-texto:focus-visible { outline: 3px solid #2433d6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip de dia",
+      "kind": "chip",
+      "refersTo": "chip-dia",
+      "description": "Escolha do dia do plano; selecionado ganha contorno ultramar, nunca preenchimento.",
+      "html": "<div class=\"ds-dias\"><button class=\"ds-chip\" aria-pressed=\"true\"><span class=\"ds-n\">1</span>Peito e tríceps</button><button class=\"ds-chip\" aria-pressed=\"false\"><span class=\"ds-n\">2</span>Costas</button></div>",
+      "css": ".ds-dias { display: flex; gap: 8px; } .ds-chip { min-height: 44px; padding: 0 14px; border: 1px solid #b4bac7; border-radius: 3px; background: #ffffff; color: #0b1020; font-family: 'Archivo Variable', system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; cursor: pointer; } .ds-chip .ds-n { margin-right: 4px; font-weight: 800; font-stretch: 62%; color: #5f6578; font-variant-numeric: tabular-nums; } .ds-chip[aria-pressed='true'] { border-color: #2433d6; box-shadow: inset 0 0 0 1px #2433d6; color: #2433d6; } .ds-chip[aria-pressed='true'] .ds-n { color: #2433d6; } .ds-chip:hover { border-color: #5f6578; } .ds-chip:focus-visible { outline: 3px solid #2433d6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Torre",
+      "kind": "custom",
+      "refersTo": "tower-row",
+      "description": "Assinatura: lista por posição com faixa de estado de 4px; a linha atual é tinta ultramar, com a contagem do descanso como diferença.",
+      "html": "<ol class=\"ds-torre\"><li data-estado=\"recorde\"><span class=\"ds-pos\">1</span><span class=\"ds-faixa\"></span><span class=\"ds-nome\">Supino reto</span><span class=\"ds-ser\">4/4</span><span class=\"ds-val\">62,5 kg × 8</span></li><li data-estado=\"meta\"><span class=\"ds-pos\">2</span><span class=\"ds-faixa\"></span><span class=\"ds-nome\">Crucifixo</span><span class=\"ds-ser\">3/3</span><span class=\"ds-val\">14 kg × 12</span></li><li data-estado=\"atual\"><span class=\"ds-pos\">3</span><span class=\"ds-faixa\"></span><span class=\"ds-nome\">Tríceps na polia</span><span class=\"ds-ser\">1/3</span><span class=\"ds-val\"><b>+0:45</b></span></li><li data-estado=\"pendente\"><span class=\"ds-pos\">4</span><span class=\"ds-faixa\"></span><span class=\"ds-nome\">Mergulho</span><span class=\"ds-ser\">0/3</span><span class=\"ds-val\">3 × 10</span></li></ol>",
+      "css": ".ds-torre { margin: 0; padding: 0; list-style: none; border-top: 1px solid #dcdfe6; font-family: 'Archivo Variable', system-ui, sans-serif; color: #0b1020; } .ds-torre li { display: grid; grid-template-columns: 44px 4px minmax(0, 1fr) auto minmax(4.5em, auto); align-items: center; column-gap: 12px; min-height: 56px; padding-right: 20px; border-bottom: 1px solid #dcdfe6; } .ds-torre li:hover { background: rgb(11 16 32 / 0.035); } .ds-pos { font-size: 1.375rem; font-weight: 800; font-stretch: 62%; text-align: center; color: #5f6578; } .ds-faixa { align-self: stretch; background: #c5cad4; } .ds-nome { padding: 10px 0; font-weight: 600; line-height: 1.2; } .ds-ser { font-size: 0.875rem; font-stretch: 85%; color: #5f6578; font-variant-numeric: tabular-nums; } .ds-val { font-weight: 700; font-stretch: 75%; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; } [data-estado='meta'] .ds-faixa { background: #12a150; } [data-estado='recorde'] .ds-faixa { background: #7b2ff7; } [data-estado='recorde'] .ds-val { color: #6320d4; } [data-estado='atual'], [data-estado='atual'] .ds-pos, [data-estado='atual'] .ds-ser { color: #2433d6; } [data-estado='atual'] .ds-nome { font-weight: 750; } [data-estado='atual'] .ds-faixa { background: #2433d6; } .ds-val b { font-weight: 800; }"
+    },
+    {
+      "name": "Torre recolhida",
+      "kind": "custom",
+      "refersTo": "tower-cell",
+      "description": "Uma célula de 40px por exercício, barra inferior de estado; a atual é ultramar e alarga no descanso.",
+      "html": "<div class=\"ds-faixas\"><span class=\"ds-cel\" data-estado=\"recorde\">1</span><span class=\"ds-cel\" data-estado=\"meta\">2</span><span class=\"ds-cel ds-larga\" data-estado=\"atual\">3<span class=\"ds-gap\">+0:45</span></span><span class=\"ds-cel\">4</span><span class=\"ds-cel\">5</span></div>",
+      "css": ".ds-faixas { display: grid; grid-template-columns: 1fr 1fr 2.6fr 1fr 1fr; gap: 3px; font-family: 'Archivo Variable', system-ui, sans-serif; } .ds-cel { display: flex; align-items: center; justify-content: center; height: 40px; border-radius: 2px; background: #ffffff; color: #5f6578; font-size: 1.0625rem; font-weight: 800; font-stretch: 62%; font-variant-numeric: tabular-nums; white-space: nowrap; box-shadow: inset 0 -4px 0 #c5cad4, inset 0 0 0 1px #dcdfe6; } .ds-cel[data-estado='meta'] { box-shadow: inset 0 -4px 0 #12a150, inset 0 0 0 1px #dcdfe6; } .ds-cel[data-estado='recorde'] { box-shadow: inset 0 -4px 0 #7b2ff7, inset 0 0 0 1px #dcdfe6; } .ds-cel[data-estado='abaixo'] { box-shadow: inset 0 -4px 0 #f5b700, inset 0 0 0 1px #dcdfe6; } .ds-cel[data-estado='atual'] { background: #2433d6; color: #ffffff; box-shadow: none; } .ds-gap { margin-left: 6px; font-weight: 700; }"
+    },
+    {
+      "name": "Placa",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "A série no ar: a única superfície ultramar da tela, com entrada em varredura da esquerda para a direita.",
+      "html": "<section class=\"ds-placa\"><div class=\"ds-cab\"><p class=\"ds-posicao\">3</p><div><h1 class=\"ds-nome\">Tríceps na polia</h1><p class=\"ds-serie\"><span>Série 2 de 3</span><span class=\"ds-meta\">10–12 reps · 25 kg</span></p></div></div><ol class=\"ds-series\"><li data-feita><span>1</span><span>25 × 12</span></li><li data-atual><span>2</span><span>agora</span></li><li><span>3</span><span></span></li></ol></section>",
+      "css": ".ds-placa { display: flex; flex-direction: column; gap: 24px; padding: 20px; background: #2433d6; color: #ffffff; font-family: 'Archivo Variable', system-ui, sans-serif; animation: ds-varre 420ms cubic-bezier(0.16, 1, 0.3, 1) both; } @keyframes ds-varre { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } } @media (prefers-reduced-motion: reduce) { .ds-placa { animation: none; } } .ds-cab { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 16px; } .ds-posicao { margin: 0; font-size: 3.5rem; font-weight: 800; font-stretch: 62%; line-height: 0.85; color: #cdd1fa; } .ds-nome { margin: 0; font-size: 2.125rem; font-weight: 750; font-stretch: 85%; line-height: 1.05; letter-spacing: -0.01em; } .ds-serie { display: flex; flex-direction: column; gap: 2px; margin: 8px 0 0; font-weight: 700; } .ds-meta { font-weight: 500; color: #cdd1fa; } .ds-series { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 3px; margin: 0; padding: 0; list-style: none; } .ds-series li { display: flex; flex-direction: column; justify-content: center; min-height: 44px; padding: 4px 8px; border-radius: 2px; background: rgb(255 255 255 / 0.08); color: #cdd1fa; font-size: 0.8125rem; font-weight: 700; font-stretch: 75%; line-height: 1.15; font-variant-numeric: tabular-nums; } .ds-series li[data-feita] { background: rgb(255 255 255 / 0.18); color: #ffffff; } .ds-series li[data-atual] { box-shadow: inset 0 0 0 2px #ffffff; color: #ffffff; }"
+    },
+    {
+      "name": "Ajuste",
+      "kind": "input",
+      "refersTo": "field-value",
+      "description": "Campo de carga/reps na placa: rótulo colado, número condensado gigante, − e + largos para o polegar.",
+      "html": "<div class=\"ds-fundo\"><label class=\"ds-ajuste\"><span class=\"ds-rotulo\">Carga · kg</span><span class=\"ds-linha\"><button class=\"ds-mm\" aria-label=\"Menos\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 12h14\"/></svg></button><input class=\"ds-valor\" value=\"25\" inputmode=\"decimal\"><button class=\"ds-mm\" aria-label=\"Mais\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg></button></span></label></div>",
+      "css": ".ds-fundo { padding: 20px; background: #2433d6; font-family: 'Archivo Variable', system-ui, sans-serif; } .ds-ajuste { display: flex; flex-direction: column; gap: 6px; } .ds-rotulo { font-size: 0.75rem; font-weight: 700; font-stretch: 85%; letter-spacing: 0.08em; text-transform: uppercase; color: #cdd1fa; } .ds-linha { display: grid; grid-template-columns: 72px minmax(0, 1fr) 72px; align-items: center; border-block: 1px solid rgb(255 255 255 / 0.3); } .ds-mm { display: grid; place-items: center; height: 64px; padding: 0; border: 0; border-radius: 3px; background: transparent; color: #ffffff; cursor: pointer; } .ds-mm:hover, .ds-mm:active { background: rgb(255 255 255 / 0.14); } .ds-mm:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; } .ds-valor { width: 100%; min-width: 0; padding: 8px 0; border: 0; background: transparent; color: #ffffff; caret-color: #ffffff; font: inherit; font-size: 5.5rem; font-weight: 800; font-stretch: 62%; line-height: 1; text-align: center; font-variant-numeric: tabular-nums lining-nums; } .ds-valor:focus-visible { outline: 3px solid #ffffff; outline-offset: -2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Torre de Tempos",
+    "overview": "O treino do dia é uma prova ao vivo lida numa torre de tempos de transmissão de corrida. Cada exercício tem posição e estado; só a série atual está no ar. O sistema vive em fundo branco de estúdio, com tinta azul-noite, fios finos de 1px e uma única placa invertida em ultramar por tela, que é a coisa que a pessoa está fazendo agora. Tudo o mais é tabela: linhas, posições, faixas de estado.\n\nA densidade é de gráfico de transmissão: números condensados, tabulares e enormes onde a pessoa precisa ler de longe com o celular numa mão (carga, repetições, contagem do descanso), texto em largura normal onde precisa ler de perto. A grade é rígida, em células de 8px, e a separação é feita por fios, nunca por campos cinza ou cartões. O movimento imita grafismo de TV: a placa entra varrendo da esquerda para a direita, a torre aberta desce de cima para baixo, e o fim do descanso inverte a tela inteira uma vez.\n\nO mundo recusa o padrão da categoria fitness: fundo escuro com verde-limão, cartões arredondados e anéis de progresso.",
+    "keyCharacteristics": [
+      "Fundo branco de estúdio, separação por fios de 1px.",
+      "Uma única placa ultramar preenchida por tela.",
+      "Estados da cronometragem como faixas finas: verde, roxo, amarelo, cinza.",
+      "Archivo variável: números condensados (62%) tabulares, texto em largura normal.",
+      "Grade de células de 8px; costuras de 3px entre células irmãs.",
+      "Movimento de grafismo de transmissão, estático com movimento reduzido."
+    ],
+    "rules": [
+      { "name": "The Uma Placa Rule", "body": "Exatamente uma superfície preenchida (invertida) por tela: na sessão, a placa da série ou do descanso; em Hoje, o CTA de começar/retomar ou a placa de retomar; no Resumo, o CTA. A linha atual da torre é tinta ultramar com faixa sobre branco em todo lugar, e só vira preenchida dentro do painel da torre aberta no celular, onde ela é a única placa.", "section": "colors" },
+      { "name": "The Faixa Fina Rule", "body": "As cores de estado aparecem como faixas de 4px na linha da torre, barras inferiores de 4px nas células recolhidas e quadradinhos de 12px na legenda. Nunca como fundo de área grande.", "section": "colors" },
+      { "name": "The Estúdio Branco Rule", "body": "O chão é sempre branco puro; a separação é feita por fios de 1px, nunca por campos cinza.", "section": "colors" },
+      { "name": "The Número Condensado Rule", "body": "Todo número lido em movimento é Archivo a 800 e largura 62%, tabular. Texto para ler de perto fica na largura normal.", "section": "typography" },
+      { "name": "The Sem Sobretítulo Rule", "body": "Nada de rótulo pequeno acima de título. Estado e contexto entram na própria linha (\"Próximo treino · 6 exercícios · cerca de 50 min\").", "section": "typography" },
+      { "name": "The Uma Linha Rule", "body": "Resultados são uma linha tabular, não células de métrica com número gigante e legenda.", "section": "typography" },
+      { "name": "The Grade de Células Rule", "body": "Espaçamento em múltiplos de 8px; a costura de 3px é a única exceção sistemática.", "section": "layout" },
+      { "name": "The Polegar Rule", "body": "Na placa, a ação principal fica na base; desfazer fica no topo da placa, longe dela; ações destrutivas ficam isoladas por espaço e fio.", "section": "layout" },
+      { "name": "The Sombra Funcional Rule", "body": "Sombra só para algo que sai do plano por estado ou sobreposição. Nunca decorativa, nunca em repouso.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** manter exatamente uma superfície ultramar preenchida por tela (placa, CTA ou placa de retomar).",
+      "**Do** desenhar a linha atual da torre como tinta e faixa ultramar sobre branco; preencher só no painel da torre aberta no celular.",
+      "**Do** usar números Archivo 800 a 62% de largura, tabulares, para tudo que é lido em movimento.",
+      "**Do** separar com fios de 1px (fio) sobre branco puro.",
+      "**Do** espaçar em múltiplos de 8px, com costura de 3px entre células irmãs.",
+      "**Do** mostrar estado como faixa de 4px, barra inferior de 4px ou quadradinho de 12px na legenda; roxo vence amarelo.",
+      "**Do** mostrar a imagem inteira (contain) numa célula da largura do conteúdo, e recolher a célula quando não houver imagem.",
+      "**Do** usar a varredura da esquerda para a direita na placa, a de cima para baixo no painel da torre e a inversão única no fim do descanso, todas desligadas com movimento reduzido."
+    ],
+    "donts": [
+      "**Don't** pôr rótulo pequeno (sobretítulo) acima de títulos; o estado entra na própria linha.",
+      "**Don't** montar células de métrica com número gigante e legenda; resultado é uma linha tabular.",
+      "**Don't** usar campos cinza ou cartões para separar conteúdo sobre o branco.",
+      "**Don't** pintar áreas grandes com verde, roxo ou amarelo.",
+      "**Don't** usar fundo escuro com verde-limão, cartões arredondados ou anéis de progresso.",
+      "**Don't** usar sombra em repouso ou como decoração.",
+      "**Don't** passar de 6px de raio (exceção: o interruptor)."
+    ]
+  }
+}
