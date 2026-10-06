@@ -1,7 +1,8 @@
-// PROVISÓRIO: é o estilo do teste de outubro/2026. Quando a identidade visual for definida (fase 3),
-// troque este texto e regere tudo com `npm run imagens:gerar -- --forcar`.
+// Estilo da Torre de Tempos: fundo branco puro, para a imagem fundir com a célula branca da placa
+// (a imagem é exibida inteira, sem corte, numa célula da largura da coluna). Mudou o estilo? Regere tudo com
+// `npm run imagens:gerar -- --forcar`.
 export const ESTILO =
-  'Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, neutral light gray studio background, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body.'
+  'Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body.'
 
 /** Instrução para editar o quadro 1 até o quadro 2 sem perder a continuidade. */
 export const CONTINUIDADE =
