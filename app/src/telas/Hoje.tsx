@@ -30,14 +30,14 @@ export default function Hoje() {
   if (!plano) {
     return (
       <main className="hoje hoje-vazio">
-        <h1 className="hoje-titulo">Você ainda não tem um plano</h1>
+        <h1 className="hoje-titulo">Seu plano de treino, montado pela IA</h1>
         <p className="hoje-texto">
-          O treino do dia aparece aqui depois que a IA montar o seu plano. O questionário completo chega em breve; por
-          enquanto, dá para gerar um plano de teste.
+          Responda seis perguntas rápidas: objetivo, experiência, dias, tempo, equipamento e limitações. A IA monta um
+          plano completo com exercícios do catálogo e explica o motivo de cada um.
         </p>
         <div className="hoje-base">
-          <button type="button" className="botao botao-primario botao-largo" onClick={() => navegar('/diagnostico')}>
-            Gerar plano de teste
+          <button type="button" className="botao botao-primario botao-largo" onClick={() => navegar('/comecar')}>
+            Montar meu plano
           </button>
         </div>
       </main>
@@ -135,7 +135,10 @@ export default function Hoje() {
           <span>Som no fim do descanso</span>
         </label>
         <p className="hoje-plano">
-          Plano: {plano.plano.nome} · {plano.plano.duracaoSemanas} semanas
+          Plano: {plano.plano.nome} · {plano.plano.duracaoSemanas} semanas ·{' '}
+          <button type="button" className="botao botao-texto botao-inline" onClick={() => navegar('/comecar')}>
+            Refazer plano
+          </button>
         </p>
       </section>
 
