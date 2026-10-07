@@ -27,6 +27,14 @@
     "quadros": 2,
     "v": "bcb2cef6"
   },
+  "crucifixo-reto-halteres": {
+    "quadros": 2,
+    "v": "ab6a77d2"
+  },
+  "crucifixo-inclinado-halteres": {
+    "quadros": 2,
+    "v": "66fc9eb9"
+  },
   "crucifixo-maquina": {
     "quadros": 2,
     "v": "79404124"
@@ -103,6 +111,14 @@
     "quadros": 2,
     "v": "99d28c03"
   },
+  "remada-cavalinho": {
+    "quadros": 2,
+    "v": "f0985b90"
+  },
+  "remada-invertida": {
+    "quadros": 2,
+    "v": "2a8fa13e"
+  },
   "remada-elastico": {
     "quadros": 2,
     "v": "db4c0234"
@@ -110,6 +126,10 @@
   "pulldown-bracos-estendidos": {
     "quadros": 2,
     "v": "b8a2512a"
+  },
+  "hiperextensao-lombar": {
+    "quadros": 2,
+    "v": "8fd394dc"
   },
   "superman": {
     "quadros": 2,
@@ -139,9 +159,17 @@
     "quadros": 2,
     "v": "2a3c0727"
   },
+  "elevacao-lateral-polia": {
+    "quadros": 2,
+    "v": "e37fcd14"
+  },
   "elevacao-lateral-elastico": {
     "quadros": 2,
     "v": "c3a5061e"
+  },
+  "elevacao-frontal-halteres": {
+    "quadros": 2,
+    "v": "597149dd"
   },
   "crucifixo-inverso-halteres": {
     "quadros": 2,
@@ -175,6 +203,10 @@
     "quadros": 2,
     "v": "6fffa4d1"
   },
+  "rosca-martelo": {
+    "quadros": 2,
+    "v": "0ab930a0"
+  },
   "rosca-scott-barra": {
     "quadros": 2,
     "v": "04ba9f7d"
@@ -202,6 +234,10 @@
   "triceps-corda": {
     "quadros": 2,
     "v": "161bf9cc"
+  },
+  "triceps-polia-acima-cabeca": {
+    "quadros": 2,
+    "v": "3205a9d2"
   },
   "triceps-testa-barra": {
     "quadros": 2,
@@ -231,6 +267,10 @@
     "quadros": 2,
     "v": "0903fa1e"
   },
+  "rosca-inversa-barra": {
+    "quadros": 2,
+    "v": "2783e99c"
+  },
   "agachamento-livre-barra": {
     "quadros": 2,
     "v": "36f8dfb7"
@@ -238,6 +278,10 @@
   "agachamento-frontal": {
     "quadros": 2,
     "v": "5e4198af"
+  },
+  "agachamento-goblet": {
+    "quadros": 2,
+    "v": "fc0b1a1f"
   },
   "agachamento-peso-corporal": {
     "quadros": 2,
@@ -254,6 +298,10 @@
   "agachamento-sumo-halter": {
     "quadros": 2,
     "v": "a5ec673c"
+  },
+  "agachamento-salto": {
+    "quadros": 2,
+    "v": "3c401d03"
   },
   "agachamento-isometrico-parede": {
     "quadros": 1,
@@ -295,9 +343,25 @@
     "quadros": 2,
     "v": "b251c686"
   },
+  "salto-caixa": {
+    "quadros": 2,
+    "v": "7bb3d712"
+  },
   "levantamento-terra": {
     "quadros": 2,
     "v": "2d61b6a0"
+  },
+  "levantamento-terra-romeno": {
+    "quadros": 2,
+    "v": "b4dbb7ec"
+  },
+  "stiff-barra": {
+    "quadros": 2,
+    "v": "9a8c56eb"
+  },
+  "stiff-halteres": {
+    "quadros": 2,
+    "v": "260727bb"
   },
   "stiff-unilateral-halter": {
     "quadros": 2,
@@ -311,9 +375,21 @@
     "quadros": 2,
     "v": "118c8e75"
   },
+  "cadeira-flexora": {
+    "quadros": 2,
+    "v": "445821ca"
+  },
+  "flexora-em-pe": {
+    "quadros": 2,
+    "v": "cfebc655"
+  },
   "elevacao-pelvica-barra": {
     "quadros": 2,
     "v": "0a2e1df4"
+  },
+  "elevacao-pelvica-maquina": {
+    "quadros": 2,
+    "v": "1a8197fd"
   },
   "ponte-gluteo": {
     "quadros": 2,
@@ -322,6 +398,10 @@
   "ponte-gluteo-unilateral": {
     "quadros": 2,
     "v": "67006d6c"
+  },
+  "gluteo-polia": {
+    "quadros": 2,
+    "v": "bf75f3ff"
   },
   "coice-quatro-apoios": {
     "quadros": 2,
@@ -335,6 +415,10 @@
     "quadros": 2,
     "v": "13779ec0"
   },
+  "kettlebell-swing": {
+    "quadros": 2,
+    "v": "66c7afc7"
+  },
   "cadeira-adutora": {
     "quadros": 2,
     "v": "35e2f043"
@@ -346,6 +430,10 @@
   "panturrilha-sentado": {
     "quadros": 2,
     "v": "23dd3a04"
+  },
+  "panturrilha-leg-press": {
+    "quadros": 2,
+    "v": "f7ae131f"
   },
   "panturrilha-peso-corporal": {
     "quadros": 2,
@@ -379,6 +467,18 @@
     "quadros": 2,
     "v": "3aa1aa35"
   },
+  "abdominal-bicicleta": {
+    "quadros": 2,
+    "v": "9bcb7bb5"
+  },
+  "rotacao-russa": {
+    "quadros": 2,
+    "v": "703f2f7b"
+  },
+  "dead-bug": {
+    "quadros": 2,
+    "v": "e0ee4fa3"
+  },
   "perdigueiro": {
     "quadros": 2,
     "v": "fce51e76"
@@ -391,9 +491,17 @@
     "quadros": 2,
     "v": "26bd018a"
   },
+  "abdominal-polia": {
+    "quadros": 2,
+    "v": "52d353d8"
+  },
   "abdominal-maquina": {
     "quadros": 2,
     "v": "0600e640"
+  },
+  "pallof-press": {
+    "quadros": 2,
+    "v": "709a0ce4"
   },
   "roda-abdominal": {
     "quadros": 2,
@@ -410,6 +518,10 @@
   "thruster-halteres": {
     "quadros": 2,
     "v": "abcdc3f1"
+  },
+  "caminhada-fazendeiro": {
+    "quadros": 2,
+    "v": "a773e69b"
   },
   "corrida-rua": {
     "quadros": 2,

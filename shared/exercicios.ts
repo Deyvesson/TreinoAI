@@ -260,7 +260,7 @@ export const EXERCICIOS = [
   { id: 'polichinelo', nome: 'Polichinelo', apelidos: ['Jumping jack'], grupo: 'corpo-inteiro', secundarios: ['cardio'], padrao: 'cardio', tipo: 'cardio', equipamento: [], medida: 'tempo', nivel: 'iniciante' },
   { id: 'thruster-halteres', nome: 'Thruster com halteres', apelidos: ['Thruster'], grupo: 'corpo-inteiro', secundarios: ['quadriceps', 'ombros', 'gluteos'], padrao: 'agachar', tipo: 'composto', equipamento: ['halteres'], medida: 'carga-reps', nivel: 'intermediario' },
   { id: 'caminhada-fazendeiro', nome: 'Caminhada do fazendeiro', apelidos: ['Farmer walk'], grupo: 'corpo-inteiro', secundarios: ['antebracos', 'trapezio', 'abdomen'], padrao: 'carregar', tipo: 'composto', equipamento: ['halteres'], medida: 'carga-tempo', nivel: 'iniciante' },
-  { id: 'levantamento-turco', nome: 'Levantamento turco com kettlebell', apelidos: ['Levantamento turco', 'Turkish get-up'], grupo: 'corpo-inteiro', secundarios: ['ombros', 'abdomen', 'gluteos'], padrao: 'core', tipo: 'composto', equipamento: ['kettlebell'], medida: 'carga-reps', unilateral: true, nivel: 'avancado' },
+  { id: 'levantamento-turco', nome: 'Levantamento turco com kettlebell', apelidos: ['Levantamento turco', 'Turkish get-up'], grupo: 'corpo-inteiro', secundarios: ['ombros', 'abdomen', 'gluteos'], padrao: 'core', tipo: 'composto', equipamento: ['kettlebell'], medida: 'carga-reps', unilateral: true, nivel: 'avancado', descontinuado: true },
 
   // Cardio
   { id: 'corrida-rua', nome: 'Corrida na rua', apelidos: ['Corrida'], grupo: 'cardio', padrao: 'cardio', tipo: 'cardio', equipamento: [], medida: 'distancia-tempo', nivel: 'iniciante' },

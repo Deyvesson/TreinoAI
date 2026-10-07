@@ -21,6 +21,23 @@ import { gerarRevisao } from './revisao.ts'
 
 const LADO_FINAL = 768
 
+/** Centraliza a figura na horizontal (pelo recorte do fundo branco), para o espelho não deslocar a pessoa. */
+async function centralizar(png: Buffer): Promise<Buffer> {
+  const { info } = await sharp(png).trim({ background: '#ffffff', threshold: 12 }).toBuffer({ resolveWithObject: true })
+  const meta = await sharp(png).metadata()
+  const largura = meta.width ?? 1024
+  const deslocamento = Math.round((largura - info.width) / 2) + (info.trimOffsetLeft ?? 0)
+  if (Math.abs(deslocamento) < 8) return png
+  const esquerda = Math.max(0, -deslocamento)
+  const recorte = await sharp(png)
+    .extract({ left: esquerda, top: 0, width: largura - Math.abs(deslocamento), height: meta.height ?? 1024 })
+    .toBuffer()
+  return sharp({ create: { width: largura, height: meta.height ?? 1024, channels: 3, background: '#ffffff' } })
+    .composite([{ input: recorte, left: Math.max(0, deslocamento), top: 0 }])
+    .png()
+    .toBuffer()
+}
+
 const existe = (arquivo: string) =>
   access(arquivo).then(
     () => true,
@@ -85,8 +102,12 @@ await emParalelo(alvo, paralelo, async (e: Exercicio) => {
     if (pose.espelho && pose.fim) {
       const bruta1 = path.join(PASTA_BRUTAS, `${e.id}-1.png`)
       const reaproveitar = !forcar && (await existe(bruta1))
-      const quadro1 = reaproveitar ? await readFile(bruta1) : await gerarImagem(imagem, prompts.inicial)
-      if (!reaproveitar || !(await existe(path.join(PASTA_SAIDA, `${e.id}-1.webp`)))) {
+      const quadro1 = await centralizar(reaproveitar ? await readFile(bruta1) : await gerarImagem(imagem, prompts.inicial))
+      if (reaproveitar) {
+        // Quadro 1 já existia (talvez refinado): só recentraliza a imagem, mantendo a proveniência registrada.
+        await writeFile(bruta1, quadro1)
+        await sharp(quadro1).resize(LADO_FINAL, LADO_FINAL).webp({ quality: 80, effort: 5 }).toFile(path.join(PASTA_SAIDA, `${e.id}-1.webp`))
+      } else {
         await salvar(e.id, 1, quadro1, prompts.inicial, imagem.deployment)
       }
       const espelhado = await sharp(quadro1).flop().png().toBuffer()

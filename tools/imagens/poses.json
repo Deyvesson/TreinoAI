@@ -340,9 +340,8 @@
   },
   "rosca-inversa-barra": {
     "camera": "frontal",
-    "inverso": true,
     "inicio": "Bottom position, facing the camera: standing upright, arms hanging straight down, the barbell in front of the thighs, same overhand (pronated) grip at shoulder width: the backs of the hands and the knuckles face the camera, thumbs wrapped under the bar.",
-    "fim": "One single scene with one single person, not a split or multi-panel image. Reverse barbell curl (overhand / pronated grip), top position, the lifter facing the camera: standing upright, feet hip-width apart, upper arms pinned to the sides, elbows bent, the barbell (one long straight bar with a plate on each end) raised to just in front of the upper chest. The hands are clearly visible: overhand grip at shoulder width, the fists on top of the bar with the knuckles pointing up, the backs of the hands facing up and toward the lifter, wrists straight in line with the forearms, thumbs under the bar. Never a palms-up biceps-curl grip."
+    "fim": "Top position, facing the camera: upper arms pinned to the sides, elbows fully bent, forearms vertical, barbell at the front of the shoulders. The palms face the camera, fingers wrapping over the top of the bar toward the camera, backs of the hands toward the lifter’s chest, wrists straight."
   },
   "agachamento-livre-barra": {
     "camera": "diagonal",
@@ -478,15 +477,15 @@
     "fim": "Bend both knees to bring the roller toward your buttocks, stopping around 90 degrees of knee flexion; keep your thighs and hips against the bench, spine neutral, and avoid lifting your pelvis."
   },
   "cadeira-flexora": {
-    "camera": "diagonal",
-    "inverso": true,
-    "inicio": "Seated leg curl machine, start position: sitting upright with the back against the backrest, hands on the side handles, the thigh pad pressing down on top of the thighs just above the knees. Both legs extended straight forward at seat height, with the backs of the lower legs, just above the heels, resting on top of the lower roller pad.",
-    "fim": "Seated leg curl machine, end position: sitting upright with the back against the backrest, hands on the side handles, the thigh pad pressing down on top of the thighs just above the knees. Both knees are bent about 90 degrees or more, so the lower legs point down and slightly back under the seat; the backs of the lower legs, just above the heels, are still on top of the lower roller pad, which has been pushed down and back with them."
+    "camera": "lateral",
+    "inicio": "Seated leg curl machine, exact side profile: the lifter sits upright with the back against the backrest and hands on the side handles; a padded thigh bar presses down on TOP of the thighs just above the knees. The lower roller pad is always BEHIND and UNDER the lower legs, touching the back of the ankles just above the heels; nothing is ever in front of the shins. Start position: both legs extended straight forward at seat height, knees straight, with the backs of the lower legs resting ON TOP of the roller pad, which sits under the calves near the heels, out in front of the seat.",
+    "fim": "Seated leg curl machine, exact side profile: the lifter sits upright with the back against the backrest and hands on the side handles; a padded thigh bar presses down on TOP of the thighs just above the knees. The lower roller pad is always BEHIND and UNDER the lower legs, touching the back of the ankles just above the heels; nothing is ever in front of the shins. End position: the knees bend about 90 degrees, so the lower legs point straight down, vertical, with the shins and the front of the ankles fully visible facing forward, in FRONT of the roller pad. The roller pad has been pushed down and back by the backs of the ankles and is now behind the lower legs, between the calves and the front edge of the seat. The thighs stay on the seat under the thigh bar."
   },
   "flexora-em-pe": {
     "camera": "lateral",
-    "inicio": "Stand upright facing the machine, holding its handles with both hands and keeping your torso steady against the front support pad; place the right ankle behind the padded roller, with the right knee nearly straight and the left foot planted on the platform. Keep your spine neutral and gaze forward.",
-    "fim": "Keep your torso and right thigh steady against the support, and curl the right heel upward toward your buttocks until the right knee is bent about 90 degrees, lifting the padded roller behind the ankle; keep the left foot planted and avoid arching your back."
+    "inverso": true,
+    "inicio": "Standing leg curl machine, exact side profile. The lifter stands upright facing the machine, chest and forearms resting on the machine’s upper support pad, hands on its handles; the left foot stands on the machine’s low platform. The machine is drawn complete and connected: a padded thigh support in front of the right thigh just above the knee, and an ankle roller pad mounted on the end of a rigid lever arm that is attached to the machine frame by a pivot at the height of the right knee, so the roller is clearly connected to the machine and never floating. The roller sits against the back of the right ankle, just above the heel. Start position: both legs straight, the right leg hanging vertical in line with the body, knee straight, the lever arm pointing straight down from the pivot with the roller behind the right ankle.",
+    "fim": "Standing leg curl machine, exact side profile. The lifter stands upright facing the machine, chest and forearms resting on the machine’s upper support pad, hands on its handles; the left foot stands on the machine’s low platform. The machine is drawn complete and connected: a padded thigh support in front of the right thigh just above the knee, and an ankle roller pad mounted on the end of a rigid lever arm that is attached to the machine frame by a pivot at the height of the right knee, so the roller is clearly connected to the machine and never floating. The roller sits against the back of the right ankle, just above the heel. End position: the right thigh stays vertical against the thigh support; only the lower leg rises behind the lifter until the knee is bent at 90 degrees and the right shin is horizontal, sole of the foot facing up and back. The lever arm has rotated up around the knee-height pivot, carrying the roller with the back of the ankle. The left leg stays straight on the platform."
   },
   "elevacao-pelvica-barra": {
     "camera": "lateral",
@@ -603,8 +602,8 @@
   "abdominal-bicicleta": {
     "camera": "frontal",
     "espelho": true,
-    "inicio": "Camera at floor level near the feet, looking along the body toward the head, the body centered and symmetric in the frame. Lying on the back, hands lightly behind the head with elbows wide, head and shoulder blades lifted off the floor, lower back pressed down, both legs raised off the floor. Twist to one side: the torso rotates so the RIGHT elbow moves toward the LEFT knee, which is pulled in toward the chest, while the RIGHT leg extends straight out, low above the floor.",
-    "fim": "The same twist to the opposite side: LEFT elbow toward the RIGHT knee, LEFT leg extended."
+    "inicio": "Camera directly overhead, looking straight down at the lifter lying on the floor: the head at the top of the frame, the feet at the bottom, the body centered on the vertical axis of the image. Hands lightly behind the head. The head and shoulders are lifted and the torso is twisted so the RIGHT ELBOW TOUCHES THE LEFT KNEE: the left knee is pulled in over the hips toward the chest and the right elbow crosses the body to meet it, while the left elbow stays back on its own side. The right leg is extended straight out, low above the floor.",
+    "fim": "The opposite side: the LEFT ELBOW touches the RIGHT KNEE, the left leg extended."
   },
   "rotacao-russa": {
     "camera": "frontal",
@@ -613,9 +612,10 @@
     "fim": "The same rotation to the opposite side: shoulders turned to the right, clasped hands beside the right hip."
   },
   "dead-bug": {
-    "camera": "lateral",
-    "inicio": "Lie on your back with arms reaching straight up over your shoulders, hips and knees bent to about 90 degrees, and shins parallel to the floor; keep your lower back gently pressed into the floor and your head resting neutrally.",
-    "fim": "Keeping your lower back pressed into the floor, extend your right leg until it hovers just above the floor and reach your left arm overhead until it is near the floor; the right hip and knee approach straight while the left shoulder opens overhead, with the other arm vertical and left leg held at about 90 degrees."
+    "camera": "diagonal",
+    "espelho": true,
+    "inicio": "Elevated camera beyond the feet, looking down along the body at about 45 degrees; the lifter lies on the back on the floor, centered on the vertical axis of the image, head at the top, feet toward the camera. Lower back pressed to the floor. Contralateral dead bug position: the LEFT ARM is extended straight back overhead, just above the floor beyond the head, while the RIGHT LEG is extended straight out, low and hovering just above the floor. At the same time the RIGHT ARM points straight up to the ceiling and the LEFT LEG stays raised with hip and knee both bent at 90 degrees, shin parallel to the floor.",
+    "fim": "The opposite side: RIGHT arm extended overhead and LEFT leg extended low; LEFT arm pointing up and RIGHT leg bent at 90 degrees."
   },
   "perdigueiro": {
     "camera": "diagonal",
