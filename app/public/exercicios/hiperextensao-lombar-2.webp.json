@@ -1,0 +1,6 @@
+{
+  "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: lateral view. Exercise: Hiperextensão lombar (also known as Extensão lombar, Banco romano). Pose: On a 45 degree hyperextension bench (roman chair): feet locked under the ankle pads on the low footplate, the front of the thighs resting on the angled hip pad with the pad just below the hip crease, legs straight along the 45 degree line of the bench. Bottom position, at full depth: the body folds sharply at the hips over the pad and the torso hangs straight down, vertical and perpendicular to the floor, head pointing at the floor and only a short distance above it, so the torso and the legs form a tight angle at the hips. Back neutral, not rounded; arms crossed over the chest (hands not behind the head).",
+  "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T14:13:52.475Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

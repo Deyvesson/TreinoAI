@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Keeping your back against the bench and upper arms still, bend both elbows to curl the dumbbells toward your shoulders, palms still facing forward and wrists straight. Stop before your elbows drift forward, then lower under control to the starting position.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.702Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

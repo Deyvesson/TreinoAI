@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Lower the bar under control to the mid-chest, keeping your wrists straight and elbows angled about 45–75 degrees from your torso. Keep your feet planted, shoulder blades retracted, and head resting on the bench.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.381Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

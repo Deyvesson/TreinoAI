@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Curl the barbell toward your shoulders by bending both elbows, keeping your upper arms pressed to the pad and your wrists straight; stop when your elbows are deeply bent and the bar is near shoulder height. Keep your chest on the pad, spine neutral, and head aligned without swinging.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.688Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

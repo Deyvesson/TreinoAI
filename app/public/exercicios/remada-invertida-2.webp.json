@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Keep the hands exactly where they hold the equipment: same grip direction, same hand width and same spot on the bar, handle or machine, unless the new pose explicitly changes the grip. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Keeping exactly the same grip as in the start position (overhand, palms facing down and forward, hands slightly wider than shoulder-width, on the same spots of the bar, wrists straight), and with the body still straight from head to heels and heels planted, pull the chest up until the bar nearly touches the mid-chest: elbows bent about 90 degrees and drawn back and out at about 45 degrees from the torso.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T14:08:19.206Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Bend your hips and knees to lower into a sumo squat until your thighs are about parallel to the floor, keeping your knees tracking in line with your toes and your heels grounded. Keep the dumbbell hanging between your legs without touching the floor, with your chest lifted, spine neutral, and head aligned with your torso.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.808Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

@@ -23,6 +23,7 @@ export async function gerarRevisao(): Promise<void> {
 
   const cartoes: string[] = []
   for (const e of EXERCICIOS as readonly Exercicio[]) {
+    if (e.descontinuado) continue
     const v1 = await versao(path.join(PASTA_SAIDA, `${e.id}-1.webp`))
     if (v1 === null) continue
     const v2 = await versao(path.join(PASTA_SAIDA, `${e.id}-2.webp`))

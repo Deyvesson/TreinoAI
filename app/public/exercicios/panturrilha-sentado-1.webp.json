@@ -1,0 +1,6 @@
+{
+  "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: lateral view. Exercise: Panturrilha sentado (also known as Gêmeos sentado, Sóleo). Pose: Sit upright on the calf-raise machine with knees bent about 90 degrees and the padded lever resting securely across your lower thighs, just above the knees. Place the balls of your feet on the platform with heels hanging off its edge, feet hip-width apart, and lower your heels under control into a comfortable stretch while keeping your back neutral and head aligned.",
+  "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.947Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

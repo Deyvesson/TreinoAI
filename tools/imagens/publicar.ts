@@ -2,11 +2,29 @@
 // O manifesto guarda quantos quadros cada exercício tem e um hash para invalidar o cache offline.
 // Cada imagem publicada leva sua proveniência em `<imagem>.webp.json` (prompt exato e origem).
 import { createHash } from 'node:crypto'
-import { copyFile, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import sharp from 'sharp'
 import { EXERCICIO_POR_ID, EXERCICIOS, type Exercicio } from '../../shared/exercicios.ts'
 import { ARQ_APROVADOS, ARQ_MANIFESTO, ARQ_POSES, PASTA_PUBLICA, PASTA_SAIDA, lerFoundry, lerJson, type Poses } from './config.ts'
 import { promptsDoExercicio, proveniencia } from './prompts.ts'
+
+// Clareia só o fundo quase branco (rampa suave entre CLARO e BRANCO no canal mais escuro do pixel),
+// para a imagem fundir com a célula branca do app sem tocar na figura nem apagar a sombra de contato.
+const CLARO = 218
+const BRANCO = 238
+const POS_PROCESSAMENTO = `fundo clareado na publicação: pixels com canal mínimo acima de ${CLARO} levados gradualmente ao branco puro (#FFFFFF) até ${BRANCO}`
+
+async function clarearFundo(webp: Buffer): Promise<Buffer> {
+  const { data, info } = await sharp(webp).removeAlpha().raw().toBuffer({ resolveWithObject: true })
+  for (let i = 0; i < data.length; i += 3) {
+    const minimo = Math.min(data[i], data[i + 1], data[i + 2])
+    if (minimo <= CLARO) continue
+    const t = Math.min(1, (minimo - CLARO) / (BRANCO - CLARO))
+    for (let k = 0; k < 3; k++) data[i + k] = Math.round(data[i + k] + (255 - data[i + k]) * t)
+  }
+  return sharp(data, { raw: { width: info.width, height: info.height, channels: 3 } }).webp({ quality: 80, effort: 5 }).toBuffer()
+}
 
 interface ItemManifesto {
   quadros: 1 | 2
@@ -42,13 +60,15 @@ for (const e of EXERCICIOS as readonly Exercicio[]) {
     const quadro = (i + 1) as 1 | 2
     const origem = path.join(PASTA_SAIDA, arquivos[i])
     const destino = path.join(PASTA_PUBLICA, arquivos[i])
-    await copyFile(origem, destino)
+    const final = await clarearFundo(conteudo)
+    await writeFile(destino, final)
     // Gerações anteriores à proveniência automática: reconstrói o prompt a partir do estilo e das poses atuais.
     const sidecar = await readFile(`${origem}.json`, 'utf8').catch(() => null)
     const prompt = quadro === 1 ? prompts?.inicial : prompts?.final
-    await writeFile(`${destino}.json`, sidecar ?? proveniencia(prompt ?? `Exercício ${e.nome}, quadro ${quadro}`, imagem.deployment, quadro))
+    const registro = JSON.parse(sidecar ?? proveniencia(prompt ?? `Exercício ${e.nome}, quadro ${quadro}`, imagem.deployment, quadro))
+    await writeFile(`${destino}.json`, JSON.stringify({ ...registro, postprocess: POS_PROCESSAMENTO }, null, 2) + '\n')
     publicados.add(arquivos[i])
-    hash.update(conteudo)
+    hash.update(final)
   }
   manifesto[e.id] = { quadros: conteudos[1] ? 2 : 1, v: hash.digest('hex').slice(0, 8) }
 }

@@ -16,10 +16,27 @@ import {
   type Destino,
   type Poses,
 } from './config.ts'
-import { promptsDoExercicio, proveniencia } from './prompts.ts'
+import { promptsDoExercicio, promptsInversos, proveniencia } from './prompts.ts'
 import { gerarRevisao } from './revisao.ts'
 
 const LADO_FINAL = 768
+
+/** Centraliza a figura na horizontal (pelo recorte do fundo branco), para o espelho não deslocar a pessoa. */
+async function centralizar(png: Buffer): Promise<Buffer> {
+  const { info } = await sharp(png).trim({ background: '#ffffff', threshold: 12 }).toBuffer({ resolveWithObject: true })
+  const meta = await sharp(png).metadata()
+  const largura = meta.width ?? 1024
+  const deslocamento = Math.round((largura - info.width) / 2) + (info.trimOffsetLeft ?? 0)
+  if (Math.abs(deslocamento) < 8) return png
+  const esquerda = Math.max(0, -deslocamento)
+  const recorte = await sharp(png)
+    .extract({ left: esquerda, top: 0, width: largura - Math.abs(deslocamento), height: meta.height ?? 1024 })
+    .toBuffer()
+  return sharp({ create: { width: largura, height: meta.height ?? 1024, channels: 3, background: '#ffffff' } })
+    .composite([{ input: recorte, left: Math.max(0, deslocamento), top: 0 }])
+    .png()
+    .toBuffer()
+}
 
 const existe = (arquivo: string) =>
   access(arquivo).then(
@@ -50,14 +67,14 @@ async function editarImagem(destino: Destino, referencia: Buffer, prompt: string
   return Buffer.from(corpo.data[0].b64_json, 'base64')
 }
 
-async function salvar(id: string, quadro: 1 | 2, png: Buffer, prompt: string, modelo: string) {
+async function salvar(id: string, quadro: 1 | 2, png: Buffer, prompt: string, modelo: string, inverso = false) {
   await writeFile(path.join(PASTA_BRUTAS, `${id}-${quadro}.png`), png)
   const webp = path.join(PASTA_SAIDA, `${id}-${quadro}.webp`)
   await sharp(png).resize(LADO_FINAL, LADO_FINAL).webp({ quality: 80, effort: 5 }).toFile(webp)
-  await writeFile(`${webp}.json`, proveniencia(prompt, modelo, quadro))
+  await writeFile(`${webp}.json`, proveniencia(prompt, modelo, quadro, inverso))
 }
 
-const { ids, forcar, soQuadro2, paralelo } = argumentos()
+const { ids, forcar, soQuadro2, paralelo, inverso: inversoPedido } = argumentos()
 const { imagem } = await lerFoundry()
 const poses = await lerJson<Poses>(ARQ_POSES, {})
 await mkdir(PASTA_BRUTAS, { recursive: true })
@@ -82,6 +99,30 @@ await emParalelo(alvo, paralelo, async (e: Exercicio) => {
   const prompts = promptsDoExercicio(e, pose)
   const inicio = Date.now()
   try {
+    if (pose.espelho && pose.fim) {
+      const bruta1 = path.join(PASTA_BRUTAS, `${e.id}-1.png`)
+      const reaproveitar = !forcar && (await existe(bruta1))
+      const quadro1 = await centralizar(reaproveitar ? await readFile(bruta1) : await gerarImagem(imagem, prompts.inicial))
+      if (reaproveitar) {
+        // Quadro 1 já existia (talvez refinado): só recentraliza a imagem, mantendo a proveniência registrada.
+        await writeFile(bruta1, quadro1)
+        await sharp(quadro1).resize(LADO_FINAL, LADO_FINAL).webp({ quality: 80, effort: 5 }).toFile(path.join(PASTA_SAIDA, `${e.id}-1.webp`))
+      } else {
+        await salvar(e.id, 1, quadro1, prompts.inicial, imagem.deployment)
+      }
+      const espelhado = await sharp(quadro1).flop().png().toBuffer()
+      await salvar(e.id, 2, espelhado, `Espelho horizontal do quadro 1 (lado oposto do movimento): ${pose.fim}`, 'sharp (espelhamento, sem nova geração)')
+      console.log(`  ✓ ${e.id} (${Math.round((Date.now() - inicio) / 1000)}s, quadro 2 espelhado)`)
+      return
+    }
+    if ((inversoPedido || pose.inverso) && pose.fim) {
+      const inv = promptsInversos(e, { ...pose, fim: pose.fim })
+      const quadro2 = await gerarImagem(imagem, inv.final)
+      await salvar(e.id, 2, quadro2, inv.final, imagem.deployment, true)
+      await salvar(e.id, 1, await editarImagem(imagem, quadro2, inv.inicial), inv.inicial, imagem.deployment, true)
+      console.log(`  ✓ ${e.id} (${Math.round((Date.now() - inicio) / 1000)}s, ordem inversa)`)
+      return
+    }
     const bruta1 = path.join(PASTA_BRUTAS, `${e.id}-1.png`)
     let quadro1: Buffer
     if (soQuadro2 || (!forcar && (await existe(bruta1)))) {

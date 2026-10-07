@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Drive through both feet and raise your hips until they are fully extended, forming a straight line from shoulders to knees; keep your shins nearly vertical and the padded lever across your hip crease. Pause with your glutes engaged without arching your lower back or flaring your ribs.",
+  "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:34:42.031Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

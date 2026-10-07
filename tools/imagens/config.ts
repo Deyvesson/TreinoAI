@@ -19,6 +19,16 @@ export interface Pose {
   inicio: string
   /** null = um quadro só (isometrias). */
   fim: string | null
+  /**
+   * Gera primeiro o quadro final (a pose difícil) e edita para o inicial. Útil quando algo rígido muda
+   * de ângulo (barra que gira num apoio) ou quando a amplitude final é grande demais para uma edição.
+   */
+  inverso?: boolean
+  /**
+   * Exercícios alternados (um lado e depois o outro): o quadro 2 é o espelho horizontal do quadro 1,
+   * sem nova geração. A câmera deve olhar ao longo do corpo para a pessoa não mudar de lugar.
+   */
+  espelho?: boolean
 }
 export type Poses = Record<string, Pose>
 
@@ -95,6 +105,8 @@ export function argumentos() {
     forcar: lista.includes('--forcar'),
     /** `--quadro 2`: refaz só o quadro 2, reaproveitando o quadro 1 já gerado. */
     soQuadro2: valor('quadro') === '2',
+    /** `--inverso`: força a ordem inversa (ver Pose.inverso) para os IDs desta execução. */
+    inverso: lista.includes('--inverso'),
     paralelo: Math.max(1, Number(valor('paralelo') ?? 4)),
   }
 }

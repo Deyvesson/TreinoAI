@@ -1,0 +1,6 @@
+{
+  "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: frontal view. Exercise: Remada alta com barra (also known as Remada alta, Upright row). Pose: Stand with feet hip-width apart, knees soft, torso upright and spine neutral; hold the bar in front of your thighs with an overhand, shoulder-width grip, arms extended and shoulders relaxed.",
+  "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.653Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

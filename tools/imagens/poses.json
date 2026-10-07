@@ -36,13 +36,13 @@
   },
   "crucifixo-reto-halteres": {
     "camera": "diagonal",
-    "inicio": "Lie face up on a flat adjustable bench with feet planted on the floor, head and back supported, and one dumbbell in each hand above the mid-chest. Keep palms facing each other, elbows softly bent, and wrists straight.",
-    "fim": "Lower both arms out to the sides in a wide arc until the upper arms are level with the torso and you feel a comfortable chest stretch; keep the same slight elbow bend, wrists straight, and shoulders resting on the bench."
+    "inicio": "Lying face up on a flat bench, feet flat on the floor, head and back on the bench. Both arms extended straight up above the chest, elbows very slightly bent, one dumbbell in each hand with a NEUTRAL grip: palms facing each other, and each dumbbell handle running parallel to the length of the body (pointing toward the head and the feet), never across the body as in a bench press. The two dumbbells almost touch directly above the chest.",
+    "fim": "Keeping exactly the same neutral grip and the same slight fixed elbow bend, the arms open wide out to the sides in a broad arc: upper arms level with the chest (not below the bench), dumbbells at chest height far out to each side, palms now facing up toward the ceiling and inward, handles still parallel to the length of the body. Chest open, shoulder blades pulled together."
   },
   "crucifixo-inclinado-halteres": {
     "camera": "diagonal",
-    "inicio": "Lie on an adjustable bench set to a 30–45° incline, feet flat and shoulder blades gently set against the bench. Hold a dumbbell in each hand above the upper chest, palms facing each other, elbows softly bent and wrists straight.",
-    "fim": "Keeping the same slight bend in your elbows, lower both arms out in a wide arc until the dumbbells are level with the upper chest and your elbows are just below shoulder height. Keep your chest lifted, back comfortably supported, and shoulders away from your ears."
+    "inicio": "Lying face up on an adjustable bench inclined about 30 to 45 degrees, feet flat on the floor, head and back on the bench. Both arms extended straight up above the upper chest, elbows very slightly bent, one dumbbell in each hand with a NEUTRAL grip: palms facing each other, and each dumbbell handle running parallel to the length of the body (pointing toward the head and the feet), never across the body as in a bench press. The two dumbbells almost touch directly above the upper chest.",
+    "fim": "Keeping exactly the same neutral grip and the same slight fixed elbow bend, the arms open wide out to the sides in a broad arc: upper arms level with the upper chest, dumbbells at shoulder-to-chest height far out to each side, palms now facing up and inward, handles still parallel to the length of the body. Chest open, shoulder blades pulled together."
   },
   "crucifixo-maquina": {
     "camera": "diagonal",
@@ -141,13 +141,14 @@
   },
   "remada-cavalinho": {
     "camera": "diagonal",
-    "inicio": "Stand straddling a barbell secured at one end, with the loaded end in front of you; hinge forward about 45 degrees with knees slightly bent, back flat, head aligned with spine, and both hands gripping the shaft just below the plates. Let your arms hang straight beneath your shoulders without rounding your back.",
-    "fim": "Keeping your torso and spine still, pull the bar toward your lower ribs, driving both elbows back close to your sides until they pass your torso; keep wrists straight and shoulders down, then return under control to the start."
+    "inicio": "Landmine T-bar row. one single straight, rigid barbell used as a landmine: its far end rests on the floor behind the lifter, the barbell runs forward between the lifter’s legs, and only its near end is loaded with one weight plate, right in front of the lifter’s shins. Standing astride the bar with feet shoulder-width apart, knees slightly bent, hips hinged so the torso leans forward about 45 degrees with a flat neutral back. Both hands grip the bar together just behind the plate, arms hanging straight down, the loaded end a few centimetres above the floor.",
+    "fim": "Same stance and the same 45 degree torso angle. The arms pull the loaded end of the barbell up until the hands and the plate are just below the lower chest, elbows bent past 90 degrees and driven back close to the ribs. The barbell stays one perfectly straight rigid bar: it pivots on its far end, which never leaves the floor behind the lifter, and it still passes between the legs.",
+    "inverso": true
   },
   "remada-invertida": {
     "camera": "lateral",
-    "inicio": "Lie face-up beneath a Smith machine bar set low, gripping it overhand slightly wider than shoulder-width; keep heels planted, legs straight, and body aligned from head to heels with arms extended and the bar above mid-chest.",
-    "fim": "Pull your chest toward the bar by driving your elbows back and squeezing your shoulder blades together, keeping your body straight, heels planted, and head neutral; bring your chest close to the bar without shrugging."
+    "inicio": "Lie face up beneath a fixed horizontal Smith machine bar set just above chest height, gripping it overhand slightly wider than shoulder-width; keep your body straight from head to heels, heels planted, arms fully extended, and shoulders controlled.",
+    "fim": "Keeping exactly the same grip as in the start position (overhand, palms facing down and forward, hands slightly wider than shoulder-width, on the same spots of the bar, wrists straight), and with the body still straight from head to heels and heels planted, pull the chest up until the bar nearly touches the mid-chest: elbows bent about 90 degrees and drawn back and out at about 45 degrees from the torso."
   },
   "remada-elastico": {
     "camera": "diagonal",
@@ -161,8 +162,9 @@
   },
   "hiperextensao-lombar": {
     "camera": "lateral",
-    "inicio": "Set your feet securely under the machine’s ankle pads, with the hip pad just below the hip crease; hinge at the hips until your torso angles downward, keeping your spine neutral, head in line with your torso, and arms crossed over your chest.",
-    "fim": "Raise your torso by extending at the hips until your body forms a straight line from head to heels; keep your spine neutral and stop without arching your lower back."
+    "inverso": true,
+    "inicio": "Top position: feet still locked under the ankle pads and thighs on the same hip pad, arms still crossed over the chest. The torso is raised until the whole body forms one straight line from heels to head along the 45 degree angle of the bench, hips fully extended, back neutral, without arching past the line.",
+    "fim": "On a 45 degree hyperextension bench (roman chair): feet locked under the ankle pads on the low footplate, the front of the thighs resting on the angled hip pad with the pad just below the hip crease, legs straight along the 45 degree line of the bench. Bottom position, at full depth: the body folds sharply at the hips over the pad and the torso hangs straight down, vertical and perpendicular to the floor, head pointing at the floor and only a short distance above it, so the torso and the legs form a tight angle at the hips. Back neutral, not rounded; arms crossed over the chest (hands not behind the head)."
   },
   "superman": {
     "camera": "lateral",
@@ -201,8 +203,9 @@
   },
   "elevacao-lateral-polia": {
     "camera": "frontal",
-    "inicio": "Stand upright with feet hip-width apart, the low pulley to your left. Hold its handle in your right hand with a neutral grip, arm relaxed slightly across the front of your body and hand near your left thigh; keep your spine neutral, head facing forward, and elbow softly bent.",
-    "fim": "Raise your right arm out to the side until it is about shoulder height, keeping the elbow softly bent, wrist neutral, and shoulder down without shrugging. Keep your torso still and spine neutral as the cable runs diagonally from your hand down to the low pulley on your left."
+    "inverso": true,
+    "inicio": "Front view: the lifter faces the camera. A single-stack cable machine stands at the lifter’s LEFT side, which is the RIGHT side of the image, and the lifter’s left hand rests on the machine frame for support. The lifter’s RIGHT arm, on the LEFT side of the image, holds a single D-handle attached to the machine’s LOW pulley, so the cable runs diagonally across the front of the body from the low pulley near the lifter’s left foot to the right hand. Start position: the right arm hangs down and slightly across the body, the handle in front of the left thigh, elbow very slightly bent, torso upright, feet hip-width apart.",
+    "fim": "Front view: the lifter faces the camera. A single-stack cable machine stands at the lifter’s LEFT side, which is the RIGHT side of the image, and the lifter’s left hand rests on the machine frame for support. The lifter’s RIGHT arm, on the LEFT side of the image, holds a single D-handle attached to the machine’s LOW pulley, so the cable runs diagonally across the front of the body from the low pulley near the lifter’s left foot to the right hand. Top position: the right arm is raised out to the right side (the left side of the image) until the hand reaches shoulder height, elbow slightly bent, palm facing down; the cable is pulled straight and taut on a diagonal from the low pulley, across the front of the body, up to the right hand. Torso upright and still, feet hip-width apart."
   },
   "elevacao-lateral-elastico": {
     "camera": "frontal",
@@ -210,9 +213,9 @@
     "fim": "Raise both arms out to the sides in the frontal plane until your hands reach shoulder height, keeping a slight bend in your elbows and wrists neutral as the band stretches from beneath your feet to your hands. Keep your torso still, spine neutral, and shoulders away from your ears."
   },
   "elevacao-frontal-halteres": {
-    "camera": "lateral",
-    "inicio": "Stand with feet hip-width apart, spine neutral, head aligned, and one dumbbell in each hand beside the front of your thighs, arms straight with a slight bend in the elbows and palms facing your body.",
-    "fim": "Raise both dumbbells forward to shoulder height with softly bent elbows and wrists neutral, keeping the weights in front of your torso, shoulders down, and spine still; do not lean back or shrug."
+    "camera": "diagonal",
+    "inicio": "Stand upright with feet hip-width apart, knees softly bent, spine neutral and head facing forward; hold one dumbbell in each hand in front of your thighs, palms facing your body, elbows softly bent about 15 degrees.",
+    "fim": "Raise both dumbbells forward to shoulder height, keeping the slight elbow bend and wrists straight; shoulders are flexed about 90 degrees, arms parallel to the floor, and torso remains still without leaning or shrugging."
   },
   "crucifixo-inverso-halteres": {
     "camera": "diagonal",
@@ -255,9 +258,10 @@
     "fim": "Keeping your upper arms still and torso upright, bend your right elbow to curl the dumbbell toward your right shoulder while turning your palm upward; stop before the elbow shifts forward, and keep the left arm extended at your side with its palm facing inward."
   },
   "rosca-martelo": {
-    "camera": "lateral",
-    "inicio": "Stand upright with feet hip-width apart, knees softly bent, spine neutral, and head facing forward. Hold a dumbbell in each hand at your sides with palms facing inward, wrists straight, elbows extended and close to your torso.",
-    "fim": "Keeping your upper arms still and elbows tucked beside your ribs, curl both dumbbells toward your shoulders until your elbows are bent about 90–110 degrees, maintaining the palms-in grip and straight wrists. Keep your torso steady, shoulders relaxed, and head facing forward."
+    "camera": "diagonal",
+    "inverso": true,
+    "inicio": "Bottom position: standing upright, feet hip-width apart, both arms hanging straight down at the sides with elbows extended, one dumbbell in each hand beside the thighs, neutral hammer grip: palms facing each other, thumbs up, each dumbbell handle horizontal and pointing forward, so one dumbbell head is in front of the fist and the other behind it.",
+    "fim": "Hammer curl, both arms together, top position: standing upright, feet hip-width apart, upper arms vertical and pinned to the sides of the torso, elbows fully bent so the forearms point up and the dumbbells are at shoulder height just in front of the shoulders, neutral hammer grip: palms facing each other, thumbs up, each dumbbell handle horizontal and pointing forward, so one dumbbell head is in front of the fist and the other behind it."
   },
   "rosca-scott-barra": {
     "camera": "diagonal",
@@ -295,9 +299,9 @@
     "fim": "Keeping your upper arms still and close to your torso, extend your elbows until your arms are nearly straight, pressing the rope down toward your thighs and slightly separating its ends; keep your wrists neutral, shoulders relaxed, and spine steady."
   },
   "triceps-polia-acima-cabeca": {
-    "camera": "diagonal",
-    "inicio": "Stand facing away from the high pulley with feet hip-width apart, knees softly bent, and both hands gripping the cable handle overhead; keep your elbows bent about 90 degrees beside your ears, the cable passing behind your head, and your spine neutral with your head facing forward.",
-    "fim": "Straighten both elbows until your arms are nearly fully extended overhead, keeping your upper arms close to your ears, shoulders steady, spine neutral, and the cable taut behind your head."
+    "camera": "lateral",
+    "inicio": "Lateral view. The lifter stands facing away from a cable machine, in a short staggered stance, torso upright with a slight forward lean. The pulley is set LOW, behind the lifter. Attachment: one thick black triceps rope looped through the cable clip, with two equal ends hanging from the clip and a rubber stopper on each end; one end in each hand, neutral grip. The cable and the rope are drawn complete and fully visible, one continuous connection from the low pulley, up behind the lifter, to the clip and the two rope ends in the hands; no part of the rope is hidden, faded or cut off. Start position: upper arms raised beside the head with the elbows pointing straight up, elbows fully bent, so the hands and the rope are behind the head at upper-back level.",
+    "fim": "Lateral view. The lifter stands facing away from a cable machine, in a short staggered stance, torso upright with a slight forward lean. The pulley is set LOW, behind the lifter. Attachment: one thick black triceps rope looped through the cable clip, with two equal ends hanging from the clip and a rubber stopper on each end; one end in each hand, neutral grip. The cable and the rope are drawn complete and fully visible, one continuous connection from the low pulley, up behind the lifter, to the clip and the two rope ends in the hands; no part of the rope is hidden, faded or cut off. End position: keeping the upper arms beside the head, the elbows extend until both arms are straight overhead, hands above the head with the two rope ends slightly apart, the cable now running taut from the low pulley up to the hands."
   },
   "triceps-testa-barra": {
     "camera": "lateral",
@@ -335,9 +339,9 @@
     "fim": "Keeping your forearms and elbows still on your thighs, curl both wrists to raise the dumbbells toward your forearms, then pause with wrists flexed; keep the movement controlled without bouncing or bending your elbows."
   },
   "rosca-inversa-barra": {
-    "camera": "diagonal",
-    "inicio": "Stand with feet hip-width apart, knees softly bent, spine neutral, and head aligned; hold a barbell in front of your thighs with an overhand grip slightly wider than shoulder-width, wrists straight, and elbows close to your sides.",
-    "fim": "Keeping your upper arms still and torso upright, curl the bar upward in front of your body until it reaches your lower chest and your elbows are bent; keep your wrists straight and avoid swinging or shrugging."
+    "camera": "frontal",
+    "inicio": "Bottom position, facing the camera: standing upright, arms hanging straight down, the barbell in front of the thighs, same overhand (pronated) grip at shoulder width: the backs of the hands and the knuckles face the camera, thumbs wrapped under the bar.",
+    "fim": "Top position, facing the camera: upper arms pinned to the sides, elbows fully bent, forearms vertical, barbell at the front of the shoulders. The palms face the camera, fingers wrapping over the top of the bar toward the camera, backs of the hands toward the lifter’s chest, wrists straight."
   },
   "agachamento-livre-barra": {
     "camera": "diagonal",
@@ -351,8 +355,8 @@
   },
   "agachamento-goblet": {
     "camera": "diagonal",
-    "inicio": "Stand with feet about shoulder-width apart, toes slightly turned out, holding one dumbbell vertically close to your chest with both hands cupping the upper end; keep your elbows tucked, spine neutral, and gaze forward.",
-    "fim": "Bend your hips and knees to lower until your thighs are about parallel to the floor, keeping your heels down, knees tracking over your toes, chest lifted, and the dumbbell close to your chest; keep your spine neutral and gaze forward."
+    "inicio": "Stand with feet about shoulder-width apart and toes turned slightly outward, holding one dumbbell vertically at chest height with both hands cupping its upper end and elbows tucked down; keep your chest lifted, spine neutral, and head aligned, with hips and knees nearly straight.",
+    "fim": "Bend your hips and knees to lower into a squat until your thighs are about parallel to the floor and hips and knees are each near 90 degrees; keep your heels planted, knees tracking over your toes, spine neutral, and the dumbbell held close to your chest."
   },
   "agachamento-peso-corporal": {
     "camera": "diagonal",
@@ -375,9 +379,10 @@
     "fim": "Bend your hips and knees to lower into a sumo squat until your thighs are about parallel to the floor, keeping your knees tracking in line with your toes and your heels grounded. Keep the dumbbell hanging between your legs without touching the floor, with your chest lifted, spine neutral, and head aligned with your torso."
   },
   "agachamento-salto": {
-    "camera": "lateral",
-    "inicio": "Stand with feet about shoulder-width apart, toes slightly turned out, arms relaxed by your sides, and spine neutral with your head facing forward.",
-    "fim": "At the jump’s peak, both feet are off the floor, legs extended but not locked, and arms swing naturally down beside the body; keep the torso upright and head aligned with the spine."
+    "camera": "diagonal",
+    "inverso": true,
+    "inicio": "Bottom of a deep bodyweight squat, ready to jump: feet shoulder-width apart and flat on the floor, hips pushed back and down to knee level or slightly below, knees bent about 90 degrees and tracking over the toes, chest up, back neutral, hands clasped together in front of the chest.",
+    "fim": "Peak of the jump squat, fully in the air: the whole body is clearly off the floor, with a visible gap of about 25 centimetres between the sneakers and the floor and the soft shadow on the floor directly below, separate from the feet. Body straight and tall, hips and knees fully extended, toes pointing down, arms swung straight down and slightly back behind the hips, chest up, gaze forward."
   },
   "agachamento-isometrico-parede": {
     "camera": "lateral",
@@ -431,8 +436,8 @@
   },
   "salto-caixa": {
     "camera": "diagonal",
-    "inicio": "Stand facing the plyo box with feet about hip-width apart, toes forward, and arms relaxed at your sides; keep your chest lifted, spine neutral, and gaze ahead.",
-    "fim": "Land with both feet fully on top of the box, about hip-width apart, knees softly bent and tracking over your toes, hips slightly back, and arms forward for balance; keep your chest lifted and spine neutral."
+    "inicio": "Stand facing a sturdy plyometric box about one short step ahead, feet hip-width apart, arms relaxed by your sides, spine neutral, and knees softly bent about 15 degrees.",
+    "fim": "Land quietly on top of the box with both feet fully supported and hip-width apart, hips and knees bent about 45–60 degrees to absorb impact, chest lifted, spine neutral, and arms reaching forward for balance."
   },
   "levantamento-terra": {
     "camera": "diagonal",
@@ -441,18 +446,20 @@
   },
   "levantamento-terra-romeno": {
     "camera": "lateral",
-    "inicio": "Stand with feet hip-width apart, knees softly bent, and hold the barbell with both hands just outside your thighs. Keep the bar against your thighs, spine neutral, shoulders set, and head aligned with your torso.",
-    "fim": "Push your hips back with a slight, nearly unchanged bend in your knees, lowering the bar close along your legs to mid-shin level. Keep your back neutral and head aligned, stopping when your hamstrings limit the hinge."
+    "inicio": "Stand upright with feet hip-width apart, knees softly bent, and hold one long straight barbell with both hands just outside your thighs; the bar has plates on both ends and rests close against the front of your thighs. Keep your hips fully extended, spine neutral, shoulders set, and head aligned with your torso.",
+    "fim": "Push your hips back and hinge forward, keeping the bar close to your legs as it lowers to just below your knees; hips are deeply flexed, torso angled about 45 degrees, and knees remain softly bent. Keep your spine neutral, shoulders set, and head aligned with your torso."
   },
   "stiff-barra": {
-    "camera": "lateral",
-    "inicio": "Stand with feet hip-width apart, holding the barbell with both hands just outside your thighs, arms straight and shoulders set; keep a slight bend in your knees, spine neutral, and head aligned with your torso.",
-    "fim": "Push your hips back and hinge forward, keeping the bar close to your legs and your knees softly bent; lower it to mid-shin height or as far as you can without rounding your back, with your neck aligned to your spine."
+    "camera": "diagonal",
+    "inverso": true,
+    "inicio": "Standing tall, feet hip-width apart, legs straight, hips fully extended, one long straight barbell with a plate on each end, held with both hands in an overhand grip at shoulder width, arms straight, the bar resting against the front of the thighs, shoulders back, back neutral.",
+    "fim": "Bottom of the stiff-legged deadlift, at full depth: the legs stay completely STRAIGHT, knees locked, never bent; the hips push far back and the torso hinges forward to slightly below parallel with the floor, back flat and neutral, head in line with the spine. One long straight barbell with a plate on each end, held with both hands in an overhand grip at shoulder width, arms hanging straight down; the hands are well below the knees and the bar is at mid-shin height, close to the legs, only a short distance above the feet."
   },
   "stiff-halteres": {
-    "camera": "lateral",
-    "inicio": "Stand with feet hip-width apart, knees softly bent, and a dumbbell in each hand held at your sides in front of your thighs; keep your spine neutral, shoulders back, and head aligned with your torso.",
-    "fim": "Push your hips back and hinge forward, keeping your knees softly bent and the dumbbells close to your legs as they reach mid-shin; stop at a comfortable hamstring stretch without rounding your back, then keep your neck aligned with your spine."
+    "camera": "diagonal",
+    "inverso": true,
+    "inicio": "Standing tall, feet hip-width apart, legs straight, hips fully extended, one dumbbell in each hand in front of the thighs, overhand grip, arms straight, shoulders back, back neutral.",
+    "fim": "Bottom of the stiff-legged deadlift with dumbbells, at full depth: the legs stay completely STRAIGHT, knees locked, never bent; the hips push far back and the torso hinges forward to slightly below parallel with the floor, back flat and neutral, head in line with the spine. Arms hang straight down; the dumbbells are well below the knees, in front of the middle of the shins, close to the legs, only a short distance above the feet."
   },
   "stiff-unilateral-halter": {
     "camera": "diagonal",
@@ -471,13 +478,14 @@
   },
   "cadeira-flexora": {
     "camera": "lateral",
-    "inicio": "Sit upright with your back against the backrest, hips and knees aligned with the machine’s pivot, and the thigh pad secured just above your knees. Place your lower legs in front of the ankle roller, keep your knees slightly bent, and hold the handles with your feet relaxed.",
-    "fim": "Keeping your back against the backrest and thighs beneath the pad, bend your knees to pull the ankle roller down and back until your knees are near 90 degrees. Pause without lifting your hips or arching your lower back."
+    "inicio": "Seated leg curl machine, exact side profile: the lifter sits upright with the back against the backrest and hands on the side handles; a padded thigh bar presses down on TOP of the thighs just above the knees. The lower roller pad is always BEHIND and UNDER the lower legs, touching the back of the ankles just above the heels; nothing is ever in front of the shins. Start position: both legs extended straight forward at seat height, knees straight, with the backs of the lower legs resting ON TOP of the roller pad, which sits under the calves near the heels, out in front of the seat.",
+    "fim": "Seated leg curl machine, exact side profile: the lifter sits upright with the back against the backrest and hands on the side handles; a padded thigh bar presses down on TOP of the thighs just above the knees. The lower roller pad is always BEHIND and UNDER the lower legs, touching the back of the ankles just above the heels; nothing is ever in front of the shins. End position: the knees bend about 90 degrees, so the lower legs point straight down, vertical, with the shins and the front of the ankles fully visible facing forward, in FRONT of the roller pad. The roller pad has been pushed down and back by the backs of the ankles and is now behind the lower legs, between the calves and the front edge of the seat. The thighs stay on the seat under the thigh bar."
   },
   "flexora-em-pe": {
     "camera": "lateral",
-    "inicio": "Stand upright facing the weight machine, holding its handles, with your left foot planted and your right thigh aligned with the machine’s pivot. Place the padded roller against the back of your right lower leg just above the ankle; keep your right knee nearly straight, torso steady, and spine neutral.",
-    "fim": "Keeping your right thigh still and your torso upright, bend your right knee to curl your heel toward your buttocks until the knee is about 90 degrees. The roller stays against the back of your lower leg, and your left foot remains planted."
+    "inverso": true,
+    "inicio": "Standing leg curl machine, exact side profile. The lifter stands upright facing the machine, chest and forearms resting on the machine’s upper support pad, hands on its handles; the left foot stands on the machine’s low platform. The machine is drawn complete and connected: a padded thigh support in front of the right thigh just above the knee, and an ankle roller pad mounted on the end of a rigid lever arm that is attached to the machine frame by a pivot at the height of the right knee, so the roller is clearly connected to the machine and never floating. The roller sits against the back of the right ankle, just above the heel. Start position: both legs straight, the right leg hanging vertical in line with the body, knee straight, the lever arm pointing straight down from the pivot with the roller behind the right ankle.",
+    "fim": "Standing leg curl machine, exact side profile. The lifter stands upright facing the machine, chest and forearms resting on the machine’s upper support pad, hands on its handles; the left foot stands on the machine’s low platform. The machine is drawn complete and connected: a padded thigh support in front of the right thigh just above the knee, and an ankle roller pad mounted on the end of a rigid lever arm that is attached to the machine frame by a pivot at the height of the right knee, so the roller is clearly connected to the machine and never floating. The roller sits against the back of the right ankle, just above the heel. End position: the right thigh stays vertical against the thigh support; only the lower leg rises behind the lifter until the knee is bent at 90 degrees and the right shin is horizontal, sole of the foot facing up and back. The lever arm has rotated up around the knee-height pivot, carrying the roller with the back of the ankle. The left leg stays straight on the platform."
   },
   "elevacao-pelvica-barra": {
     "camera": "lateral",
@@ -486,8 +494,8 @@
   },
   "elevacao-pelvica-maquina": {
     "camera": "lateral",
-    "inicio": "Sit in the hip-thrust machine with your upper back supported by the back pad and the padded lever resting across your hip crease; place both feet flat and hip-width apart, knees bent, and lower your hips under control while keeping your ribs down and spine neutral.",
-    "fim": "Drive through both feet to raise your hips until your thighs and torso form a straight line, with knees bent about 90 degrees and the pad still across your hip crease; squeeze your glutes without arching your lower back or thrusting your ribs upward."
+    "inicio": "Sit with your upper back against the machine’s backrest, feet flat and hip-width apart, shins nearly vertical, and the padded lever resting across your hip crease. Lower your hips until they are about 90 degrees flexed, keeping your ribs down, spine neutral, and chin slightly tucked.",
+    "fim": "Drive through both feet and raise your hips until they are fully extended, forming a straight line from shoulders to knees; keep your shins nearly vertical and the padded lever across your hip crease. Pause with your glutes engaged without arching your lower back or flaring your ribs."
   },
   "ponte-gluteo": {
     "camera": "lateral",
@@ -500,14 +508,15 @@
     "fim": "Press through your right heel and raise your hips until your shoulders, hips, and right knee form a straight line, keeping your pelvis level and avoiding an excessive lower-back arch. Keep your left knee bent and lifted, with your head relaxed on the floor."
   },
   "gluteo-polia": {
-    "camera": "diagonal",
-    "inicio": "Stand facing the cable machine, holding its frame lightly with both hands; the low pulley is attached to your right ankle, and your feet are hip-width apart. Keep your torso upright, spine neutral, gaze forward, and right knee softly bent with the foot just behind your body.",
-    "fim": "Keeping the right knee softly bent and your hips square, drive your right thigh backward until it is slightly behind your torso, stopping before your lower back arches. Keep your torso steady and spine neutral, with the cable taut behind your right ankle."
+    "camera": "lateral",
+    "inverso": true,
+    "inicio": "Lateral view. The lifter faces a cable machine, leaning the torso forward about 30 degrees with a flat back, both hands holding the machine frame at chest height for support. An ankle strap on the right ankle is attached to the machine’s LOW pulley; the cable runs from the low pulley to the right ankle. The left leg is the standing leg, straight with the knee soft. Start position: the right knee is slightly bent and the right foot is just behind the left foot, a little off the floor, the cable taut.",
+    "fim": "Lateral view. The lifter faces a cable machine, leaning the torso forward about 30 degrees with a flat back, both hands holding the machine frame at chest height for support. An ankle strap on the right ankle is attached to the machine’s LOW pulley; the cable runs from the low pulley to the right ankle. The left leg is the standing leg, straight with the knee soft. End position: the right leg kicks straight back and up until it is FULLY EXTENDED, knee straight, the whole leg in line from hip to heel and raised well behind the body at about 30 to 45 degrees above the floor line, hip fully extended and glute squeezed, without arching the lower back; the cable is pulled taut from the low pulley to the right ankle."
   },
   "gluteo-maquina": {
-    "camera": "diagonal",
-    "inicio": "Stand facing the glute-kickback machine with your chest lightly supported on the pad and both hands holding the handles; place the pad against the back of your right lower leg just above the ankle, keep your left foot planted, and hold your spine neutral with the right knee slightly bent and thigh beneath your hip.",
-    "fim": "Keeping your torso still, push the machine pad backward by extending your right hip until your thigh is slightly behind your body; keep the knee softly bent, hips facing forward, and lower back neutral without arching."
+    "camera": "lateral",
+    "inicio": "Stand facing the machine with your chest and forearms supported on its front pad, both hands holding the handles, and your left foot planted beneath your hip. Keep your spine neutral and head aligned; bend the right knee about 90 degrees with the padded lever against the back of your lower leg just above the ankle, and keep the right thigh slightly forward of your torso.",
+    "fim": "Keeping your torso still and spine neutral, drive the right thigh backward until the hip is extended and the thigh is roughly in line with your torso; keep the right knee softly bent about 20–30 degrees and press the padded lever back with your lower leg. The left foot stays planted and the handles remain held."
   },
   "coice-quatro-apoios": {
     "camera": "diagonal",
@@ -526,8 +535,8 @@
   },
   "kettlebell-swing": {
     "camera": "lateral",
-    "inicio": "Stand with feet about shoulder-width apart, knees softly bent, spine neutral, and head aligned with your torso. Hold the kettlebell with both hands in front of your thighs, arms straight and shoulders relaxed.",
-    "fim": "Drive your hips forward to stand tall, with knees and hips extended and no backward lean. Let the kettlebell swing to about shoulder height in front of you, arms straight but relaxed, wrists neutral, and shoulders down."
+    "inicio": "Stand with feet about shoulder-width apart, knees softly bent and spine neutral; hinge at the hips until they are flexed about 70–90 degrees, holding the kettlebell handle with both hands as it hangs between and slightly behind your thighs.",
+    "fim": "Drive your hips fully forward to stand tall with knees nearly straight and spine neutral, allowing the kettlebell to swing to chest height in front of you with arms relaxed and straight; do not lean back or lift the bell with your shoulders."
   },
   "cadeira-adutora": {
     "camera": "frontal",
@@ -546,8 +555,9 @@
   },
   "panturrilha-leg-press": {
     "camera": "lateral",
-    "inicio": "Sit in the leg press with your back and head supported against the pads, hips and knees nearly extended but not locked. Place the balls of both feet shoulder-width apart on the lower edge of the platform, toes pointing forward and heels hanging freely below it; lower your heels under control into a comfortable ankle stretch.",
-    "fim": "Keeping your knees and torso still against the pads, press through the balls of both feet to raise your heels as high as comfortable. Finish with ankles plantar-flexed, toes still on the platform, and knees softly extended without locking."
+    "inverso": true,
+    "inicio": "45 degree leg press machine (seated sled leg press), lateral view: the lifter lies back on the reclined seat pad, hands on the side handles. The legs are almost fully extended and stay that way, knees straight but not locked, the thighs not moving. Only the balls of the feet and the toes rest on the BOTTOM edge of the large foot platform, with the heels hanging off below the platform edge. Start position: the ankles are flexed, heels dropped below the edge of the platform, so the platform sits a little lower, closer to the lifter.",
+    "fim": "One single scene with one single person, not a split or multi-panel image. 45 degree leg press machine (seated sled leg press), lateral view: the lifter lies back on the reclined seat pad, hands on the side handles. The legs are almost fully extended and stay that way, knees straight but not locked, the thighs not moving. Only the balls of the feet and the toes rest on the BOTTOM edge of the large foot platform, with the heels hanging off below the platform edge. End position: pushing only with the balls of the feet, the ankles extend fully (toes pointed, heels raised), so the platform is pushed a few centimetres further up and away along its rails; the knees and hips stay where they were."
   },
   "panturrilha-peso-corporal": {
     "camera": "lateral",
@@ -590,19 +600,22 @@
     "fim": "Curl your torso up as you bend both knees toward your chest, balancing on your sit bones with your arms reaching forward alongside your legs; keep your neck relaxed and avoid pulling on your head."
   },
   "abdominal-bicicleta": {
-    "camera": "diagonal",
-    "inicio": "Lie on your back with your knees bent at 90 degrees above your hips and your shins parallel to the floor. Place your hands lightly behind your head with elbows open, gently lift your shoulder blades, keep your chin slightly tucked, and press your lower back toward the floor.",
-    "fim": "Rotate your torso to bring your right shoulder toward your left knee without pulling on your head, while extending your right leg low and straight without letting your lower back arch. Keep the left knee over your hip, elbows open, and shoulder blades lifted."
+    "camera": "frontal",
+    "espelho": true,
+    "inicio": "Camera directly overhead, looking straight down at the lifter lying on the floor: the head at the top of the frame, the feet at the bottom, the body centered on the vertical axis of the image. Hands lightly behind the head. The head and shoulders are lifted and the torso is twisted so the RIGHT ELBOW TOUCHES THE LEFT KNEE: the left knee is pulled in over the hips toward the chest and the right elbow crosses the body to meet it, while the left elbow stays back on its own side. The right leg is extended straight out, low above the floor.",
+    "fim": "The opposite side: the LEFT ELBOW touches the RIGHT KNEE, the left leg extended."
   },
   "rotacao-russa": {
-    "camera": "diagonal",
-    "inicio": "Sit with knees bent, feet flat on the floor, and heels grounded; lean back slightly with a long, neutral spine and chest lifted. Hold your hands together in front of your chest, elbows softly bent, and keep your head aligned with your torso.",
-    "fim": "Keeping your hips and feet planted and spine long, rotate your rib cage and clasped hands to the right, stopping at a comfortable range without rounding your back. Turn your head with your torso and keep your knees steady."
+    "camera": "frontal",
+    "espelho": true,
+    "inicio": "Camera directly in front of the lifter, at chest height; the lifter faces the camera and is centered in the frame, the hips on the vertical centre line. Seated on the floor in a V position: knees bent and pointing at the camera, feet together and lifted a little off the floor, torso leaning back about 45 degrees with a straight back, hands clasped together in front of the chest. Rotation to the lifter’s LEFT: the shoulders turn to the left and the clasped hands move down beside the left hip, close to the floor, while the knees and feet stay centered.",
+    "fim": "The same rotation to the opposite side: shoulders turned to the right, clasped hands beside the right hip."
   },
   "dead-bug": {
-    "camera": "lateral",
-    "inicio": "Lie on your back with arms reaching straight up over your shoulders, hips and knees bent to 90 degrees, and lower back gently pressed into the floor; keep your head relaxed and gaze upward.",
-    "fim": "Slowly extend your right leg low toward the floor while reaching your left arm overhead, keeping the opposite arm vertical, the opposite knee bent, and your lower back gently pressed down."
+    "camera": "diagonal",
+    "espelho": true,
+    "inicio": "Elevated camera beyond the feet, looking down along the body at about 45 degrees; the lifter lies on the back on the floor, centered on the vertical axis of the image, head at the top, feet toward the camera. Lower back pressed to the floor. Contralateral dead bug position: the LEFT ARM is extended straight back overhead, just above the floor beyond the head, while the RIGHT LEG is extended straight out, low and hovering just above the floor. At the same time the RIGHT ARM points straight up to the ceiling and the LEFT LEG stays raised with hip and knee both bent at 90 degrees, shin parallel to the floor.",
+    "fim": "The opposite side: RIGHT arm extended overhead and LEFT leg extended low; LEFT arm pointing up and RIGHT leg bent at 90 degrees."
   },
   "perdigueiro": {
     "camera": "diagonal",
@@ -620,9 +633,9 @@
     "fim": "Without swinging, brace your abdomen and raise both straight legs together until they are about parallel to the floor, with hips flexed near 90 degrees and a slight pelvic tuck; keep your arms straight and head neutral."
   },
   "abdominal-polia": {
-    "camera": "diagonal",
-    "inicio": "Kneel facing the cable machine with knees hip-width apart and hips stacked over your knees; hold the cable ends beside your temples, elbows bent, with the taut cable running from the high pulley in front of and above you. Keep your spine neutral and neck aligned with your torso.",
-    "fim": "Keeping your hips over your knees and your arms fixed, curl your ribs toward your pelvis until your torso is flexed and your elbows move toward your thighs. Keep your neck relaxed and avoid pulling with your arms."
+    "camera": "lateral",
+    "inicio": "Kneel facing a high cable pulley with knees hip-width apart, hips stacked over knees, and hold the rope ends beside your temples; keep your spine neutral and torso upright, with the cable running from above and in front of your head.",
+    "fim": "Keep your hips over your knees and curl your torso down by flexing your spine, bringing your ribs toward your pelvis until your trunk is inclined about 45 degrees; keep the rope beside your head and avoid pulling with your arms."
   },
   "abdominal-maquina": {
     "camera": "diagonal",
@@ -631,8 +644,8 @@
   },
   "pallof-press": {
     "camera": "diagonal",
-    "inicio": "Stand with feet shoulder-width apart and knees softly bent, body turned sideways to the cable machine on your right; hold the handle with both hands at the center of your chest, elbows bent, spine neutral, and head aligned with your torso.",
-    "fim": "Press both hands straight forward from your chest until your arms are extended, keeping the handle at chest height and resisting the cable’s pull without rotating or leaning; keep your ribs stacked over your pelvis and your knees softly bent."
+    "inicio": "Stand with feet shoulder-width apart, knees slightly bent, and the cable machine to your left with its pulley set at chest height; hold the single handle in your right hand at your sternum, elbow bent about 90 degrees, keeping your torso and head facing forward and your spine neutral.",
+    "fim": "Keep your torso square and still as you press the handle straight forward to chest height, extending your right elbow until the arm is nearly straight; keep your shoulders level, ribs down, and spine neutral against the cable’s pull."
   },
   "roda-abdominal": {
     "camera": "lateral",
@@ -655,14 +668,14 @@
     "fim": "Stand tall with hips and knees extended, pressing both dumbbells directly overhead until your arms are straight and the weights are stacked over your shoulders. Keep your ribs down, spine neutral, and gaze forward."
   },
   "caminhada-fazendeiro": {
-    "camera": "diagonal",
-    "inicio": "Stand tall with feet hip-width apart, holding a dumbbell in each hand at your sides with a firm neutral grip, arms straight, shoulders relaxed, and wrists aligned; brace your abdomen and keep your head facing forward.",
-    "fim": "Take one controlled step forward, landing softly on the lead foot while the other heel lifts; keep both dumbbells hanging beside your thighs, arms straight, torso upright, shoulders level, and gaze forward."
+    "camera": "lateral",
+    "inicio": "Stand tall with feet hip-width apart, hips and knees extended, and shoulders level; hold one dumbbell in each hand at your sides with a firm neutral grip, arms straight and weights hanging beside your thighs. Keep your spine neutral and gaze forward.",
+    "fim": "Take a clear walking stride with the right foot forward and left foot behind, both feet briefly off the floor or just touching down in the stride; the right knee is slightly bent, the left leg trails with its hip extended, and both arms remain straight as the dumbbells hang beside your thighs. Keep your torso upright, shoulders level, and gaze forward."
   },
   "levantamento-turco": {
     "camera": "diagonal",
-    "inicio": "Lie on your back with the kettlebell held in your right hand above your right shoulder, wrist straight and elbow locked; bend your right knee with that foot planted, keep your left leg extended, and rest your left arm on the floor out at about 45 degrees. Keep your gaze on the kettlebell and your shoulder packed down.",
-    "fim": "Stand tall with feet about hip-width apart, the kettlebell locked overhead in your right hand with wrist stacked over shoulder and elbow straight; keep your ribs down, spine neutral, and gaze forward."
+    "inicio": "Lie on your back with the kettlebell held in your right hand directly above your right shoulder, wrist straight and elbow locked; bend the right knee to about 90 degrees with that foot flat, keep the left leg straight, and extend the left arm on the floor about 45 degrees from your torso, palm down. Keep your head turned toward the kettlebell and your spine neutral.",
+    "fim": "Stand upright with feet about hip-width apart and knees and hips fully extended, holding the kettlebell steady overhead in your right hand with the elbow locked, wrist straight, and arm aligned over the shoulder. Keep your ribs down, spine neutral, and gaze forward."
   },
   "corrida-rua": {
     "camera": "lateral",

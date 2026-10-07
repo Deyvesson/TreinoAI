@@ -6,4 +6,4 @@ export const ESTILO =
 
 /** Instrução para editar o quadro 1 até o quadro 2 sem perder a continuidade. */
 export const CONTINUIDADE =
-  'Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to:'
+  'Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Keep the hands exactly where they hold the equipment: same grip direction, same hand width and same spot on the bar, handle or machine, unless the new pose explicitly changes the grip. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose:'

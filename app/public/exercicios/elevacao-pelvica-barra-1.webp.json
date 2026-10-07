@@ -1,0 +1,6 @@
+{
+  "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: lateral view. Exercise: Elevação pélvica com barra (also known as Elevação pélvica, Hip thrust, Elevação de quadril). Pose: Sit on the floor with your shoulder blades against the long edge of the bench, knees bent and feet flat hip-width apart; place the barbell across the front of your hips and hold it steady with both hands. Keep your chin slightly tucked, ribs down, and spine neutral.",
+  "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T12:27:03.898Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}

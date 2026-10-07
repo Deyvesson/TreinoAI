@@ -1,0 +1,6 @@
+{
+  "prompt": "Same person, same face, same clothes and sneakers, same dumbbells. Keep exactly the same arm position relative to the torso, the same hand position and the same grip: do not rotate the hands or the dumbbells, keep each dumbbell handle oriented exactly as in the image. Change only the bench: replace the flat bench with an adjustable incline bench set at about 35 degrees, with the back, head and hips resting on the inclined backrest and the seat, feet flat on the floor. Same pure white background, same camera angle, framing and lighting.",
+  "origin": "Edição de crucifixo-reto-halteres-1 (aprovado) com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
+  "createdAt": "2026-10-07T13:25:07.674Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
+}
