@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useState } from 'react'
+import { InstalarApp } from '../componentes/InstalarApp'
 import { Torre } from '../componentes/Torre'
 import { db, planoAtivo } from '../dados/db'
 import { diaDaSessao, encerrarSessao, iniciarSessao, proximoDia, sessaoAtiva } from '../dados/repositorio'
@@ -35,6 +36,7 @@ export default function Hoje() {
           Responda seis perguntas rápidas: objetivo, experiência, dias, tempo, equipamento e limitações. A IA monta um
           plano completo com exercícios do catálogo e explica o motivo de cada um.
         </p>
+        <InstalarApp />
         <div className="hoje-base">
           <button type="button" className="botao botao-primario botao-largo" onClick={() => navegar('/comecar')}>
             Montar meu plano
@@ -62,6 +64,9 @@ export default function Hoje() {
           </button>
         </section>
         <Torre linhas={torre} modo="classificacao" />
+        <div className="hoje-instalar-retomar">
+          <InstalarApp />
+        </div>
         <div className="hoje-perigo">
           {confirmandoEncerrar ? (
             <>
@@ -110,6 +115,8 @@ export default function Hoje() {
           de {minutosEstimados(dia)} min
         </p>
       </header>
+
+      <InstalarApp />
 
       {plano.plano.dias.length > 1 && (
         <nav className="dias" aria-label="Dias do plano">
