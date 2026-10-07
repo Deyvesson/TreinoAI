@@ -230,7 +230,7 @@ Uma paleta de estúdio: branco puro, tinta azul-noite, um único azul ultramar p
 - **Fio Forte** (fio-forte): contorno do chip de dia, trilho do interruptor desligado, barra de rolagem.
 
 ### Named Rules
-**The Uma Placa Rule.** Exatamente uma superfície preenchida (invertida) por tela: na sessão, a placa da série ou do descanso; em Hoje, o CTA de começar/retomar ou a placa de retomar; no Resumo, o CTA. A linha atual da torre é tinta ultramar com faixa sobre branco em todo lugar, e só vira preenchida dentro do painel da torre aberta no celular, onde ela é a única placa.
+**The Uma Placa Rule.** Exatamente uma superfície preenchida (invertida) por tela: na sessão, a placa da série ou do descanso; em Hoje, o CTA de começar/retomar ou a placa de retomar; no Resumo, o CTA; no questionário e no plano pronto, o CTA de continuar; na geração do plano, a placa inteira (com o relógio no tamanho do cronômetro, não no Display). Seleções do questionário (opções, células, caixas de equipamento) são tinta e contorno ultramar, nunca preenchidas. A linha atual da torre é tinta ultramar com faixa sobre branco em todo lugar, e só vira preenchida dentro do painel da torre aberta no celular, onde ela é a única placa.
 
 **The Faixa Fina Rule.** As cores de estado aparecem como faixas de 4px na linha da torre, barras inferiores de 4px nas células recolhidas e quadradinhos de 12px na legenda. Nunca como fundo de área grande.
 
