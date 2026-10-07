@@ -26,6 +26,8 @@ export interface SessaoSalva {
   atual: string | null
   /** Fim do descanso em ms desde a época (sobrevive a tela bloqueada e recarga); null fora do descanso. */
   descansoAte: number | null
+  /** Treino de exemplo criado na tela de diagnóstico; removível sem tocar nos reais. */
+  teste?: boolean
 }
 
 export interface SerieSalva {
