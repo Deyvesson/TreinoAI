@@ -1,4 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
+import { TrendingUp } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { InstalarApp } from '../componentes/InstalarApp'
 import { Torre } from '../componentes/Torre'
@@ -108,6 +109,9 @@ export default function Hoje() {
   return (
     <main className="hoje">
       <header className="hoje-cabeca">
+        <button type="button" className="hoje-progresso" onClick={() => navegar('/progresso')}>
+          <TrendingUp size={18} aria-hidden="true" /> Progresso
+        </button>
         <h1 className="hoje-titulo">{dia.nome}</h1>
         <p className="hoje-foco">{dia.foco}</p>
         <p className="hoje-numeros num">

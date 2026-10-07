@@ -1,4 +1,5 @@
 import type { PerfilTreino, PlanoGerado } from '../../../shared/plano'
+import type { AnaliseGerada, ResumoProgresso } from '../../../shared/progresso'
 
 // Um pouco acima do limite de 45 s das Functions do SWA, para a resposta de erro da API chegar primeiro.
 const TEMPO_LIMITE_MS = 50_000
@@ -27,6 +28,30 @@ export async function gerarPlano(perfil: PerfilTreino): Promise<Resultado<PlanoG
   } catch (falha) {
     if (falha instanceof DOMException && falha.name === 'TimeoutError') {
       return { ok: false, erro: 'A geração demorou demais. Tente de novo.' }
+    }
+    return { ok: false, erro: 'Não foi possível falar com a API. Verifique a conexão e tente de novo.' }
+  }
+}
+
+export async function analisarProgresso(resumo: ResumoProgresso): Promise<Resultado<AnaliseGerada>> {
+  if (!navigator.onLine) {
+    return { ok: false, erro: 'Sem conexão. A análise precisa de internet; o histórico continua disponível offline.' }
+  }
+  try {
+    const resposta = await fetch('/api/analise', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(resumo),
+      signal: AbortSignal.timeout(TEMPO_LIMITE_MS),
+    })
+    const corpo = (await resposta.json().catch(() => null)) as ({ ok: true } & AnaliseGerada) | { ok: false; erro: string } | null
+    if (!corpo) return { ok: false, erro: 'A resposta da API veio vazia. Tente de novo.' }
+    if (!corpo.ok) return { ok: false, erro: corpo.erro }
+    const { ok: _ok, ...gerada } = corpo
+    return { ok: true, valor: gerada }
+  } catch (falha) {
+    if (falha instanceof DOMException && falha.name === 'TimeoutError') {
+      return { ok: false, erro: 'A análise demorou demais. Tente de novo.' }
     }
     return { ok: false, erro: 'Não foi possível falar com a API. Verifique a conexão e tente de novo.' }
   }

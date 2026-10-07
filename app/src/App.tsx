@@ -1,5 +1,6 @@
 import Diagnostico from './telas/Diagnostico'
 import Hoje from './telas/Hoje'
+import Progresso from './telas/Progresso'
 import Questionario from './telas/Questionario'
 import Resumo from './telas/Resumo'
 import Sessao from './telas/Sessao'
@@ -12,6 +13,7 @@ export default function App() {
   if (caminho === '/treino') return <Sessao />
   if (resumo) return <Resumo sessaoId={Number(resumo[1])} />
   if (caminho === '/comecar') return <Questionario />
+  if (caminho === '/progresso') return <Progresso />
   if (caminho === '/diagnostico') return <Diagnostico />
   return <Hoje />
 }

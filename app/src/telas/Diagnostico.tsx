@@ -1,8 +1,10 @@
+import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useState } from 'react'
 import { EXERCICIO_POR_ID } from '../../../shared/exercicios'
 import type { PerfilTreino } from '../../../shared/plano'
 import { gerarPlano } from '../dados/api'
 import { ativarPlano, pedirArmazenamentoPersistente, planoAtivo, salvarPerfil, type PlanoSalvo } from '../dados/db'
+import { apagarHistoricoDeTeste, contarTreinosDeTeste, gerarHistoricoDeTeste } from '../dados/teste'
 import { navegar } from '../rotas'
 import './diagnostico.css'
 
@@ -134,6 +136,60 @@ export default function Diagnostico() {
           </article>
         )}
       </section>
+
+      <HistoricoDeTeste />
     </main>
+  )
+}
+
+/** Cria treinos de exemplo para testar a tela de progresso e a análise da IA sem precisar treinar 4 vezes. */
+function HistoricoDeTeste() {
+  const quantos = useLiveQuery(() => contarTreinosDeTeste(), [])
+  const [estado, setEstado] = useState<{ tipo: 'parado' | 'trabalhando' } | { tipo: 'feito' | 'erro'; mensagem: string }>({ tipo: 'parado' })
+
+  async function gerar() {
+    setEstado({ tipo: 'trabalhando' })
+    try {
+      const criados = await gerarHistoricoDeTeste()
+      setEstado({ tipo: 'feito', mensagem: `${criados} treinos de exemplo criados nas últimas 6 semanas.` })
+    } catch (falha) {
+      setEstado({ tipo: 'erro', mensagem: (falha as Error).message })
+    }
+  }
+
+  async function apagar() {
+    setEstado({ tipo: 'trabalhando' })
+    const removidos = await apagarHistoricoDeTeste()
+    setEstado({ tipo: 'feito', mensagem: `${removidos} treinos de exemplo removidos (e as análises salvas).` })
+  }
+
+  return (
+    <section>
+      <h2>Histórico de teste</h2>
+      <p className="lede">
+        Cria cerca de 15 treinos de exemplo a partir do plano ativo, em 6 semanas, para testar a tela Progresso e a análise da
+        IA. Ficam marcados como teste e podem ser apagados sem tocar nos treinos reais.
+      </p>
+      <button type="button" onClick={gerar} disabled={estado.tipo === 'trabalhando'}>
+        Gerar histórico de teste
+      </button>
+      {Boolean(quantos) && (
+        <button type="button" className="probe-secundario" onClick={apagar} disabled={estado.tipo === 'trabalhando'}>
+          Apagar histórico de teste ({quantos})
+        </button>
+      )}
+      <div className="result" role="status" aria-live="polite">
+        {(estado.tipo === 'feito' || estado.tipo === 'erro') && (
+          <p className={estado.tipo === 'erro' ? 'error' : 'lede'}>
+            {estado.mensagem}{' '}
+            {estado.tipo === 'feito' && (
+              <button type="button" className="probe-voltar" onClick={() => navegar('/progresso')}>
+                Abrir Progresso →
+              </button>
+            )}
+          </p>
+        )}
+      </div>
+    </section>
   )
 }
