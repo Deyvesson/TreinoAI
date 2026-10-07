@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Bend your elbows close to your sides and lower your chest toward your hands while keeping your body straight and your neck neutral; stop just before your chest reaches your hands, then press back up.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.764Z"
+  "createdAt": "2026-10-07T12:27:03.764Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

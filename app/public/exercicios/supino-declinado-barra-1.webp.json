@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Supino declinado com barra (also known as Supino declinado). Pose: Lie face up on the decline bench with your head lower than your hips and feet secured under the bench pads. Hold the barbell over your lower chest with wrists straight, elbows bent about 90 degrees and angled slightly away from your torso; keep your shoulder blades retracted and your spine in a comfortable, stable arch.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.404Z"
+  "createdAt": "2026-10-07T12:27:03.404Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

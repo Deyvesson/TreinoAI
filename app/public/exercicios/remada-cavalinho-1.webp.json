@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same barbell and plate, same floor pivot, same background, same camera angle, framing and lighting. Change the pose to the bottom of the row: the hips hinge deeper so the torso leans forward almost parallel to the floor with a flat back, knees slightly bent, and the arms hang straight down so the hands reach mid-shin height, gripping the bar just behind the plate. The weight plate almost touches the floor. The whole barbell, including the short sleeve beyond the plate, lies on one single straight line from the floor pivot behind the lifter to the end of the sleeve, almost flat on the floor, with no bend at the hands.",
   "origin": "Edição do quadro 2 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T13:36:31.772Z"
+  "createdAt": "2026-10-07T13:36:31.772Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

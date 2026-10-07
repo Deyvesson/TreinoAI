@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Raise both arms out to the sides in the frontal plane until your hands reach shoulder height, keeping a slight bend in your elbows and wrists neutral as the band stretches from beneath your feet to your hands. Keep your torso still, spine neutral, and shoulders away from your ears.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.630Z"
+  "createdAt": "2026-10-07T12:27:03.630Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

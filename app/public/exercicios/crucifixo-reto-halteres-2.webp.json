@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Keeping exactly the same neutral grip and the same slight fixed elbow bend, the arms open wide out to the sides in a broad arc: upper arms level with the chest (not below the bench), dumbbells at chest height far out to each side, palms now facing up toward the ceiling and inward, handles still parallel to the length of the body. Chest open, shoulder blades pulled together.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:51:50.321Z"
+  "createdAt": "2026-10-07T12:51:50.321Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

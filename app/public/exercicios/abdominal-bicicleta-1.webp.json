@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Keep the hands exactly where they hold the equipment: same grip direction, same hand width and same spot on the bar, handle or machine, unless the new pose explicitly changes the grip. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Same overhead view and same person. Make the twist unmistakable: the head and the right shoulder are lifted off the floor and the torso rotates to the left so the RIGHT ELBOW crosses over the body and touches the outside of the LEFT KNEE, which is pulled in over the hips toward the chest; the left elbow stays back on the floor side, the right leg is extended straight, low above the floor. Both hands lightly behind the head.",
   "origin": "Refinamento por edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T18:05:11.623Z"
+  "createdAt": "2026-10-07T18:05:11.623Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

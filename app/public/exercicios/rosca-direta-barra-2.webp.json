@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Curl the barbell up toward your lower chest by bending your elbows, keeping them close to your sides and your upper arms still. Keep your wrists straight, torso upright without swinging, and shoulders relaxed.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.675Z"
+  "createdAt": "2026-10-07T12:27:03.675Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

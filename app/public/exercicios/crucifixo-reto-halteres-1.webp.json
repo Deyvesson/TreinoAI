@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Crucifixo reto com halteres (also known as Crucifixo). Pose: Lying face up on a flat bench, feet flat on the floor, head and back on the bench. Both arms extended straight up above the chest, elbows very slightly bent, one dumbbell in each hand with a NEUTRAL grip: palms facing each other, and each dumbbell handle running parallel to the length of the body (pointing toward the head and the feet), never across the body as in a bench press. The two dumbbells almost touch directly above the chest.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:51:20.277Z"
+  "createdAt": "2026-10-07T12:51:20.277Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Keep the hands exactly where they hold the equipment: same grip direction, same hand width and same spot on the bar, handle or machine, unless the new pose explicitly changes the grip. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Same exercise, but go deeper: keep both legs completely straight with the knees locked, push the hips further back and lower the torso until it is slightly below parallel with the floor, so the arms hang straight down and the barbell moves down to mid-shin height, close to the legs, with the hands well below the knees. Same overhand grip at shoulder width.",
   "origin": "Refinamento por edição do quadro 2 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T17:52:06.099Z"
+  "createdAt": "2026-10-07T17:52:06.099Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

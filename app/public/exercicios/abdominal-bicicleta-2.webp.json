@@ -1,5 +1,6 @@
 {
   "prompt": "Espelho horizontal do quadro 1 (lado oposto do movimento): The opposite side: the LEFT ELBOW touches the RIGHT KNEE, the left leg extended.",
   "origin": "Edição do quadro 1 com sharp (espelhamento, sem nova geração) (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T18:05:57.535Z"
+  "createdAt": "2026-10-07T18:05:57.535Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

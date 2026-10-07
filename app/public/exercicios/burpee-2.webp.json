@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Jump vertically with both feet together, arms reaching overhead, and body extended; keep your ribs aligned over your pelvis and prepare to land softly with knees slightly bent.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:04.027Z"
+  "createdAt": "2026-10-07T12:27:04.027Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

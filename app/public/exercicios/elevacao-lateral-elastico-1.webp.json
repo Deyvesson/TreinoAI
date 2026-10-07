@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: frontal view. Exercise: Elevação lateral com elástico. Pose: Stand with feet hip-width apart on the middle of the resistance band, holding one end in each hand with arms by your sides, palms facing your thighs and elbows softly bent. Keep your spine neutral, chest lifted, head aligned, and shoulders relaxed.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.626Z"
+  "createdAt": "2026-10-07T12:27:03.626Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

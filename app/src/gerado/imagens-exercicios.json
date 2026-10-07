@@ -1,566 +1,566 @@
 {
   "supino-reto-barra": {
     "quadros": 2,
-    "v": "d693fb79"
+    "v": "a4093b4a"
   },
   "supino-reto-halteres": {
     "quadros": 2,
-    "v": "e1dad200"
+    "v": "2eaa4b3e"
   },
   "supino-inclinado-barra": {
     "quadros": 2,
-    "v": "c2bf4c44"
+    "v": "dcba415a"
   },
   "supino-inclinado-halteres": {
     "quadros": 2,
-    "v": "c1baaaca"
+    "v": "b5a633b3"
   },
   "supino-declinado-barra": {
     "quadros": 2,
-    "v": "9a1cfd51"
+    "v": "0cb90411"
   },
   "supino-maquina": {
     "quadros": 2,
-    "v": "2608156e"
+    "v": "16147778"
   },
   "supino-inclinado-smith": {
     "quadros": 2,
-    "v": "bcb2cef6"
+    "v": "92f5dfe1"
   },
   "crucifixo-reto-halteres": {
     "quadros": 2,
-    "v": "ab6a77d2"
+    "v": "fe8d2125"
   },
   "crucifixo-inclinado-halteres": {
     "quadros": 2,
-    "v": "66fc9eb9"
+    "v": "b15d2a7d"
   },
   "crucifixo-maquina": {
     "quadros": 2,
-    "v": "79404124"
+    "v": "fcf3894e"
   },
   "crossover-polia-alta": {
     "quadros": 2,
-    "v": "8a0e314e"
+    "v": "0d9c6fb0"
   },
   "crossover-polia-baixa": {
     "quadros": 2,
-    "v": "eb98c206"
+    "v": "945315a2"
   },
   "flexao-de-braco": {
     "quadros": 2,
-    "v": "ee9c3dc9"
+    "v": "cd98a500"
   },
   "flexao-joelhos": {
     "quadros": 2,
-    "v": "53ff398a"
+    "v": "2462e5de"
   },
   "flexao-inclinada": {
     "quadros": 2,
-    "v": "d42ecf2b"
+    "v": "8eadc54b"
   },
   "flexao-declinada": {
     "quadros": 2,
-    "v": "0cb2524b"
+    "v": "3e779a90"
   },
   "mergulho-paralelas": {
     "quadros": 2,
-    "v": "1364a3b3"
+    "v": "c4dc71e0"
   },
   "pullover-halter": {
     "quadros": 2,
-    "v": "c0a5a765"
+    "v": "79556568"
   },
   "barra-fixa-pronada": {
     "quadros": 2,
-    "v": "d72afb32"
+    "v": "0aa6947e"
   },
   "barra-fixa-supinada": {
     "quadros": 2,
-    "v": "c426585a"
+    "v": "50a1193c"
   },
   "barra-fixa-negativa": {
     "quadros": 2,
-    "v": "0d2268ac"
+    "v": "c19f981e"
   },
   "puxada-frontal-aberta": {
     "quadros": 2,
-    "v": "a8fa28da"
+    "v": "5c6e677b"
   },
   "puxada-frontal-supinada": {
     "quadros": 2,
-    "v": "5ba11145"
+    "v": "75b64246"
   },
   "puxada-triangulo": {
     "quadros": 2,
-    "v": "77450492"
+    "v": "a6a61705"
   },
   "remada-curvada-barra": {
     "quadros": 2,
-    "v": "240f297f"
+    "v": "0ad8cb4a"
   },
   "remada-unilateral-halter": {
     "quadros": 2,
-    "v": "034a067c"
+    "v": "fd4e206b"
   },
   "remada-baixa-triangulo": {
     "quadros": 2,
-    "v": "9590e104"
+    "v": "b08d3927"
   },
   "remada-maquina": {
     "quadros": 2,
-    "v": "99d28c03"
+    "v": "3745bdb9"
   },
   "remada-cavalinho": {
     "quadros": 2,
-    "v": "f0985b90"
+    "v": "0f4bae98"
   },
   "remada-invertida": {
     "quadros": 2,
-    "v": "2a8fa13e"
+    "v": "998fcb3a"
   },
   "remada-elastico": {
     "quadros": 2,
-    "v": "db4c0234"
+    "v": "28eea07b"
   },
   "pulldown-bracos-estendidos": {
     "quadros": 2,
-    "v": "b8a2512a"
+    "v": "b16bf3a7"
   },
   "hiperextensao-lombar": {
     "quadros": 2,
-    "v": "8fd394dc"
+    "v": "7d6f82ac"
   },
   "superman": {
     "quadros": 2,
-    "v": "25b189ab"
+    "v": "b1e9b2bc"
   },
   "desenvolvimento-halteres": {
     "quadros": 2,
-    "v": "dafa64aa"
+    "v": "890a4fb4"
   },
   "desenvolvimento-barra": {
     "quadros": 2,
-    "v": "cf969873"
+    "v": "576c5e24"
   },
   "desenvolvimento-maquina": {
     "quadros": 2,
-    "v": "ec2acbd7"
+    "v": "01e164c0"
   },
   "desenvolvimento-arnold": {
     "quadros": 2,
-    "v": "030bf8ef"
+    "v": "d9afe08b"
   },
   "flexao-pike": {
     "quadros": 2,
-    "v": "338ff77c"
+    "v": "9c766b59"
   },
   "elevacao-lateral-halteres": {
     "quadros": 2,
-    "v": "2a3c0727"
+    "v": "e6001f06"
   },
   "elevacao-lateral-polia": {
     "quadros": 2,
-    "v": "e37fcd14"
+    "v": "28d02f18"
   },
   "elevacao-lateral-elastico": {
     "quadros": 2,
-    "v": "c3a5061e"
+    "v": "df5185ce"
   },
   "elevacao-frontal-halteres": {
     "quadros": 2,
-    "v": "597149dd"
+    "v": "f20d8130"
   },
   "crucifixo-inverso-halteres": {
     "quadros": 2,
-    "v": "8d129420"
+    "v": "248d424e"
   },
   "crucifixo-inverso-maquina": {
     "quadros": 2,
-    "v": "bc0b713f"
+    "v": "ffb27a0b"
   },
   "face-pull": {
     "quadros": 2,
-    "v": "89591928"
+    "v": "72cad423"
   },
   "remada-alta": {
     "quadros": 2,
-    "v": "97e144ec"
+    "v": "95debab6"
   },
   "encolhimento-halteres": {
     "quadros": 2,
-    "v": "216673a9"
+    "v": "67506ce8"
   },
   "encolhimento-barra": {
     "quadros": 2,
-    "v": "581520c1"
+    "v": "fa0435e4"
   },
   "rosca-direta-barra": {
     "quadros": 2,
-    "v": "51b8d558"
+    "v": "e4e3503a"
   },
   "rosca-alternada-halteres": {
     "quadros": 2,
-    "v": "6fffa4d1"
+    "v": "10f48189"
   },
   "rosca-martelo": {
     "quadros": 2,
-    "v": "0ab930a0"
+    "v": "3c5e828e"
   },
   "rosca-scott-barra": {
     "quadros": 2,
-    "v": "04ba9f7d"
+    "v": "d547e819"
   },
   "rosca-concentrada": {
     "quadros": 2,
-    "v": "5bcf27a3"
+    "v": "af7fd822"
   },
   "rosca-inclinada-halteres": {
     "quadros": 2,
-    "v": "3385a29c"
+    "v": "c42d37e3"
   },
   "rosca-polia": {
     "quadros": 2,
-    "v": "045111c5"
+    "v": "95f403dd"
   },
   "rosca-elastico": {
     "quadros": 2,
-    "v": "15694a4c"
+    "v": "54376708"
   },
   "triceps-polia-barra": {
     "quadros": 2,
-    "v": "c61334da"
+    "v": "eb072d53"
   },
   "triceps-corda": {
     "quadros": 2,
-    "v": "161bf9cc"
+    "v": "ed32681f"
   },
   "triceps-polia-acima-cabeca": {
     "quadros": 2,
-    "v": "3205a9d2"
+    "v": "3d5417cf"
   },
   "triceps-testa-barra": {
     "quadros": 2,
-    "v": "1e184a04"
+    "v": "220957dc"
   },
   "triceps-frances-halter": {
     "quadros": 2,
-    "v": "e1c9ddf3"
+    "v": "099d669f"
   },
   "triceps-coice-halter": {
     "quadros": 2,
-    "v": "b010f681"
+    "v": "2ffec9d7"
   },
   "mergulho-banco": {
     "quadros": 2,
-    "v": "e4ba5881"
+    "v": "5e2c574f"
   },
   "supino-fechado": {
     "quadros": 2,
-    "v": "406f3c23"
+    "v": "6682eb42"
   },
   "flexao-diamante": {
     "quadros": 2,
-    "v": "458755c0"
+    "v": "ef66b663"
   },
   "rosca-punho": {
     "quadros": 2,
-    "v": "0903fa1e"
+    "v": "d04574e4"
   },
   "rosca-inversa-barra": {
     "quadros": 2,
-    "v": "2783e99c"
+    "v": "d242f8a4"
   },
   "agachamento-livre-barra": {
     "quadros": 2,
-    "v": "36f8dfb7"
+    "v": "3f58c8c1"
   },
   "agachamento-frontal": {
     "quadros": 2,
-    "v": "5e4198af"
+    "v": "2f3cacb9"
   },
   "agachamento-goblet": {
     "quadros": 2,
-    "v": "fc0b1a1f"
+    "v": "653c5ac7"
   },
   "agachamento-peso-corporal": {
     "quadros": 2,
-    "v": "5afb589b"
+    "v": "415d6614"
   },
   "agachamento-smith": {
     "quadros": 2,
-    "v": "cd2a483e"
+    "v": "96903f5f"
   },
   "agachamento-hack": {
     "quadros": 2,
-    "v": "e407ede0"
+    "v": "888c71fb"
   },
   "agachamento-sumo-halter": {
     "quadros": 2,
-    "v": "a5ec673c"
+    "v": "db50b394"
   },
   "agachamento-salto": {
     "quadros": 2,
-    "v": "3c401d03"
+    "v": "3ad49e56"
   },
   "agachamento-isometrico-parede": {
     "quadros": 1,
-    "v": "1ff8706d"
+    "v": "311bf25d"
   },
   "agachamento-pistola": {
     "quadros": 2,
-    "v": "8f729c58"
+    "v": "59ec9fd1"
   },
   "agachamento-bulgaro": {
     "quadros": 2,
-    "v": "bd99db0b"
+    "v": "739e42c5"
   },
   "leg-press-45": {
     "quadros": 2,
-    "v": "1a3c3b2d"
+    "v": "18e6fb95"
   },
   "leg-press-horizontal": {
     "quadros": 2,
-    "v": "974f057a"
+    "v": "117371db"
   },
   "cadeira-extensora": {
     "quadros": 2,
-    "v": "afb4da18"
+    "v": "46b2bd79"
   },
   "afundo-halteres": {
     "quadros": 2,
-    "v": "6b9e7a58"
+    "v": "fee6f410"
   },
   "afundo-peso-corporal": {
     "quadros": 2,
-    "v": "bd3056a6"
+    "v": "1cf3696f"
   },
   "passada-halteres": {
     "quadros": 2,
-    "v": "25777400"
+    "v": "2a705e42"
   },
   "subida-banco": {
     "quadros": 2,
-    "v": "b251c686"
+    "v": "0f9700fb"
   },
   "salto-caixa": {
     "quadros": 2,
-    "v": "7bb3d712"
+    "v": "1c10b4cf"
   },
   "levantamento-terra": {
     "quadros": 2,
-    "v": "2d61b6a0"
+    "v": "22d92b2a"
   },
   "levantamento-terra-romeno": {
     "quadros": 2,
-    "v": "b4dbb7ec"
+    "v": "c0663471"
   },
   "stiff-barra": {
     "quadros": 2,
-    "v": "9a8c56eb"
+    "v": "a5c7e755"
   },
   "stiff-halteres": {
     "quadros": 2,
-    "v": "260727bb"
+    "v": "0b514059"
   },
   "stiff-unilateral-halter": {
     "quadros": 2,
-    "v": "c9cfe66e"
+    "v": "483a467e"
   },
   "good-morning": {
     "quadros": 2,
-    "v": "1de3a877"
+    "v": "a2a355e4"
   },
   "mesa-flexora": {
     "quadros": 2,
-    "v": "118c8e75"
+    "v": "3ebbe4cd"
   },
   "cadeira-flexora": {
     "quadros": 2,
-    "v": "445821ca"
+    "v": "77b064b3"
   },
   "flexora-em-pe": {
     "quadros": 2,
-    "v": "cfebc655"
+    "v": "d3723b6b"
   },
   "elevacao-pelvica-barra": {
     "quadros": 2,
-    "v": "0a2e1df4"
+    "v": "d8cbedc5"
   },
   "elevacao-pelvica-maquina": {
     "quadros": 2,
-    "v": "1a8197fd"
+    "v": "3c16866f"
   },
   "ponte-gluteo": {
     "quadros": 2,
-    "v": "36626128"
+    "v": "a82ce5c1"
   },
   "ponte-gluteo-unilateral": {
     "quadros": 2,
-    "v": "67006d6c"
+    "v": "3a7eec8d"
   },
   "gluteo-polia": {
     "quadros": 2,
-    "v": "bf75f3ff"
+    "v": "b1f84be0"
   },
   "coice-quatro-apoios": {
     "quadros": 2,
-    "v": "f8e84b9d"
+    "v": "df4eb011"
   },
   "cadeira-abdutora": {
     "quadros": 2,
-    "v": "5b09f337"
+    "v": "b446f775"
   },
   "caminhada-lateral-elastico": {
     "quadros": 2,
-    "v": "13779ec0"
+    "v": "e7620163"
   },
   "kettlebell-swing": {
     "quadros": 2,
-    "v": "66c7afc7"
+    "v": "b4e0eb10"
   },
   "cadeira-adutora": {
     "quadros": 2,
-    "v": "35e2f043"
+    "v": "0a4251e0"
   },
   "panturrilha-em-pe-maquina": {
     "quadros": 2,
-    "v": "5c3d8964"
+    "v": "55d45b84"
   },
   "panturrilha-sentado": {
     "quadros": 2,
-    "v": "23dd3a04"
+    "v": "53e08bdc"
   },
   "panturrilha-leg-press": {
     "quadros": 2,
-    "v": "f7ae131f"
+    "v": "40d119d1"
   },
   "panturrilha-peso-corporal": {
     "quadros": 2,
-    "v": "96c1559d"
+    "v": "5f1c06a5"
   },
   "panturrilha-unilateral-halter": {
     "quadros": 2,
-    "v": "0d19e023"
+    "v": "b95e7026"
   },
   "prancha": {
     "quadros": 1,
-    "v": "5d912940"
+    "v": "bd0ca546"
   },
   "prancha-lateral": {
     "quadros": 1,
-    "v": "a7a9cfc8"
+    "v": "5cf414cc"
   },
   "canoinha": {
     "quadros": 1,
-    "v": "153de03f"
+    "v": "a481d840"
   },
   "abdominal-supra": {
     "quadros": 2,
-    "v": "09066a1e"
+    "v": "6893af4c"
   },
   "abdominal-infra": {
     "quadros": 2,
-    "v": "ca6a490c"
+    "v": "f77d9412"
   },
   "abdominal-remador": {
     "quadros": 2,
-    "v": "3aa1aa35"
+    "v": "b2f10b5d"
   },
   "abdominal-bicicleta": {
     "quadros": 2,
-    "v": "9bcb7bb5"
+    "v": "8570e2d6"
   },
   "rotacao-russa": {
     "quadros": 2,
-    "v": "703f2f7b"
+    "v": "2b48c26b"
   },
   "dead-bug": {
     "quadros": 2,
-    "v": "e0ee4fa3"
+    "v": "94b726b3"
   },
   "perdigueiro": {
     "quadros": 2,
-    "v": "fce51e76"
+    "v": "12929909"
   },
   "escalador": {
     "quadros": 2,
-    "v": "8b1e690b"
+    "v": "de0cd9e7"
   },
   "elevacao-pernas-barra": {
     "quadros": 2,
-    "v": "26bd018a"
+    "v": "5d3460c2"
   },
   "abdominal-polia": {
     "quadros": 2,
-    "v": "52d353d8"
+    "v": "469df9a9"
   },
   "abdominal-maquina": {
     "quadros": 2,
-    "v": "0600e640"
+    "v": "141f4965"
   },
   "pallof-press": {
     "quadros": 2,
-    "v": "709a0ce4"
+    "v": "cdf12edf"
   },
   "roda-abdominal": {
     "quadros": 2,
-    "v": "b76ca249"
+    "v": "a78e6312"
   },
   "burpee": {
     "quadros": 2,
-    "v": "5e60c42b"
+    "v": "f4cf48ca"
   },
   "polichinelo": {
     "quadros": 2,
-    "v": "42af0fc0"
+    "v": "e9a97518"
   },
   "thruster-halteres": {
     "quadros": 2,
-    "v": "abcdc3f1"
+    "v": "9a84b485"
   },
   "caminhada-fazendeiro": {
     "quadros": 2,
-    "v": "a773e69b"
+    "v": "4210fb5c"
   },
   "corrida-rua": {
     "quadros": 2,
-    "v": "e4b14184"
+    "v": "fc8074ff"
   },
   "corrida-intervalada": {
     "quadros": 2,
-    "v": "ea477534"
+    "v": "4f37d447"
   },
   "caminhada": {
     "quadros": 2,
-    "v": "e5ca575b"
+    "v": "c28d6d6b"
   },
   "corrida-esteira": {
     "quadros": 2,
-    "v": "374fa350"
+    "v": "f40a40d4"
   },
   "caminhada-inclinada-esteira": {
     "quadros": 2,
-    "v": "8ecf6a3c"
+    "v": "d692af57"
   },
   "bicicleta-ergometrica": {
     "quadros": 2,
-    "v": "b647fce7"
+    "v": "45da561e"
   },
   "remo-ergometrico": {
     "quadros": 2,
-    "v": "8632fa2b"
+    "v": "fb00055e"
   },
   "eliptico": {
     "quadros": 2,
-    "v": "2c82f31b"
+    "v": "a0517bd6"
   },
   "escada-ergometrica": {
     "quadros": 2,
-    "v": "07651c9c"
+    "v": "0ed82b48"
   },
   "pular-corda": {
     "quadros": 2,
-    "v": "37c3e8a5"
+    "v": "36e029d6"
   }
 }

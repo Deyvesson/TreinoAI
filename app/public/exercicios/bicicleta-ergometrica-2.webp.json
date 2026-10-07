@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Pedal smoothly until the right pedal reaches the bottom and the left pedal reaches the top, keeping the feet planted on the pedals, knees tracking in line with the feet, and torso steady.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:04.073Z"
+  "createdAt": "2026-10-07T12:27:04.073Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

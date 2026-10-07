@@ -1,5 +1,6 @@
 {
   "prompt": "Espelho horizontal do quadro 1 (lado oposto do movimento): The opposite side: RIGHT arm extended overhead and LEFT leg extended low; LEFT arm pointing up and RIGHT leg bent at 90 degrees.",
   "origin": "Edição do quadro 1 com sharp (espelhamento, sem nova geração) (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T18:10:10.234Z"
+  "createdAt": "2026-10-07T18:10:10.234Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

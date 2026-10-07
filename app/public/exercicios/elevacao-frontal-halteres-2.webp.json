@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose, and make the change large and unmistakable, as the opposite end of the movement. New pose: Raise both dumbbells forward to shoulder height, keeping the slight elbow bend and wrists straight; shoulders are flexed about 90 degrees, arms parallel to the floor, and torso remains still without leaning or shrugging.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:31:33.530Z"
+  "createdAt": "2026-10-07T12:31:33.530Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

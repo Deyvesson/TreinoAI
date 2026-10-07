@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Agachamento livre com barra (also known as Agachamento livre, Agachamento, Back squat). Pose: Stand with feet about shoulder-width apart and toes slightly turned out, holding the barbell across the upper traps—not on the neck—with a secure overhand grip just outside the shoulders. Brace your trunk, keep your chest lifted and spine neutral, and stand tall with knees extended but not locked.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.773Z"
+  "createdAt": "2026-10-07T12:27:03.773Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

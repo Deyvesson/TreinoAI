@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Stiff com halteres. Pose: Bottom of the stiff-legged deadlift with dumbbells, at full depth: the legs stay completely STRAIGHT, knees locked, never bent; the hips push far back and the torso hinges forward to slightly below parallel with the floor, back flat and neutral, head in line with the spine. Arms hang straight down; the dumbbells are well below the knees, in front of the middle of the shins, close to the legs, only a short distance above the feet.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T17:48:51.409Z"
+  "createdAt": "2026-10-07T17:48:51.409Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

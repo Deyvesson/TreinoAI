@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Bend both knees to lower under control until the right thigh is near parallel to the floor and the left knee points toward the floor without touching it; keep the right knee tracking over the toes, heel grounded, hips square, and torso slightly inclined with a neutral spine. The dumbbells hang beside your hips without swinging.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.825Z"
+  "createdAt": "2026-10-07T12:27:03.825Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

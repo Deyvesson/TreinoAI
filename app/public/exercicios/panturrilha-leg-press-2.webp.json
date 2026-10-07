@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: lateral view. Exercise: Panturrilha no leg press. Pose: One single scene with one single person, not a split or multi-panel image. 45 degree leg press machine (seated sled leg press), lateral view: the lifter lies back on the reclined seat pad, hands on the side handles. The legs are almost fully extended and stay that way, knees straight but not locked, the thighs not moving. Only the balls of the feet and the toes rest on the BOTTOM edge of the large foot platform, with the heels hanging off below the platform edge. End position: pushing only with the balls of the feet, the ankles extend fully (toes pointed, heels raised), so the platform is pushed a few centimetres further up and away along its rails; the knees and hips stay where they were.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T17:55:22.222Z"
+  "createdAt": "2026-10-07T17:55:22.222Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

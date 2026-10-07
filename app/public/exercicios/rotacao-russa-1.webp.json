@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: frontal view. Exercise: Rotação russa (also known as Russian twist). Pose: Camera directly in front of the lifter, at chest height; the lifter faces the camera and is centered in the frame, the hips on the vertical centre line. Seated on the floor in a V position: knees bent and pointing at the camera, feet together and lifted a little off the floor, torso leaning back about 45 degrees with a straight back, hands clasped together in front of the chest. Rotation to the lifter’s LEFT: the shoulders turn to the left and the clasped hands move down beside the left hip, close to the floor, while the knees and feet stay centered.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T17:58:47.453Z"
+  "createdAt": "2026-10-07T17:58:47.453Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

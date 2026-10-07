@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Rosca martelo. Pose: Hammer curl, both arms together, top position: standing upright, feet hip-width apart, upper arms vertical and pinned to the sides of the torso, elbows fully bent so the forearms point up and the dumbbells are at shoulder height just in front of the shoulders, neutral hammer grip: palms facing each other, thumbs up, each dumbbell handle horizontal and pointing forward, so one dumbbell head is in front of the fist and the other behind it.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T14:20:47.611Z"
+  "createdAt": "2026-10-07T14:20:47.611Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

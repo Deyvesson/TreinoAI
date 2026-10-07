@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: diagonal view. Exercise: Desenvolvimento com halteres (also known as Desenvolvimento). Pose: Sit upright on the adjustable bench with your back supported, feet flat on the floor, and one dumbbell in each hand at shoulder height. Keep wrists straight, palms facing forward or slightly inward, and elbows bent about 90 degrees and slightly in front of your torso.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.575Z"
+  "createdAt": "2026-10-07T12:27:03.575Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

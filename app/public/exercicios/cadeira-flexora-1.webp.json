@@ -1,5 +1,6 @@
 {
   "prompt": "Clean instructional fitness illustration, full body, one athletic adult in plain dark t-shirt, shorts and plain unbranded black sneakers, pure white seamless studio background (#FFFFFF) with only a soft contact shadow under the body and equipment, soft even lighting, no text, no logos, no brand marks, anatomically correct form, subject centered with margin around the body. Camera: lateral view. Exercise: Cadeira flexora (also known as Flexora sentada). Pose: Seated leg curl machine, exact side profile: the lifter sits upright with the back against the backrest and hands on the side handles; a padded thigh bar presses down on TOP of the thighs just above the knees. The lower roller pad is always BEHIND and UNDER the lower legs, touching the back of the ankles just above the heels; nothing is ever in front of the shins. Start position: both legs extended straight forward at seat height, knees straight, with the backs of the lower legs resting ON TOP of the roller pad, which sits under the calves near the heels, out in front of the seat.",
   "origin": "Gerado com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T18:12:13.586Z"
+  "createdAt": "2026-10-07T18:12:13.586Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }

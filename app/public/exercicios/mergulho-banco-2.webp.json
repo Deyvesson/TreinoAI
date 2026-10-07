@@ -1,5 +1,6 @@
 {
   "prompt": "Same person, same face, same clothes and sneakers, same equipment, same background, same camera angle, framing and lighting. Change only the pose to: Bend your elbows back to lower your hips in front of the bench until your elbows are about 90 degrees, keeping your shoulders down and hips close to the bench. Keep your feet flat, knees bent, and torso upright; do not let your shoulders drop below your elbows.",
   "origin": "Edição do quadro 1 com gpt-image-2.5 (Azure AI Foundry, treinoai-foundry)",
-  "createdAt": "2026-10-07T12:27:03.753Z"
+  "createdAt": "2026-10-07T12:27:03.753Z",
+  "postprocess": "fundo clareado na publicação: pixels com canal mínimo acima de 218 levados gradualmente ao branco puro (#FFFFFF) até 238"
 }
