@@ -43,6 +43,8 @@ Return the starting position ("inicio") and the end or peak position ("fim") of 
 - Unilateral exercises: the right side works.
 - Pick the camera that makes the movement easiest to read: usually "lateral"; "frontal" for movements in the frontal plane (lateral raises, abduction, jumping jacks); "diagonal" when depth matters.
 - Use only the listed equipment. If the list is empty, it is bodyweight only.
+- The two frames must look clearly different at thumbnail size: name the joints that move the most and give their angle in both positions (e.g. "hips at about 90 degrees" vs "hips fully extended"). For explosive or carried movements, "fim" is the most contrasting moment (feet off the ground, kettlebell at chest height, mid-stride with weights at the sides while walking).
+- Describe equipment so it cannot be misdrawn: a barbell is one long straight bar held with both hands, with plates on both ends; for cable exercises name the attachment (rope, handle, straight bar, ankle strap) and the pulley height; for machines name the pad positions relative to the body.
 - English, one or two sentences each. No brand names, no text, no mention of the camera inside the pose texts.`
 
 const SCHEMA = {
