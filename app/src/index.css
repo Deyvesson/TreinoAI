@@ -1868,6 +1868,478 @@ html.invertida {
   }
 }
 
+/* Progresso: histórico, frequência e análise da IA. Mesmo mundo da torre; a única placa é o CTA de analisar. */
+
+.hoje-cabeca {
+  position: relative;
+}
+
+.hoje-progresso {
+  float: right;
+  margin: 0 0 var(--c) calc(var(--c) * 1.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 calc(var(--c) * 1.5);
+  border: 1px solid var(--fio-forte);
+  border-radius: var(--raio);
+  background: var(--superficie);
+  color: var(--ultramar);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-stretch: 85%;
+  cursor: pointer;
+}
+
+.hoje-progresso:hover {
+  background: rgb(36 51 214 / 0.06);
+}
+
+.progresso {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: calc(var(--c) * 6);
+}
+
+.progresso-topo {
+  padding: max(var(--c), env(safe-area-inset-top)) var(--margem) 0 calc(var(--c) * 1.5);
+}
+
+.progresso-cabeca {
+  padding: var(--c) var(--margem) var(--c);
+}
+
+.progresso-cabeca .hoje-titulo {
+  margin-top: 0;
+}
+
+.progresso-vazio {
+  padding: 0 var(--margem);
+}
+
+.progresso-vazio .botao-largo {
+  margin-top: calc(var(--c) * 2);
+}
+
+.progresso-secao {
+  padding-top: calc(var(--c) * 4);
+}
+
+.progresso-secao > h2 {
+  margin: 0 0 calc(var(--c) * 1.5);
+  padding: 0 var(--margem);
+  font-size: 1.375rem;
+  font-weight: 800;
+  font-stretch: 75%;
+}
+
+/* Análise */
+.analise-bloqueada,
+.analise-intro,
+.analise-gerando,
+.analise-erro,
+.analise-nota,
+.analise,
+.progresso-secao > .botao-largo,
+.analise-refazer {
+  margin-inline: var(--margem);
+}
+
+.progresso-secao > .botao-largo {
+  width: calc(100% - var(--margem) * 2);
+  margin-top: calc(var(--c) * 2);
+}
+
+.analise-bloqueada p,
+.analise-intro {
+  max-width: 62ch;
+  margin-top: calc(var(--c) * 1.5);
+  margin-bottom: 0;
+  color: var(--tinta-2);
+}
+
+.analise-bloqueada .passos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 280px;
+}
+
+.analise-gerando {
+  margin-top: 0;
+  font-weight: 700;
+  font-stretch: 85%;
+}
+
+.analise-erro {
+  margin-top: calc(var(--c) * 1.5);
+  color: var(--perigo);
+  font-weight: 600;
+}
+
+.analise-nota {
+  margin-top: calc(var(--c) * 2);
+  margin-bottom: 0;
+  color: var(--tinta-3);
+  font-size: 0.9375rem;
+}
+
+.analise-refazer {
+  margin-top: calc(var(--c) * 2.5);
+}
+
+.analise {
+  max-width: 64ch;
+}
+
+.analise-data {
+  margin: 0;
+  color: var(--tinta-3);
+  font-size: 0.875rem;
+}
+
+.analise-resumo {
+  margin: var(--c) 0 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.analise h3 {
+  margin: calc(var(--c) * 3) 0 var(--c);
+  font-size: 1rem;
+  font-weight: 750;
+  font-stretch: 85%;
+}
+
+.analise p {
+  margin: 0;
+  color: var(--tinta-2);
+}
+
+.analise-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--fio);
+}
+
+.analise-lista li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: calc(var(--c) * 1.5) 0;
+  border-bottom: 1px solid var(--fio);
+  color: var(--tinta-2);
+}
+
+.analise-lista strong {
+  color: var(--tinta);
+}
+
+.analise-sugestao {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.analise-passos {
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--tinta-2);
+}
+
+.analise-passos li + li {
+  margin-top: var(--c);
+}
+
+/* Frequência semanal: células da torre, uma por semana. */
+.frequencia-meta {
+  margin: 0 0 calc(var(--c) * 1.5);
+  padding: 0 var(--margem);
+  color: var(--tinta-2);
+  font-size: 0.9375rem;
+}
+
+.frequencia {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 3px;
+  margin: 0;
+  padding: 0 var(--margem);
+  list-style: none;
+}
+
+.frequencia li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 64px;
+  border-radius: 2px;
+  box-shadow:
+    inset 0 -4px 0 var(--pendente),
+    inset 0 0 0 1px var(--fio);
+}
+
+.frequencia li[data-estado='meta'] {
+  box-shadow:
+    inset 0 -4px 0 var(--verde),
+    inset 0 0 0 1px var(--fio);
+}
+
+.frequencia li[data-estado='abaixo'] {
+  box-shadow:
+    inset 0 -4px 0 var(--amarelo),
+    inset 0 0 0 1px var(--fio);
+}
+
+.frequencia-valor {
+  font-size: 1.625rem;
+  font-weight: 800;
+  font-stretch: 62%;
+  line-height: 1;
+}
+
+.frequencia li[data-estado='atual'] {
+  box-shadow:
+    inset 0 -4px 0 var(--ultramar),
+    inset 0 0 0 1px var(--fio);
+}
+
+.frequencia li[data-estado='atual'] .frequencia-valor,
+.frequencia li[data-estado='atual'] .frequencia-semana {
+  color: var(--ultramar);
+}
+
+.legenda [data-estado='atual'] span {
+  background: var(--ultramar);
+}
+
+.frequencia li[data-estado='pendente'] .frequencia-valor {
+  color: var(--tinta-3);
+}
+
+.frequencia-semana {
+  padding-bottom: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-stretch: 85%;
+  color: var(--tinta-3);
+}
+
+.frequencia-legenda {
+  padding-top: calc(var(--c) * 1.5);
+}
+
+.legenda [data-estado='pendente'] span {
+  background: var(--pendente);
+}
+
+/* Listas de evolução e treinos */
+.evolucao .torre-cabeca,
+.treino-feito {
+  grid-template-columns: 4px minmax(0, 1fr) auto 18px;
+  padding-left: var(--margem);
+}
+
+.treino-feito {
+  grid-template-columns: 64px 4px minmax(0, 1fr) 18px;
+}
+
+.treino-feito-data {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-stretch: 85%;
+  color: var(--tinta-2);
+  text-transform: capitalize;
+}
+
+.treino-feito-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: calc(var(--c) * 1.5) 0;
+}
+
+.treino-feito-texto .torre-nome {
+  padding: 0;
+}
+
+.treino-feito-meta {
+  font-size: 0.8125rem;
+  color: var(--tinta-3);
+}
+
+.evolucao-detalhe {
+  padding: 0 var(--margem) var(--margem);
+}
+
+/* Gráfico de evolução */
+.grafico-area {
+  position: relative;
+  border-radius: var(--raio);
+  touch-action: pan-y;
+}
+
+.grafico-area svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grafico-grade {
+  stroke: var(--fio);
+  stroke-width: 1;
+}
+
+.grafico-eixo {
+  fill: var(--tinta-3);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.grafico-linha {
+  fill: none;
+  stroke: var(--tinta-2);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.grafico-ponto {
+  fill: var(--tinta-2);
+  stroke: var(--superficie);
+  stroke-width: 2;
+}
+
+.grafico-recorde {
+  fill: var(--roxo);
+}
+
+.grafico-ponto[data-ativo] {
+  stroke: var(--tinta);
+  stroke-width: 2.5;
+}
+
+.grafico-mira {
+  stroke: var(--tinta-3);
+  stroke-width: 1;
+}
+
+.grafico-rotulo {
+  fill: var(--tinta);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.grafico-alvo {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+.grafico-dica {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 10px;
+  border-radius: var(--raio);
+  background: var(--tinta);
+  color: var(--na-placa);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateX(8px);
+}
+
+.grafico-dica[data-lado='esquerda'] {
+  transform: translateX(calc(-100% - 8px));
+}
+
+.grafico-dica strong {
+  font-size: 0.9375rem;
+}
+
+.grafico-dica span {
+  color: var(--na-placa-2);
+}
+
+.grafico-legenda {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: var(--c) 0 0;
+  font-size: 0.8125rem;
+  color: var(--tinta-2);
+}
+
+.grafico-legenda span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--roxo);
+}
+
+.grafico-tabela {
+  margin-top: var(--c);
+  font-size: 0.875rem;
+}
+
+.grafico-tabela summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 40px;
+  color: var(--tinta-2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.grafico-tabela summary::-webkit-details-marker {
+  display: none;
+}
+
+.grafico-tabela[open] summary svg {
+  rotate: 180deg;
+}
+
+.legenda-topo {
+  padding-top: 0;
+}
+
+.progresso-desde {
+  margin: 4px 0 0;
+  color: var(--tinta-3);
+  font-size: 0.875rem;
+}
+
+.grafico-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grafico-tabela th,
+.grafico-tabela td {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--fio);
+  text-align: left;
+}
+
+.grafico-tabela th {
+  color: var(--tinta-3);
+  font-weight: 600;
+}
+
 /* Desktop: a torre fixa à esquerda, como na transmissão. */
 
 @media (min-width: 960px) {

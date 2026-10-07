@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type { PerfilTreino, PlanoGerado } from '../../../shared/plano'
+import type { AnaliseGerada } from '../../../shared/progresso'
 
 export interface PerfilSalvo extends PerfilTreino {
   id: 'atual'
@@ -39,11 +40,16 @@ export interface SerieSalva {
   registradaEm: string
 }
 
+export interface AnaliseSalva extends AnaliseGerada {
+  id?: number
+}
+
 export const db = new Dexie('treinoai') as Dexie & {
   perfil: EntityTable<PerfilSalvo, 'id'>
   planos: EntityTable<PlanoSalvo, 'id'>
   sessoes: EntityTable<SessaoSalva, 'id'>
   series: EntityTable<SerieSalva, 'id'>
+  analises: EntityTable<AnaliseSalva, 'id'>
 }
 
 // Novas tabelas entram numa nova versão, sem apagar as anteriores.
@@ -54,6 +60,9 @@ db.version(1).stores({
 db.version(2).stores({
   sessoes: '++id, estado, planoId, iniciadaEm',
   series: '++id, sessaoId, exercicioId, registradaEm',
+})
+db.version(3).stores({
+  analises: '++id, geradaEm',
 })
 
 export async function salvarPerfil(perfil: PerfilTreino): Promise<void> {
