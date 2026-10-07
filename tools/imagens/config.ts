@@ -24,6 +24,11 @@ export interface Pose {
    * de ângulo (barra que gira num apoio) ou quando a amplitude final é grande demais para uma edição.
    */
   inverso?: boolean
+  /**
+   * Exercícios alternados (um lado e depois o outro): o quadro 2 é o espelho horizontal do quadro 1,
+   * sem nova geração. A câmera deve olhar ao longo do corpo para a pessoa não mudar de lugar.
+   */
+  espelho?: boolean
 }
 export type Poses = Record<string, Pose>
 

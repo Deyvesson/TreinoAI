@@ -7,7 +7,8 @@
     "imagens:gerar": "node imagens/gerar.ts",
     "imagens:revisar": "node imagens/revisar.ts",
     "imagens:publicar": "node imagens/publicar.ts",
-    "check": "tsc -p ."
+    "check": "tsc -p .",
+    "imagens:refinar": "node imagens/refinar.ts"
   },
   "dependencies": {
     "sharp": "^0.35.5"

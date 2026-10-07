@@ -82,6 +82,18 @@ await emParalelo(alvo, paralelo, async (e: Exercicio) => {
   const prompts = promptsDoExercicio(e, pose)
   const inicio = Date.now()
   try {
+    if (pose.espelho && pose.fim) {
+      const bruta1 = path.join(PASTA_BRUTAS, `${e.id}-1.png`)
+      const reaproveitar = !forcar && (await existe(bruta1))
+      const quadro1 = reaproveitar ? await readFile(bruta1) : await gerarImagem(imagem, prompts.inicial)
+      if (!reaproveitar || !(await existe(path.join(PASTA_SAIDA, `${e.id}-1.webp`)))) {
+        await salvar(e.id, 1, quadro1, prompts.inicial, imagem.deployment)
+      }
+      const espelhado = await sharp(quadro1).flop().png().toBuffer()
+      await salvar(e.id, 2, espelhado, `Espelho horizontal do quadro 1 (lado oposto do movimento): ${pose.fim}`, 'sharp (espelhamento, sem nova geração)')
+      console.log(`  ✓ ${e.id} (${Math.round((Date.now() - inicio) / 1000)}s, quadro 2 espelhado)`)
+      return
+    }
     if ((inversoPedido || pose.inverso) && pose.fim) {
       const inv = promptsInversos(e, { ...pose, fim: pose.fim })
       const quadro2 = await gerarImagem(imagem, inv.final)
