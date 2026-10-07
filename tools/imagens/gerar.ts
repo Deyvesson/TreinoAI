@@ -16,7 +16,7 @@ import {
   type Destino,
   type Poses,
 } from './config.ts'
-import { promptsDoExercicio, proveniencia } from './prompts.ts'
+import { promptsDoExercicio, promptsInversos, proveniencia } from './prompts.ts'
 import { gerarRevisao } from './revisao.ts'
 
 const LADO_FINAL = 768
@@ -50,14 +50,14 @@ async function editarImagem(destino: Destino, referencia: Buffer, prompt: string
   return Buffer.from(corpo.data[0].b64_json, 'base64')
 }
 
-async function salvar(id: string, quadro: 1 | 2, png: Buffer, prompt: string, modelo: string) {
+async function salvar(id: string, quadro: 1 | 2, png: Buffer, prompt: string, modelo: string, inverso = false) {
   await writeFile(path.join(PASTA_BRUTAS, `${id}-${quadro}.png`), png)
   const webp = path.join(PASTA_SAIDA, `${id}-${quadro}.webp`)
   await sharp(png).resize(LADO_FINAL, LADO_FINAL).webp({ quality: 80, effort: 5 }).toFile(webp)
-  await writeFile(`${webp}.json`, proveniencia(prompt, modelo, quadro))
+  await writeFile(`${webp}.json`, proveniencia(prompt, modelo, quadro, inverso))
 }
 
-const { ids, forcar, soQuadro2, paralelo } = argumentos()
+const { ids, forcar, soQuadro2, paralelo, inverso: inversoPedido } = argumentos()
 const { imagem } = await lerFoundry()
 const poses = await lerJson<Poses>(ARQ_POSES, {})
 await mkdir(PASTA_BRUTAS, { recursive: true })
@@ -82,6 +82,14 @@ await emParalelo(alvo, paralelo, async (e: Exercicio) => {
   const prompts = promptsDoExercicio(e, pose)
   const inicio = Date.now()
   try {
+    if ((inversoPedido || pose.inverso) && pose.fim) {
+      const inv = promptsInversos(e, { ...pose, fim: pose.fim })
+      const quadro2 = await gerarImagem(imagem, inv.final)
+      await salvar(e.id, 2, quadro2, inv.final, imagem.deployment, true)
+      await salvar(e.id, 1, await editarImagem(imagem, quadro2, inv.inicial), inv.inicial, imagem.deployment, true)
+      console.log(`  ✓ ${e.id} (${Math.round((Date.now() - inicio) / 1000)}s, ordem inversa)`)
+      return
+    }
     const bruta1 = path.join(PASTA_BRUTAS, `${e.id}-1.png`)
     let quadro1: Buffer
     if (soQuadro2 || (!forcar && (await existe(bruta1)))) {

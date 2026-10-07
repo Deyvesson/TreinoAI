@@ -36,13 +36,13 @@
   },
   "crucifixo-reto-halteres": {
     "camera": "diagonal",
-    "inicio": "Lie face up on a flat adjustable bench with head, upper back, and hips supported, feet flat on the floor, and spine neutral. Hold one dumbbell in each hand directly above the chest, palms facing each other, elbows softly bent about 20 degrees, and arms nearly together.",
-    "fim": "Keeping the same soft elbow bend and neutral spine, lower both dumbbells out to the sides in a wide arc until the upper arms are about 70 degrees from the torso and level with the chest; keep wrists stacked over elbows and do not let the shoulders drop below the bench."
+    "inicio": "Lying face up on a flat bench, feet flat on the floor, head and back on the bench. Both arms extended straight up above the chest, elbows very slightly bent, one dumbbell in each hand with a NEUTRAL grip: palms facing each other, and each dumbbell handle running parallel to the length of the body (pointing toward the head and the feet), never across the body as in a bench press. The two dumbbells almost touch directly above the chest.",
+    "fim": "Keeping exactly the same neutral grip and the same slight fixed elbow bend, the arms open wide out to the sides in a broad arc: upper arms level with the chest (not below the bench), dumbbells at chest height far out to each side, palms now facing up toward the ceiling and inward, handles still parallel to the length of the body. Chest open, shoulder blades pulled together."
   },
   "crucifixo-inclinado-halteres": {
     "camera": "diagonal",
-    "inicio": "Lie face-up on an adjustable bench set to about 30 degrees, feet flat on the floor and head supported; hold one dumbbell in each hand above the upper chest, palms facing each other, elbows softly bent about 20 degrees, arms nearly vertical and shoulders stacked over the chest.",
-    "fim": "Keeping the same slight bend in both elbows and a stable, gently arched back, lower the dumbbells outward in a wide arc until the upper arms are level with the chest and the elbows are just below shoulder height; shoulders are opened wide, with the weights beside the upper chest and not pulled below a comfortable stretch."
+    "inicio": "Lying face up on an adjustable bench inclined about 30 to 45 degrees, feet flat on the floor, head and back on the bench. Both arms extended straight up above the upper chest, elbows very slightly bent, one dumbbell in each hand with a NEUTRAL grip: palms facing each other, and each dumbbell handle running parallel to the length of the body (pointing toward the head and the feet), never across the body as in a bench press. The two dumbbells almost touch directly above the upper chest.",
+    "fim": "Keeping exactly the same neutral grip and the same slight fixed elbow bend, the arms open wide out to the sides in a broad arc: upper arms level with the upper chest, dumbbells at shoulder-to-chest height far out to each side, palms now facing up and inward, handles still parallel to the length of the body. Chest open, shoulder blades pulled together."
   },
   "crucifixo-maquina": {
     "camera": "diagonal",
@@ -141,13 +141,14 @@
   },
   "remada-cavalinho": {
     "camera": "diagonal",
-    "inicio": "Stand straddling a straight barbell secured at one end on the floor behind you, with weight plates on its free end; hinge forward about 45 degrees with knees softly bent, spine neutral, and head aligned, then grasp the bar just below the plates with both hands. Let the loaded end hang beneath your chest, arms extended and shoulders relaxed.",
-    "fim": "Keep the same braced hip hinge and neutral spine, and row the loaded end toward your lower ribs by driving both elbows back close to your sides; elbows bend to about 90 degrees and shoulder blades draw together, without lifting or twisting your torso."
+    "inicio": "Landmine T-bar row. one single straight, rigid barbell used as a landmine: its far end rests on the floor behind the lifter, the barbell runs forward between the lifter’s legs, and only its near end is loaded with one weight plate, right in front of the lifter’s shins. Standing astride the bar with feet shoulder-width apart, knees slightly bent, hips hinged so the torso leans forward about 45 degrees with a flat neutral back. Both hands grip the bar together just behind the plate, arms hanging straight down, the loaded end a few centimetres above the floor.",
+    "fim": "Same stance and the same 45 degree torso angle. The arms pull the loaded end of the barbell up until the hands and the plate are just below the lower chest, elbows bent past 90 degrees and driven back close to the ribs. The barbell stays one perfectly straight rigid bar: it pivots on its far end, which never leaves the floor behind the lifter, and it still passes between the legs.",
+    "inverso": true
   },
   "remada-invertida": {
     "camera": "lateral",
     "inicio": "Lie face up beneath a fixed horizontal Smith machine bar set just above chest height, gripping it overhand slightly wider than shoulder-width; keep your body straight from head to heels, heels planted, arms fully extended, and shoulders controlled.",
-    "fim": "Keeping your body straight and heels planted, pull your chest up to the bar by bending your elbows to about 90 degrees and drawing them back; the bar touches or nearly touches your mid-chest."
+    "fim": "Keeping exactly the same grip as in the start position (overhand, palms facing down and forward, hands slightly wider than shoulder-width, on the same spots of the bar, wrists straight), and with the body still straight from head to heels and heels planted, pull the chest up until the bar nearly touches the mid-chest: elbows bent about 90 degrees and drawn back and out at about 45 degrees from the torso."
   },
   "remada-elastico": {
     "camera": "diagonal",
@@ -161,8 +162,9 @@
   },
   "hiperextensao-lombar": {
     "camera": "lateral",
-    "inicio": "On a weight-machine Roman-chair station, secure the ankles beneath the lower rollers and place the front of the hips against the upper pad; hinge forward at the hips with knees slightly bent, arms crossed over the chest, and back straight, torso about 45 degrees below horizontal.",
-    "fim": "Raise the torso by extending the hips until the body forms a straight line from head to heels, with hips fully extended and spine neutral; keep the ankles secured, knees softly bent, and do not arch past neutral."
+    "inverso": true,
+    "inicio": "Top position: feet still locked under the ankle pads and thighs on the same hip pad, arms still crossed over the chest. The torso is raised until the whole body forms one straight line from heels to head along the 45 degree angle of the bench, hips fully extended, back neutral, without arching past the line.",
+    "fim": "On a 45 degree hyperextension bench (roman chair): feet locked under the ankle pads on the low footplate, the front of the thighs resting on the angled hip pad with the pad just below the hip crease, legs straight along the 45 degree line of the bench. Bottom position, at full depth: the body folds sharply at the hips over the pad and the torso hangs straight down, vertical and perpendicular to the floor, head pointing at the floor and only a short distance above it, so the torso and the legs form a tight angle at the hips. Back neutral, not rounded; arms crossed over the chest (hands not behind the head)."
   },
   "superman": {
     "camera": "lateral",
