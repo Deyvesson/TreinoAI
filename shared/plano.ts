@@ -1,6 +1,6 @@
 // Contrato entre o app e a API: o perfil que o usuário preenche e o plano que a IA devolve.
 // Só tipos e constantes, sem dependências, para valer igual no app, na API e nos scripts.
-import type { Equipamento, ExercicioId, Nivel } from './exercicios'
+import type { Equipamento, Nivel } from './exercicios'
 
 export const OBJETIVOS = ['hipertrofia', 'forca', 'emagrecimento', 'condicionamento', 'saude'] as const
 export type Objetivo = (typeof OBJETIVOS)[number]
@@ -25,7 +25,8 @@ export interface PerfilTreino {
 // A prescrição usa os campos que fazem sentido para a `medida` do exercício no catálogo;
 // os demais vêm null (ex.: prancha tem duracaoSegundos, não repetições).
 export interface ExercicioPrescrito {
-  exercicioId: ExercicioId
+  /** ID do catálogo (planos da IA usam só estes) ou de um exercício criado pelo usuário (`pessoal-...`). */
+  exercicioId: string
   series: number
   repeticoesMin: number | null
   repeticoesMax: number | null
@@ -56,6 +57,9 @@ export interface Plano {
   /** Ajustes feitos por causa das limitações e avisos de segurança. */
   cuidados: string[]
 }
+
+/** De onde o plano veio: gerado pela IA, editado pelo usuário a partir de um da IA, ou montado do zero. */
+export type OrigemPlano = 'ia' | 'editado' | 'manual'
 
 export interface PlanoGerado {
   plano: Plano

@@ -37,6 +37,13 @@ export default function Hoje() {
           Responda seis perguntas rápidas: objetivo, experiência, dias, tempo, equipamento e limitações. A IA monta um
           plano completo com exercícios do catálogo e explica o motivo de cada um.
         </p>
+        <p className="hoje-texto">
+          Prefere escolher cada exercício?{' '}
+          <button type="button" className="botao botao-texto botao-inline" onClick={() => navegar('/plano/novo')}>
+            Monte seu plano do zero
+          </button>
+          .
+        </p>
         <InstalarApp />
         <div className="hoje-base">
           <button type="button" className="botao botao-primario botao-largo" onClick={() => navegar('/comecar')}>
@@ -96,7 +103,8 @@ export default function Hoje() {
     )
   }
 
-  const indice = diaEscolhido ?? diaSugerido ?? 0
+  // Depois de editar, o plano pode ter menos dias que o índice lembrado.
+  const indice = Math.min(diaEscolhido ?? diaSugerido ?? 0, plano.plano.dias.length - 1)
   const dia = plano.plano.dias[indice]
   const torre = montarTorre(dia, [], null)
 
@@ -126,7 +134,7 @@ export default function Hoje() {
         <nav className="dias" aria-label="Dias do plano">
           {plano.plano.dias.map((d, i) => (
             <button
-              key={d.nome}
+              key={i}
               type="button"
               className="dia-chip"
               aria-pressed={i === indice}
@@ -146,11 +154,19 @@ export default function Hoje() {
           <span>Som no fim do descanso</span>
         </label>
         <p className="hoje-plano">
-          Plano: {plano.plano.nome} · {plano.plano.duracaoSemanas} semanas ·{' '}
-          <button type="button" className="botao botao-texto botao-inline" onClick={() => navegar('/comecar')}>
-            Refazer plano
-          </button>
+          Plano: {plano.plano.nome} · {plano.plano.duracaoSemanas} semanas
         </p>
+        <div className="hoje-plano-acoes">
+          <button type="button" className="botao botao-texto" onClick={() => navegar('/plano/editar')}>
+            Editar plano
+          </button>
+          <button type="button" className="botao botao-texto" onClick={() => navegar('/comecar')}>
+            Refazer com a IA
+          </button>
+          <button type="button" className="botao botao-texto" onClick={() => navegar('/plano/novo')}>
+            Montar do zero
+          </button>
+        </div>
       </section>
 
       <div className="hoje-base">

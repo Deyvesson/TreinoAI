@@ -1,6 +1,7 @@
 // Regras da sessão, sem acesso a banco: montam a torre a partir do dia do plano e das séries registradas.
-import { EXERCICIO_POR_ID, type Equipamento, type Exercicio } from '../../../shared/exercicios'
+import type { Equipamento, Exercicio } from '../../../shared/exercicios'
 import type { DiaDeTreino, ExercicioPrescrito } from '../../../shared/plano'
+import { exercicioPorId } from './catalogo'
 import type { SerieSalva } from './db'
 
 /** Cores da cronometragem: verde meta, roxo recorde, amarelo abaixo, cinza pendente; `atual` é a série no ar. */
@@ -30,7 +31,7 @@ const EXERCICIO_DESCONHECIDO = (id: string): Exercicio => ({
 })
 
 export function exercicioDe(id: string): Exercicio {
-  return EXERCICIO_POR_ID.get(id) ?? EXERCICIO_DESCONHECIDO(id)
+  return exercicioPorId(id) ?? EXERCICIO_DESCONHECIDO(id)
 }
 
 export function cumpriuMeta(p: ExercicioPrescrito, e: Exercicio, s: SerieSalva): boolean {

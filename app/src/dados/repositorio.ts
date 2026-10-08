@@ -13,12 +13,17 @@ export function diaDaSessao(plano: PlanoSalvo, sessao: Pick<SessaoSalva, 'diaInd
   return plano.plano.dias[Math.min(sessao.diaIndice, plano.plano.dias.length - 1)]
 }
 
-/** O dia sugerido é o seguinte ao último treino feito com este plano. */
+/** O dia sugerido é o seguinte ao último treino feito com este plano (ou com as versões anteriores dele). */
 export async function proximoDia(plano: PlanoSalvo): Promise<number> {
-  const anteriores = await db.sessoes.where('planoId').equals(plano.id!).toArray()
-  const feitas = anteriores.filter((s) => s.estado !== 'ativa').sort((a, b) => a.iniciadaEm.localeCompare(b.iniciadaEm))
-  const ultima = feitas.at(-1)
-  return ultima ? (ultima.diaIndice + 1) % plano.plano.dias.length : 0
+  let atual: PlanoSalvo | undefined = plano
+  while (atual?.id !== undefined) {
+    const anteriores = await db.sessoes.where('planoId').equals(atual.id).toArray()
+    const feitas = anteriores.filter((s) => s.estado !== 'ativa').sort((a, b) => a.iniciadaEm.localeCompare(b.iniciadaEm))
+    const ultima = feitas.at(-1)
+    if (ultima) return (ultima.diaIndice + 1) % plano.plano.dias.length
+    atual = atual.versaoDe !== undefined ? await db.planos.get(atual.versaoDe) : undefined
+  }
+  return 0
 }
 
 export async function iniciarSessao(plano: PlanoSalvo, diaIndice: number): Promise<number> {
