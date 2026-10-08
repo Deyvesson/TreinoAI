@@ -38,8 +38,10 @@ export function planoSchema(ids: readonly ExercicioId[]) {
 
 // Garante em tempo de compilação que os schemas não se afastam dos tipos compartilhados.
 type Igual<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
+// O plano da IA é mais estrito que o tipo compartilhado (IDs só do catálogo), então basta caber nele.
+type Cabe<A, B> = A extends B ? true : false;
 const perfilConfere: Igual<z.infer<typeof perfilSchema>, PerfilTreino> = true;
-const planoConfere: Igual<z.infer<ReturnType<typeof planoSchema>>, Plano> = true;
+const planoConfere: Cabe<z.infer<ReturnType<typeof planoSchema>>, Plano> = true;
 void perfilConfere;
 void planoConfere;
 

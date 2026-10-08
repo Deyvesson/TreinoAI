@@ -1,9 +1,9 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useState } from 'react'
-import { EXERCICIO_POR_ID } from '../../../shared/exercicios'
 import type { PerfilTreino } from '../../../shared/plano'
 import { gerarPlano } from '../dados/api'
 import { ativarPlano, pedirArmazenamentoPersistente, planoAtivo, salvarPerfil, type PlanoSalvo } from '../dados/db'
+import { exercicioDe } from '../dados/sessao'
 import { apagarHistoricoDeTeste, contarTreinosDeTeste, gerarHistoricoDeTeste } from '../dados/teste'
 import { navegar } from '../rotas'
 import './diagnostico.css'
@@ -126,7 +126,7 @@ export default function Diagnostico() {
                 <ol>
                   {dia.exercicios.map((p) => (
                     <li key={p.exercicioId}>
-                      <span>{EXERCICIO_POR_ID.get(p.exercicioId)?.nome ?? p.exercicioId}</span>
+                      <span>{exercicioDe(p.exercicioId).nome}</span>
                       <span className="num">{prescricao(p)}</span>
                     </li>
                   ))}

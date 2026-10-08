@@ -72,7 +72,7 @@ export function Torre({ linhas, modo, descanso, onFazerAgora }: Props) {
                 <p className="torre-meta num">
                   {textoMeta(linha.prescrito, linha.exercicio)} · descanso {formatarTempo(linha.prescrito.descansoSegundos)}
                 </p>
-                <p>{linha.prescrito.motivo}</p>
+                <p>{linha.prescrito.motivo || 'Escolhido por você.'}</p>
                 {linha.prescrito.observacao && <p className="torre-obs">{linha.prescrito.observacao}</p>}
               </div>
             )}

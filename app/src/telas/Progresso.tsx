@@ -18,7 +18,7 @@ export default function Progresso() {
   const versao = useLiveQuery(async () => `${await db.sessoes.count()}-${await db.series.count()}`, [])
   const [historico, setHistorico] = useState<Historico | null>(null)
   const ultimaAnalise = useLiveQuery(async () => (await db.analises.orderBy('geradaEm').last()) ?? null, [])
-  const perfil = useLiveQuery(async () => (await lerPerfil()) ?? null, [])
+  const perfil = useLiveQuery(async () => (await lerPerfil()) ?? (await planoAtivo())?.perfil ?? null, [])
 
   useEffect(() => {
     if (versao !== undefined) carregarHistorico().then(setHistorico)
@@ -128,7 +128,9 @@ function SecaoAnalise({ historico, ultima }: { historico: Historico; ultima: Ana
   const novos = ultima ? total - ultima.treinosAnalisados : total
 
   async function analisar() {
-    const [perfil, plano] = await Promise.all([lerPerfil(), planoAtivo()])
+    const [salvo, plano] = await Promise.all([lerPerfil(), planoAtivo()])
+    // Quem montou o plano do zero não respondeu o questionário: vale o perfil guardado no plano.
+    const perfil = salvo ?? plano?.perfil
     if (!perfil || !plano) {
       setEstado({ tipo: 'erro', mensagem: 'Monte um plano antes de pedir a análise.' })
       return

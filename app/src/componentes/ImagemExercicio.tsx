@@ -1,12 +1,5 @@
 import { useState } from 'react'
-import manifesto from '../gerado/imagens-exercicios.json'
-
-interface ItemManifesto {
-  quadros: 1 | 2
-  v: string
-}
-
-const IMAGENS = manifesto as Record<string, ItemManifesto>
+import { IMAGENS } from '../dados/imagens'
 
 /**
  * Os dois quadros do exercício alternando com transição suave. Tocar pausa no quadro atual.

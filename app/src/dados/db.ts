@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie'
-import type { PerfilTreino, PlanoGerado } from '../../../shared/plano'
+import type { Exercicio } from '../../../shared/exercicios'
+import type { OrigemPlano, PerfilTreino, PlanoGerado } from '../../../shared/plano'
 import type { AnaliseGerada } from '../../../shared/progresso'
 
 export interface PerfilSalvo extends PerfilTreino {
@@ -11,6 +12,11 @@ export interface PerfilSalvo extends PerfilTreino {
 export interface PlanoSalvo extends PlanoGerado {
   id?: number
   ativo: 0 | 1
+  /** Ausente nos planos anteriores a esta versão: eram todos da IA. */
+  origem?: OrigemPlano
+  editadoEm?: string
+  /** Plano do qual este é a versão editada; o próximo dia sugerido continua a sequência dele. */
+  versaoDe?: number
 }
 
 export type EstadoSessao = 'ativa' | 'concluida' | 'encerrada'
@@ -46,12 +52,19 @@ export interface AnaliseSalva extends AnaliseGerada {
   id?: number
 }
 
+/** Exercício criado pelo usuário quando não está no catálogo: entra no treino sem imagem. */
+export interface ExercicioPersonalizado extends Exercicio {
+  personalizado: true
+  criadoEm: string
+}
+
 export const db = new Dexie('treinoai') as Dexie & {
   perfil: EntityTable<PerfilSalvo, 'id'>
   planos: EntityTable<PlanoSalvo, 'id'>
   sessoes: EntityTable<SessaoSalva, 'id'>
   series: EntityTable<SerieSalva, 'id'>
   analises: EntityTable<AnaliseSalva, 'id'>
+  exercicios: EntityTable<ExercicioPersonalizado, 'id'>
 }
 
 // Novas tabelas entram numa nova versão, sem apagar as anteriores.
@@ -66,6 +79,9 @@ db.version(2).stores({
 db.version(3).stores({
   analises: '++id, geradaEm',
 })
+db.version(4).stores({
+  exercicios: 'id, nome',
+})
 
 export async function salvarPerfil(perfil: PerfilTreino): Promise<void> {
   await db.perfil.put({ ...perfil, id: 'atual', atualizadoEm: new Date().toISOString() })
@@ -79,7 +95,7 @@ export async function lerPerfil(): Promise<PerfilTreino | undefined> {
 }
 
 /** Salva o plano como ativo. Os anteriores ficam no histórico, porque as sessões registradas apontam para eles. */
-export async function ativarPlano(gerado: PlanoGerado): Promise<number> {
+export async function ativarPlano(gerado: PlanoGerado & Pick<PlanoSalvo, 'origem' | 'editadoEm' | 'versaoDe'>): Promise<number> {
   return db.transaction('rw', db.planos, async () => {
     await db.planos.where('ativo').equals(1).modify({ ativo: 0 })
     return db.planos.add({ ...gerado, ativo: 1 }) as Promise<number>
