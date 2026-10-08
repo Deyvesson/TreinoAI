@@ -64,7 +64,11 @@ export function useSomDescanso(): [boolean, (ligado: boolean) => void] {
   const definir = (valor: boolean) => {
     localStorage.setItem(CHAVE_SOM, valor ? '1' : '0')
     ouvintesSom.forEach((o) => o())
-    if (valor) prepararSom()
+    // Ligar o som toca o aviso uma vez, para a pessoa saber como é e conferir o volume.
+    if (valor) {
+      prepararSom()
+      tocarBipes()
+    }
   }
   return [ligado, definir]
 }
@@ -78,20 +82,39 @@ export function prepararSom() {
   if (contextoAudio.state === 'suspended') contextoAudio.resume().catch(() => {})
 }
 
-/** Fim do descanso: vibra onde há suporte (Android) e toca dois bipes curtos se o som estiver ligado. */
+// Três bipes, o último mais longo e mais agudo, como a largada de uma prova: dá para ouvir na academia.
+// Onda quadrada (mais energia na faixa em que o alto-falante do celular rende) com um passa-baixa para não ficar estridente.
+const BIPES = [
+  { atraso: 0, duracao: 0.16, frequencia: 1320 },
+  { atraso: 0.3, duracao: 0.16, frequencia: 1320 },
+  { atraso: 0.6, duracao: 0.5, frequencia: 1760 },
+] as const
+
+/** Fim do descanso: vibra onde há suporte (Android) e toca os bipes se o som estiver ligado. */
 export function avisarFimDoDescanso() {
   navigator.vibrate?.([220, 120, 220])
-  if (!somLigado() || !contextoAudio) return
+  if (somLigado()) tocarBipes()
+}
+
+function tocarBipes() {
+  if (!contextoAudio) return
   const inicio = contextoAudio.currentTime
-  for (const atraso of [0, 0.28]) {
+  const filtro = contextoAudio.createBiquadFilter()
+  filtro.type = 'lowpass'
+  filtro.frequency.value = 5000
+  filtro.connect(contextoAudio.destination)
+  for (const { atraso, duracao, frequencia } of BIPES) {
     const oscilador = contextoAudio.createOscillator()
     const volume = contextoAudio.createGain()
-    oscilador.frequency.value = 880
-    volume.gain.setValueAtTime(0.0001, inicio + atraso)
-    volume.gain.exponentialRampToValueAtTime(0.4, inicio + atraso + 0.02)
-    volume.gain.exponentialRampToValueAtTime(0.0001, inicio + atraso + 0.2)
-    oscilador.connect(volume).connect(contextoAudio.destination)
-    oscilador.start(inicio + atraso)
-    oscilador.stop(inicio + atraso + 0.22)
+    oscilador.type = 'square'
+    oscilador.frequency.value = frequencia
+    const t = inicio + atraso
+    volume.gain.setValueAtTime(0.0001, t)
+    volume.gain.exponentialRampToValueAtTime(0.9, t + 0.01)
+    volume.gain.setValueAtTime(0.9, t + duracao - 0.04)
+    volume.gain.exponentialRampToValueAtTime(0.0001, t + duracao)
+    oscilador.connect(volume).connect(filtro)
+    oscilador.start(t)
+    oscilador.stop(t + duracao + 0.02)
   }
 }
