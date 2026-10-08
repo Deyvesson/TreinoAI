@@ -85,7 +85,7 @@ const ABCDE: Omit<Divisao, "rotativa"> = {
 };
 
 /**
- * 2 dias: AB. 3 dias: ABC. 4 dias: ABCD no avançado, AB repetido nos demais. 5 dias: ABCDE no avançado,
+ * 2 dias: AB para todos. 3 dias: ABC. 4 dias: AB repetido só no iniciante, ABCD nos demais. 5 dias: ABCDE no avançado,
  * ABC em rotação nos demais. 6 dias: ABC duas vezes. Quando há mais dias que treinos, a divisão é rotativa.
  */
 export function divisaoPara(perfil: Pick<PerfilTreino, "diasPorSemana" | "nivel">): Divisao {
@@ -93,7 +93,7 @@ export function divisaoPara(perfil: Pick<PerfilTreino, "diasPorSemana" | "nivel"
   const base =
     perfil.diasPorSemana <= 2 ? AB
     : perfil.diasPorSemana === 3 ? ABC
-    : perfil.diasPorSemana === 4 ? (avancado ? ABCD : AB)
+    : perfil.diasPorSemana === 4 ? (perfil.nivel === "iniciante" ? AB : ABCD)
     : perfil.diasPorSemana === 5 ? (avancado ? ABCDE : ABC)
     : ABC;
   return { ...base, rotativa: perfil.diasPorSemana > base.dias.length };
