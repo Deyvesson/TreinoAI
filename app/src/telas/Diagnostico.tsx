@@ -5,6 +5,7 @@ import { gerarPlano } from '../dados/api'
 import { ativarPlano, pedirArmazenamentoPersistente, planoAtivo, salvarPerfil, type PlanoSalvo } from '../dados/db'
 import { exercicioDe } from '../dados/sessao'
 import { apagarHistoricoDeTeste, contarTreinosDeTeste, gerarHistoricoDeTeste } from '../dados/teste'
+import { FORMA_DE_VIBRAR, PADRAO_FIM_DO_DESCANSO, vibrar } from '../ganchos'
 import { navegar } from '../rotas'
 import './diagnostico.css'
 
@@ -137,8 +138,50 @@ export default function Diagnostico() {
         )}
       </section>
 
+      <TesteDeVibracao />
       <HistoricoDeTeste />
     </main>
+  )
+}
+
+/**
+ * Compara a vibração disparada por um toque com a disparada por um timer, que é o caso do fim do descanso.
+ * Serve principalmente para testar o toque experimental do iPhone.
+ */
+function TesteDeVibracao() {
+  const [contagem, setContagem] = useState<number | null>(null)
+  const forma =
+    FORMA_DE_VIBRAR === 'padrao' ? 'API de vibração padrão (Android e navegadores que suportam)'
+    : FORMA_DE_VIBRAR === 'ios' ? 'toque experimental do iPhone (iOS 18 ou mais novo)'
+    : 'nenhuma: este navegador não vibra'
+
+  function vibrarDepois() {
+    setContagem(5)
+    let resta = 5
+    const relogio = setInterval(() => {
+      resta--
+      setContagem(resta)
+      if (resta > 0) return
+      clearInterval(relogio)
+      vibrar(PADRAO_FIM_DO_DESCANSO)
+      setContagem(null)
+    }, 1000)
+  }
+
+  return (
+    <section>
+      <h2>Vibração</h2>
+      <p className="lede">
+        Forma detectada: {forma}. O primeiro botão vibra no toque. O segundo espera 5 segundos sem você tocar em nada, como no
+        fim do descanso. Mantenha esta tela aberta.
+      </p>
+      <button type="button" onClick={() => vibrar(PADRAO_FIM_DO_DESCANSO)}>
+        Vibrar agora
+      </button>
+      <button type="button" className="probe-secundario" onClick={vibrarDepois} disabled={contagem !== null}>
+        {contagem === null ? 'Vibrar em 5 segundos' : `Vibrando em ${contagem}…`}
+      </button>
+    </section>
   )
 }
 

@@ -78,9 +78,48 @@ export function prepararSom() {
   if (contextoAudio.state === 'suspended') contextoAudio.resume().catch(() => {})
 }
 
-/** Fim do descanso: vibra onde há suporte (Android) e toca dois bipes curtos se o som estiver ligado. */
+const ehIOS =
+  /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
+/** Como o aparelho vibra: API padrão (Android), o toque do iOS 18+ (experimental) ou nada. */
+export const FORMA_DE_VIBRAR: 'padrao' | 'ios' | null = 'vibrate' in navigator ? 'padrao' : ehIOS ? 'ios' : null
+
+/**
+ * O Safari não tem navigator.vibrate, mas no iOS 18+ alternar um <input type="checkbox" switch>
+ * dispara um toque leve do motor de vibração. Experimental: a Apple pode limitar a toques do usuário.
+ */
+function toqueIOS() {
+  const rotulo = document.createElement('label')
+  rotulo.setAttribute('aria-hidden', 'true')
+  rotulo.style.display = 'none'
+  const caixa = document.createElement('input')
+  caixa.type = 'checkbox'
+  caixa.setAttribute('switch', '')
+  rotulo.append(caixa)
+  document.body.append(rotulo)
+  rotulo.click()
+  rotulo.remove()
+}
+
+/** Padrão no formato do navigator.vibrate (vibra, pausa, vibra...); no iPhone, um toque por pulso. */
+export function vibrar(padrao: readonly number[]) {
+  if (FORMA_DE_VIBRAR === 'padrao') {
+    navigator.vibrate([...padrao])
+    return
+  }
+  if (FORMA_DE_VIBRAR !== 'ios') return
+  let atraso = 0
+  padrao.forEach((duracao, i) => {
+    if (i % 2 === 0) setTimeout(toqueIOS, atraso)
+    atraso += duracao
+  })
+}
+
+export const PADRAO_FIM_DO_DESCANSO = [220, 120, 220] as const
+
+/** Fim do descanso: vibra (Android; iPhone em teste) e toca dois bipes curtos se o som estiver ligado. */
 export function avisarFimDoDescanso() {
-  navigator.vibrate?.([220, 120, 220])
+  vibrar(PADRAO_FIM_DO_DESCANSO)
   if (!somLigado() || !contextoAudio) return
   const inicio = contextoAudio.currentTime
   for (const atraso of [0, 0.28]) {
