@@ -106,7 +106,7 @@ function perfilPadrao(plano: Plano): PerfilTreino {
   return {
     objetivo: 'saude',
     nivel: 'intermediario',
-    diasPorSemana: plano.dias.length,
+    diasPorSemana: Math.min(6, Math.max(2, plano.dias.length)),
     minutosPorSessao: 60,
     equipamento: [],
     limitacoes: null,
@@ -135,13 +135,11 @@ export async function salvarPlano(original: PlanoSalvo | null, plano: Plano): Pr
       return original.id
     }
   }
+  // Os dias por semana são a meta da pessoa, não o número de treinos: uma divisão ABC pode rodar 5 vezes por semana.
   const perfil = original?.perfil ?? (await lerPerfil()) ?? perfilPadrao(limpo)
   return ativarPlano({
     plano: limpo,
-    perfil: {
-      ...perfil,
-      diasPorSemana: Math.min(6, Math.max(2, limpo.dias.length)),
-    },
+    perfil,
     geradoEm: original?.geradoEm ?? agora,
     modelo: original?.modelo ?? 'manual',
     origem,

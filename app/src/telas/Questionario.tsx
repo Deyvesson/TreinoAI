@@ -198,7 +198,7 @@ export default function Questionario() {
         )}
 
         {passo === 2 && (
-          <Pergunta titulo="Quantos dias por semana você vai treinar?" texto="Cada dia vira um treino diferente no plano.">
+          <Pergunta titulo="Quantos dias por semana você vai treinar?" texto="A divisão dos treinos (AB, ABC...) sai dos dias e da sua experiência.">
             <div className="celulas" role="radiogroup" aria-label="Dias por semana">
               {Array.from(
                 { length: LIMITES_PERFIL.diasPorSemana.max - LIMITES_PERFIL.diasPorSemana.min + 1 },
@@ -468,20 +468,25 @@ function Gerando({
 }
 
 function PlanoPronto({ gerado }: { gerado: PlanoGerado }) {
-  const { plano } = gerado
+  const { plano, perfil } = gerado
+  // Com mais dias que treinos, os treinos se repetem em sequência (ex.: ABC em 5 dias).
+  const rodizio = perfil.diasPorSemana > plano.dias.length
   return (
     <main className="hoje plano-pronto">
       <header className="hoje-cabeca">
         <h1 className="hoje-titulo">{plano.nome}</h1>
         <p className="hoje-numeros num">
-          {plano.dias.length} treinos por semana · {plano.duracaoSemanas} semanas
+          {rodizio
+            ? `${plano.dias.length} treinos em sequência · ${perfil.diasPorSemana} dias por semana`
+            : `${plano.dias.length} treinos por semana`}{' '}
+          · {plano.duracaoSemanas} semanas
         </p>
         <p className="plano-resumo">{plano.resumo}</p>
       </header>
 
       <ol className="torre" aria-label="Treinos da semana">
         {plano.dias.map((dia, i) => (
-          <li key={dia.nome} className="torre-linha" data-estado="pendente">
+          <li key={i} className="torre-linha" data-estado="pendente">
             <div className="torre-cabeca plano-dia">
               <span className="torre-pos">{i + 1}</span>
               <span className="torre-faixa" aria-hidden="true" />

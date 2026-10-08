@@ -1,3 +1,4 @@
+import { divisaoPara, problemasDeDivisao, type Divisao } from "./divisoes";
 import { z } from "zod";
 import { EQUIPAMENTOS, NIVEIS, type Exercicio, type ExercicioId } from "../../../shared/exercicios";
 import { LIMITES_PERFIL, OBJETIVOS, type PerfilTreino, type Plano } from "../../../shared/plano";
@@ -66,11 +67,13 @@ function minutosEstimados(dia: Plano["dias"][number], porId: ReadonlyMap<string,
   return segundos / 60;
 }
 
-export function verificarPlano(plano: Plano, perfil: PerfilTreino, porId: ReadonlyMap<string, Exercicio>): string[] {
-  const problemas: string[] = [];
-  if (plano.dias.length !== perfil.diasPorSemana) {
-    problemas.push(`O plano tem ${plano.dias.length} dias, mas precisa ter exatamente ${perfil.diasPorSemana}.`);
-  }
+export function verificarPlano(
+  plano: Plano,
+  perfil: PerfilTreino,
+  porId: ReadonlyMap<string, Exercicio>,
+  divisao: Divisao = divisaoPara(perfil),
+): string[] {
+  const problemas: string[] = problemasDeDivisao(plano.dias, divisao, (id) => porId.get(id)?.grupo);
   if (!inteiroEntre(plano.duracaoSemanas, 2, 16)) problemas.push("duracaoSemanas deve ser um inteiro entre 2 e 16.");
 
   plano.dias.forEach((dia, i) => {
