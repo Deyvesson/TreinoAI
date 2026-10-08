@@ -47,10 +47,11 @@ export function useMovimentoReduzido(): boolean {
   )
 }
 
-// Preferência de som no fim do descanso (desligada por padrão).
+// Preferência de som no fim do descanso (ligada por padrão; só um "0" salvo desliga).
 
 const CHAVE_SOM = 'treinoai:som-descanso'
 const ouvintesSom = new Set<() => void>()
+const somLigado = () => localStorage.getItem(CHAVE_SOM) !== '0'
 
 export function useSomDescanso(): [boolean, (ligado: boolean) => void] {
   const ligado = useSyncExternalStore(
@@ -58,7 +59,7 @@ export function useSomDescanso(): [boolean, (ligado: boolean) => void] {
       ouvintesSom.add(ouvinte)
       return () => ouvintesSom.delete(ouvinte)
     },
-    () => localStorage.getItem(CHAVE_SOM) === '1',
+    somLigado,
   )
   const definir = (valor: boolean) => {
     localStorage.setItem(CHAVE_SOM, valor ? '1' : '0')
@@ -72,7 +73,7 @@ let contextoAudio: AudioContext | null = null
 
 /** O iOS só libera áudio depois de um toque; chame dentro de um gesto do usuário. */
 export function prepararSom() {
-  if (localStorage.getItem(CHAVE_SOM) !== '1') return
+  if (!somLigado()) return
   contextoAudio ??= new AudioContext()
   if (contextoAudio.state === 'suspended') contextoAudio.resume().catch(() => {})
 }
@@ -80,7 +81,7 @@ export function prepararSom() {
 /** Fim do descanso: vibra onde há suporte (Android) e toca dois bipes curtos se o som estiver ligado. */
 export function avisarFimDoDescanso() {
   navigator.vibrate?.([220, 120, 220])
-  if (localStorage.getItem(CHAVE_SOM) !== '1' || !contextoAudio) return
+  if (!somLigado() || !contextoAudio) return
   const inicio = contextoAudio.currentTime
   for (const atraso of [0, 0.28]) {
     const oscilador = contextoAudio.createOscillator()
