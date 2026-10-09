@@ -2,7 +2,14 @@
 // Se o plano já tem treinos registrados, salvar cria uma nova versão: os treinos antigos continuam apontando
 // para a versão em que foram feitos, e o histórico não muda.
 import type { Exercicio } from '../../../shared/exercicios'
-import type { ExercicioPrescrito, OrigemPlano, PerfilTreino, Plano } from '../../../shared/plano'
+import {
+  LIMITES_TOTAL_TREINOS,
+  TOTAL_TREINOS_PADRAO,
+  type ExercicioPrescrito,
+  type OrigemPlano,
+  type PerfilTreino,
+  type Plano,
+} from '../../../shared/plano'
 import { ativarPlano, db, lerPerfil, type PlanoSalvo } from './db'
 import { exercicioDe } from './sessao'
 
@@ -31,7 +38,7 @@ export function prescricaoPadrao(e: Exercicio): ExercicioPrescrito {
         repeticoesMin: 8,
         repeticoesMax: 12,
         duracaoSegundos: null,
-        descansoSegundos: 90,
+        descansoSegundos: 60,
         repeticoesEmReserva: 2,
       }
     case 'tempo':
@@ -52,7 +59,7 @@ export function prescricaoPadrao(e: Exercicio): ExercicioPrescrito {
         repeticoesMin: null,
         repeticoesMax: null,
         duracaoSegundos: 1200,
-        descansoSegundos: 0,
+        descansoSegundos: 60,
         repeticoesEmReserva: null,
       }
   }
@@ -86,12 +93,17 @@ export function planoVazio(nome: string, quantidadeDeDias: number): Plano {
       exercicios: [],
     })),
     cuidados: [],
+    totalTreinos: TOTAL_TREINOS_PADRAO,
   }
 }
 
 export function problemasDoPlano(plano: Plano): string[] {
   const problemas: string[] = []
   if (!plano.nome.trim()) problemas.push('Dê um nome ao plano.')
+  const total = plano.totalTreinos ?? TOTAL_TREINOS_PADRAO
+  if (!Number.isInteger(total) || total < LIMITES_TOTAL_TREINOS.min || total > LIMITES_TOTAL_TREINOS.max) {
+    problemas.push(`A quantidade de treinos vai de ${LIMITES_TOTAL_TREINOS.min} a ${LIMITES_TOTAL_TREINOS.max}.`)
+  }
   plano.dias.forEach((dia, i) => {
     const rotulo = dia.nome.trim() || `Treino ${i + 1}`
     if (!dia.nome.trim()) problemas.push(`O treino ${i + 1} precisa de um nome.`)

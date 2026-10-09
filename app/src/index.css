@@ -2650,6 +2650,51 @@ html.invertida {
   gap: var(--c) calc(var(--c) * 3);
 }
 
+/* Contagem de treinos do plano: número condensado, como a posição na torre. */
+.hoje-contagem {
+  margin: calc(var(--c) * 1.5) 0 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-stretch: 75%;
+  color: var(--tinta-2);
+}
+
+.hoje-contagem strong {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-stretch: 62%;
+  color: var(--ultramar);
+}
+
+.editor-total {
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) minmax(0, 1fr);
+  align-items: end;
+  gap: calc(var(--c) * 2);
+  margin-top: calc(var(--c) * 2.5);
+}
+
+.editor-total p {
+  margin: 0 0 6px;
+  font-size: 0.875rem;
+  color: var(--tinta-3);
+}
+
+input.contador-valor {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--tinta);
+  font-family: inherit;
+}
+
+input.contador-valor:focus-visible {
+  outline-offset: -2px;
+}
+
 /* Escolha de exercício: tela cheia, busca presa no topo. */
 
 .escolher {

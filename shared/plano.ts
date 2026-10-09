@@ -56,7 +56,12 @@ export interface Plano {
   dias: DiaDeTreino[]
   /** Ajustes feitos por causa das limitações e avisos de segurança. */
   cuidados: string[]
+  /** Quantas vezes a pessoa vai fazer estes treinos antes de trocar de plano. Ausente = TOTAL_TREINOS_PADRAO. */
+  totalTreinos?: number
 }
+
+export const TOTAL_TREINOS_PADRAO = 40
+export const LIMITES_TOTAL_TREINOS = { min: 1, max: 999 } as const
 
 /** De onde o plano veio: gerado pela IA, editado pelo usuário a partir de um da IA, ou montado do zero. */
 export type OrigemPlano = 'ia' | 'editado' | 'manual'
