@@ -528,6 +528,11 @@ button.torre-cabeca:hover {
   color: var(--tinta-3);
 }
 
+.sessao-progresso strong {
+  font-weight: 700;
+  color: var(--tinta);
+}
+
 .sessao-aviso {
   margin: 0 var(--margem) var(--c);
   padding: calc(var(--c) * 1.25) calc(var(--c) * 2);
@@ -2906,7 +2911,6 @@ input.contador-valor:focus-visible {
   }
 
   .sessao-topo .torre-faixas,
-  .sessao-progresso,
   .sessao-dia {
     display: none;
   }

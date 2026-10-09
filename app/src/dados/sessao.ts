@@ -137,14 +137,46 @@ export function incrementoDeCarga(e: Exercicio): number {
   return 2.5
 }
 
+/** Execução de uma série (sem o descanso): duração prescrita, ou ~4 s por repetição, ou ~7 min por km. */
+function segundosDeExecucao(p: ExercicioPrescrito): number {
+  const lados = exercicioDe(p.exercicioId).unilateral ? 2 : 1
+  const execucao = p.duracaoSegundos ?? (p.distanciaKm ? p.distanciaKm * 420 : (p.repeticoesMax ?? p.repeticoesMin ?? 10) * 4)
+  return execucao * lados
+}
+
 export function minutosEstimados(dia: DiaDeTreino): number {
   let segundos = 0
-  for (const p of dia.exercicios) {
-    const lados = exercicioDe(p.exercicioId).unilateral ? 2 : 1
-    const execucao = p.duracaoSegundos ?? (p.distanciaKm ? p.distanciaKm * 420 : (p.repeticoesMax ?? p.repeticoesMin ?? 10) * 4)
-    segundos += p.series * (execucao * lados + p.descansoSegundos)
-  }
+  for (const p of dia.exercicios) segundos += p.series * (segundosDeExecucao(p) + p.descansoSegundos)
   return Math.round(segundos / 60)
+}
+
+/**
+ * Quanto do treino já foi, contado em séries (avança a cada série, não só a cada exercício),
+ * e quanto falta pelo plano: séries restantes com execução e descanso, mais o descanso em curso.
+ */
+export function progressoDaSessao(torre: readonly LinhaTorre[], descansoRestante: number | null) {
+  let feitas = 0
+  let total = 0
+  let segundos = descansoRestante ?? 0
+  for (const linha of torre) {
+    total += linha.total
+    feitas += Math.min(linha.feitas, linha.total)
+    const faltam = Math.max(0, linha.total - linha.feitas)
+    segundos += faltam * (segundosDeExecucao(linha.prescrito) + linha.prescrito.descansoSegundos)
+  }
+  // A última série do treino não tem descanso depois.
+  const ultima = torre.findLast((l) => !l.completo)
+  if (ultima) segundos -= ultima.prescrito.descansoSegundos
+  return {
+    percentual: total ? Math.round((feitas / total) * 100) : 0,
+    segundosRestantes: Math.max(0, segundos),
+  }
+}
+
+/** "cerca de 25 min", "menos de 1 min". */
+export function textoTempoRestante(segundos: number): string {
+  const minutos = Math.round(segundos / 60)
+  return minutos < 1 ? 'menos de 1 min' : `cerca de ${minutos} min`
 }
 
 // Formatação em PT-BR.

@@ -22,6 +22,8 @@ import {
   formatarTempo,
   incrementoDeCarga,
   montarTorre,
+  progressoDaSessao,
+  textoTempoRestante,
   textoMeta,
   textoSerie,
   type LinhaTorre,
@@ -97,6 +99,7 @@ export default function Sessao() {
   const decorrido = (agora - Date.parse(sessao.iniciadaEm)) / 1000
   const ultima = [...series].sort((a, b) => a.registradaEm.localeCompare(b.registradaEm)).at(-1) ?? null
   const feitos = torre.filter((l) => l.completo).length
+  const { percentual, segundosRestantes } = progressoDaSessao(torre, restante)
 
   async function registrar(valores: ValoresSerie) {
     prepararSom()
@@ -137,7 +140,8 @@ export default function Sessao() {
           </button>
           <TorreRecolhida linhas={torre} descanso={restante} onAbrir={() => setTorreAberta(true)} />
           <p className="sessao-progresso num">
-            {feitos} de {torre.length} exercícios
+            {feitos} de {torre.length} exercícios · <strong>{percentual}%</strong> · faltam{' '}
+            {textoTempoRestante(segundosRestantes)}
           </p>
         </header>
 
