@@ -2,7 +2,13 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { ArrowDown, ArrowUp, ChevronLeft, Minus, Plus } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import type { Exercicio } from '../../../shared/exercicios'
-import type { DiaDeTreino, ExercicioPrescrito, Plano } from '../../../shared/plano'
+import {
+  LIMITES_TOTAL_TREINOS,
+  TOTAL_TREINOS_PADRAO,
+  type DiaDeTreino,
+  type ExercicioPrescrito,
+  type Plano,
+} from '../../../shared/plano'
 import { EscolherExercicio } from '../componentes/EscolherExercicio'
 import { db, planoAtivo, type PlanoSalvo } from '../dados/db'
 import {
@@ -337,6 +343,21 @@ function Editor({ original, inicial, treinosFeitos, substituiPlano }: PropsEdito
             setProblemas([])
           }}
         />
+        <div className="editor-total">
+          <Contador
+            rotulo="Quantidade de treinos"
+            valor={plano.totalTreinos ?? TOTAL_TREINOS_PADRAO}
+            min={LIMITES_TOTAL_TREINOS.min}
+            max={LIMITES_TOTAL_TREINOS.max}
+            passo={1}
+            digitavel
+            onChange={(totalTreinos) => {
+              setPlano((p) => ({ ...p, totalTreinos }))
+              setProblemas([])
+            }}
+          />
+          <p>Quantas vezes você vai fazer estes treinos antes de trocar de plano.</p>
+        </div>
         {treinosFeitos > 0 && (
           <p className="nota editor-nota">
             Você já fez {treinosFeitos} {treinosFeitos === 1 ? 'treino' : 'treinos'} com este plano. Salvar cria uma
@@ -653,12 +674,21 @@ interface PropsContador {
   max: number
   passo: number
   formatar?: (n: number) => string
+  /** Tocar no número abre o teclado numérico (para valores que vão longe, como a quantidade de treinos). */
+  digitavel?: boolean
   onChange: (n: number) => void
 }
 
 /** − valor +, compacto, para a lista do editor. */
-function Contador({ rotulo, valor, min, max, passo, formatar = String, onChange }: PropsContador) {
+function Contador({ rotulo, valor, min, max, passo, formatar = String, digitavel = false, onChange }: PropsContador) {
   const limitar = (n: number) => Math.round(Math.min(max, Math.max(min, n)) * 100) / 100
+  const [rascunho, setRascunho] = useState<string | null>(null)
+
+  function confirmar() {
+    const lido = Number((rascunho ?? '').trim())
+    setRascunho(null)
+    if (rascunho?.trim() && Number.isFinite(lido)) onChange(limitar(Math.round(lido)))
+  }
   return (
     <div className="contador" role="group" aria-label={rotulo}>
       <span className="contador-rotulo" aria-hidden="true">
@@ -674,9 +704,27 @@ function Contador({ rotulo, valor, min, max, passo, formatar = String, onChange 
         >
           <Minus size={20} strokeWidth={2.25} aria-hidden="true" />
         </button>
-        <output className="contador-valor num" aria-live="polite">
-          {valor === null ? '—' : formatar(valor)}
-        </output>
+        {digitavel ? (
+          <input
+            className="contador-valor num"
+            inputMode="numeric"
+            enterKeyHint="done"
+            autoComplete="off"
+            aria-label={rotulo}
+            value={rascunho ?? (valor === null ? '' : formatar(valor))}
+            onFocus={(evento) => {
+              setRascunho(evento.currentTarget.value)
+              evento.currentTarget.select()
+            }}
+            onChange={(evento) => setRascunho(evento.currentTarget.value.replace(/D/g, ''))}
+            onBlur={confirmar}
+            onKeyDown={(evento) => evento.key === 'Enter' && evento.currentTarget.blur()}
+          />
+        ) : (
+          <output className="contador-valor num" aria-live="polite">
+            {valor === null ? '—' : formatar(valor)}
+          </output>
+        )}
         <button
           type="button"
           className="contador-botao"

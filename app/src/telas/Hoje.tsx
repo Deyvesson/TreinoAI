@@ -3,8 +3,9 @@ import { TrendingUp } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { InstalarApp } from '../componentes/InstalarApp'
 import { Torre } from '../componentes/Torre'
+import { TOTAL_TREINOS_PADRAO } from '../../../shared/plano'
 import { db, planoAtivo } from '../dados/db'
-import { diaDaSessao, encerrarSessao, iniciarSessao, proximoDia, sessaoAtiva } from '../dados/repositorio'
+import { diaDaSessao, encerrarSessao, iniciarSessao, proximoDia, sessaoAtiva, treinosFeitos } from '../dados/repositorio'
 import { minutosEstimados, montarTorre } from '../dados/sessao'
 import { prepararSom, useSomDescanso } from '../ganchos'
 import { navegar } from '../rotas'
@@ -16,6 +17,7 @@ export default function Hoje() {
     async () => (sessao?.id ? db.series.where('sessaoId').equals(sessao.id).toArray() : []),
     [sessao?.id],
   )
+  const feitos = useLiveQuery(async () => (plano ? treinosFeitos(plano) : 0), [plano])
   const [diaEscolhido, setDiaEscolhido] = useState<number | null>(null)
   const [diaSugerido, setDiaSugerido] = useState<number | null>(null)
   const [som, setSom] = useSomDescanso()
@@ -25,7 +27,7 @@ export default function Hoje() {
     if (plano) proximoDia(plano).then(setDiaSugerido)
   }, [plano])
 
-  if (plano === undefined || sessao === undefined || seriesDaSessao === undefined) {
+  if (plano === undefined || sessao === undefined || seriesDaSessao === undefined || feitos === undefined) {
     return <div className="carregando" aria-busy="true" />
   }
 
@@ -107,6 +109,7 @@ export default function Hoje() {
   const indice = Math.min(diaEscolhido ?? diaSugerido ?? 0, plano.plano.dias.length - 1)
   const dia = plano.plano.dias[indice]
   const torre = montarTorre(dia, [], null)
+  const total = plano.plano.totalTreinos ?? TOTAL_TREINOS_PADRAO
 
   async function comecar() {
     prepararSom()
@@ -122,6 +125,9 @@ export default function Hoje() {
         </button>
         <h1 className="hoje-titulo">{dia.nome}</h1>
         <p className="hoje-foco">{dia.foco}</p>
+        <p className="hoje-contagem num" aria-label={`${feitos} de ${total} treinos feitos`}>
+          <strong>{feitos}</strong>/{total} treinos{feitos >= total && ' · plano concluído'}
+        </p>
         <p className="hoje-numeros num">
           {indice === diaSugerido ? 'Próximo treino' : 'Treino escolhido'} · {dia.exercicios.length} exercícios · cerca
           de {minutosEstimados(dia)} min

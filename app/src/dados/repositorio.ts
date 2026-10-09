@@ -13,6 +13,24 @@ export function diaDaSessao(plano: PlanoSalvo, sessao: Pick<SessaoSalva, 'diaInd
   return plano.plano.dias[Math.min(sessao.diaIndice, plano.plano.dias.length - 1)]
 }
 
+/**
+ * Treinos já feitos com este plano, somando as versões anteriores dele (editar não zera a contagem).
+ * Conta o que terminou com pelo menos uma série; sessões abandonadas sem série e o histórico de teste ficam de fora.
+ */
+export async function treinosFeitos(plano: PlanoSalvo): Promise<number> {
+  const ids: number[] = []
+  let atual: PlanoSalvo | undefined = plano
+  while (atual?.id !== undefined && !ids.includes(atual.id)) {
+    ids.push(atual.id)
+    atual = atual.versaoDe !== undefined ? await db.planos.get(atual.versaoDe) : undefined
+  }
+  const sessoes = await db.sessoes.where('planoId').anyOf(ids).toArray()
+  const terminadas = sessoes.filter((s) => s.estado !== 'ativa' && !s.teste).map((s) => s.id!)
+  if (!terminadas.length) return 0
+  const comSerie = new Set(await db.series.where('sessaoId').anyOf(terminadas).keys())
+  return terminadas.filter((id) => comSerie.has(id)).length
+}
+
 /** O dia sugerido é o seguinte ao último treino feito com este plano (ou com as versões anteriores dele). */
 export async function proximoDia(plano: PlanoSalvo): Promise<number> {
   let atual: PlanoSalvo | undefined = plano
